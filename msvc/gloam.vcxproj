@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="Current">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d93add3b-4eec-4064-a7d5-1bd7eef78db9}</ProjectGuid>
+    <RootNamespace>gloam</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <ImportGroup Label="PropertySheets">
+    <!-- Global Reference sheet -->
+    <Import Project="..\..\Setup.props" Condition="!exists('..\..\Toolset.props') And exists('..\..\Setup.props')" />
+    <!-- Toolset Property sheet -->
+    <Import Project="..\..\Toolset.props" Condition="exists('..\..\Toolset.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\Master.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\..\xxHash;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\EGL\eglplatform.h" />
+    <ClInclude Include="..\include\gloam\egl.h" />
+    <ClInclude Include="..\include\gloam\gl.h" />
+    <ClInclude Include="..\include\gloam\glx.h" />
+    <ClInclude Include="..\include\gloam\vk.h" />
+    <ClInclude Include="..\include\gloam\wgl.h" />
+    <ClInclude Include="..\include\KHR\khrplatform.h" />
+    <ClInclude Include="..\include\vk_platform.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_av1std.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_av1std_decode.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_av1std_encode.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h264std.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h264std_decode.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h264std_encode.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h265std.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h265std_decode.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h265std_encode.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_vp9std.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_vp9std_decode.h" />
+    <ClInclude Include="..\include\vk_video\vulkan_video_codecs_common.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\egl.c" />
+    <ClCompile Include="..\src\gl.c" />
+    <ClCompile Include="..\src\glx.c" />
+    <ClCompile Include="..\src\vk.c" />
+    <ClCompile Include="..\src\wgl.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{ca5f78a0-5b26-4467-8a53-9426f0698d7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\EGL">
+      <UniqueIdentifier>{d93afc1e-0143-4eee-b75c-aa021c390291}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\gloam">
+      <UniqueIdentifier>{7c70bc43-2bb5-43f9-b205-058d9f067068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\KHR">
+      <UniqueIdentifier>{80aaea93-6ccf-4b83-9f1c-43962b40ce5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\vk_video">
+      <UniqueIdentifier>{8bf44271-53eb-440c-a59e-5b6ee54c3dcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{ffadab43-8db5-4573-be65-4704cfd5534f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\EGL\eglplatform.h">
+      <Filter>include\EGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gloam\egl.h">
+      <Filter>include\gloam</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gloam\gl.h">
+      <Filter>include\gloam</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gloam\glx.h">
+      <Filter>include\gloam</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gloam\vk.h">
+      <Filter>include\gloam</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gloam\wgl.h">
+      <Filter>include\gloam</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\KHR\khrplatform.h">
+      <Filter>include\KHR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_platform.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_av1std.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_av1std_decode.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_av1std_encode.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h264std.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h264std_decode.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h264std_encode.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h265std.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h265std_decode.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_h265std_encode.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_vp9std.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codec_vp9std_decode.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vk_video\vulkan_video_codecs_common.h">
+      <Filter>include\vk_video</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\egl.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gl.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\glx.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\vk.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\wgl.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
