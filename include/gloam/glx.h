@@ -55,7 +55,87 @@ extern "C" {
 #endif
 #ifndef GLAPIENTRY
 #  define GLAPIENTRY GLOAM_API_PTR
-#endif
+#endif/* ---- Version feature guards ----------------------------------------------
+   These mirror the upstream vulkan_core.h / gl.h definitions so that code
+   guarded by e.g. #ifdef GL_VERSION_3_3 compiles correctly against this
+   header. */
+#define GLX_VERSION_1_0 1
+#define GLX_VERSION_1_1 1
+#define GLX_VERSION_1_2 1
+#define GLX_VERSION_1_3 1
+#define GLX_VERSION_1_4 1
+
+/* ---- Extension compile-time guards ---------------------------------------
+   These mirror the definitions in standard glext.h/gl2ext.h/eglext.h so
+   that code guarded by e.g. #ifdef GL_ARB_draw_indirect compiles correctly
+   against this header. */
+#define GLX_3DFX_multisample 1
+#define GLX_AMD_gpu_association 1
+#define GLX_ARB_context_flush_control 1
+#define GLX_ARB_create_context 1
+#define GLX_ARB_create_context_no_error 1
+#define GLX_ARB_create_context_profile 1
+#define GLX_ARB_create_context_robustness 1
+#define GLX_ARB_fbconfig_float 1
+#define GLX_ARB_framebuffer_sRGB 1
+#define GLX_ARB_get_proc_address 1
+#define GLX_ARB_multisample 1
+#define GLX_ARB_robustness_application_isolation 1
+#define GLX_ARB_robustness_share_group_isolation 1
+#define GLX_ARB_vertex_buffer_object 1
+#define GLX_EXT_buffer_age 1
+#define GLX_EXT_context_priority 1
+#define GLX_EXT_create_context_es2_profile 1
+#define GLX_EXT_create_context_es_profile 1
+#define GLX_EXT_fbconfig_packed_float 1
+#define GLX_EXT_framebuffer_sRGB 1
+#define GLX_EXT_get_drawable_type 1
+#define GLX_EXT_import_context 1
+#define GLX_EXT_libglvnd 1
+#define GLX_EXT_no_config_context 1
+#define GLX_EXT_stereo_tree 1
+#define GLX_EXT_swap_control 1
+#define GLX_EXT_swap_control_tear 1
+#define GLX_EXT_texture_from_pixmap 1
+#define GLX_EXT_visual_info 1
+#define GLX_EXT_visual_rating 1
+#define GLX_INTEL_swap_event 1
+#define GLX_MESA_agp_offset 1
+#define GLX_MESA_copy_sub_buffer 1
+#define GLX_MESA_pixmap_colormap 1
+#define GLX_MESA_query_renderer 1
+#define GLX_MESA_release_buffers 1
+#define GLX_MESA_set_3dfx_mode 1
+#define GLX_MESA_swap_control 1
+#define GLX_NV_copy_buffer 1
+#define GLX_NV_copy_image 1
+#define GLX_NV_delay_before_swap 1
+#define GLX_NV_float_buffer 1
+#define GLX_NV_multigpu_context 1
+#define GLX_NV_multisample_coverage 1
+#define GLX_NV_present_video 1
+#define GLX_NV_robustness_video_memory_purge 1
+#define GLX_NV_swap_group 1
+#define GLX_NV_video_capture 1
+#define GLX_NV_video_out 1
+#define GLX_OML_swap_method 1
+#define GLX_OML_sync_control 1
+#define GLX_SGIS_blended_overlay 1
+#define GLX_SGIS_multisample 1
+#define GLX_SGIS_shared_multisample 1
+#define GLX_SGIX_fbconfig 1
+#define GLX_SGIX_hyperpipe 1
+#define GLX_SGIX_pbuffer 1
+#define GLX_SGIX_swap_barrier 1
+#define GLX_SGIX_swap_group 1
+#define GLX_SGIX_video_resize 1
+#define GLX_SGIX_visual_select_group 1
+#define GLX_SGI_cushion 1
+#define GLX_SGI_make_current_read 1
+#define GLX_SGI_swap_control 1
+#define GLX_SGI_video_sync 1
+#define GLX_SUN_get_transparent_index 1
+
 /* ---- Constants ----------------------------------------------------------- */
 #define GLX_EXTENSION_NAME "GLX" /* This is modest abuse of the enum tag mechanism, maybe a string tag? */
 #define GLX_VENDOR 0x1
@@ -350,7 +430,6 @@ extern "C" {
 #define GLX_SAMPLES_ARB 100001
 #define GLX_SAMPLES_SGIS 100001
 #define GLX_COVERAGE_SAMPLES_NV 100001
-
 
 /* ---- Types ----------------------------------------------------------------
    Emitted in topological dependency order. */

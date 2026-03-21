@@ -92,7 +92,15 @@
 extern "C" {
 #endif
 
-
+/* ---- Version feature guards ----------------------------------------------
+   These mirror the upstream vulkan_core.h / gl.h definitions so that code
+   guarded by e.g. #ifdef GL_VERSION_3_3 compiles correctly against this
+   header. */
+#define VK_VERSION_1_0 1
+#define VK_VERSION_1_1 1
+#define VK_VERSION_1_2 1
+#define VK_VERSION_1_3 1
+#define VK_VERSION_1_4 1
 /* ---- Constants ----------------------------------------------------------- */
 #define VK_MAX_PHYSICAL_DEVICE_NAME_SIZE 256
 #define VK_UUID_SIZE 16
@@ -1490,22 +1498,6 @@ extern "C" {
 #define VK_EXT_EXTENSION_678_EXTENSION_NAME "VK_EXT_extension_678"
 #define VK_EXT_EXTENSION_679_SPEC_VERSION 0
 #define VK_EXT_EXTENSION_679_EXTENSION_NAME "VK_EXT_extension_679"
-
-
-/* ---- Version feature guards ----------------------------------------------
-   These mirror the upstream vulkan_core.h definitions so that code guarded
-   by e.g. #ifdef VK_VERSION_1_1 compiles correctly against this header. */
-
-#define VK_VERSION_1_0 1
-
-#define VK_VERSION_1_1 1
-
-#define VK_VERSION_1_2 1
-
-#define VK_VERSION_1_3 1
-
-#define VK_VERSION_1_4 1
-
 
 /* ---- Vulkan enum groups -------------------------------------------------- */
 

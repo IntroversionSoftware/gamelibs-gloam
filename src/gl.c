@@ -5853,7 +5853,7 @@ static int gloam_gl_get_extensions_gl(GloamGLContext *context,
     if (context->GetStringi != NULL && context->GetIntegerv != NULL) {
         GLint n = 0;
         uint32_t i;
-        context->GetIntegerv(0x821D /* GL_NUM_EXTENSIONS */, &n);
+        context->GetIntegerv(GL_NUM_EXTENSIONS, &n);
         num_exts = (uint32_t)n;
         if (num_exts > 0) {
             exts = (uint64_t *)calloc(num_exts, sizeof(uint64_t));
@@ -6630,7 +6630,7 @@ static int gloam_gl_get_extensions_gles2(GloamGLContext *context,
     if (context->GetStringi != NULL && context->GetIntegerv != NULL) {
         GLint n = 0;
         uint32_t i;
-        context->GetIntegerv(0x821D /* GL_NUM_EXTENSIONS */, &n);
+        context->GetIntegerv(GL_NUM_EXTENSIONS, &n);
         num_exts = (uint32_t)n;
         if (num_exts > 0) {
             exts = (uint64_t *)calloc(num_exts, sizeof(uint64_t));

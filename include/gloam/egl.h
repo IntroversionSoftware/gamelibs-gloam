@@ -49,7 +49,279 @@ extern "C" {
 #endif
 #ifndef GLAPIENTRY
 #  define GLAPIENTRY GLOAM_API_PTR
+#endif/* ---- Version feature guards ----------------------------------------------
+   These mirror the upstream vulkan_core.h / gl.h definitions so that code
+   guarded by e.g. #ifdef GL_VERSION_3_3 compiles correctly against this
+   header. */
+#define EGL_VERSION_1_0 1
+#define EGL_VERSION_1_1 1
+#define EGL_VERSION_1_2 1
+#define EGL_VERSION_1_3 1
+#define EGL_VERSION_1_4 1
+#define EGL_VERSION_1_5 1
+
+/* ---- Extension compile-time guards ---------------------------------------
+   These mirror the definitions in standard glext.h/gl2ext.h/eglext.h so
+   that code guarded by e.g. #ifdef GL_ARB_draw_indirect compiles correctly
+   against this header. */
+#define EGL_ANDROID_GLES_layers 1
+#define EGL_ANDROID_blob_cache 1
+#define EGL_ANDROID_create_native_client_buffer 1
+#define EGL_ANDROID_framebuffer_target 1
+#define EGL_ANDROID_front_buffer_auto_refresh 1
+#define EGL_ANDROID_get_frame_timestamps 1
+#define EGL_ANDROID_get_native_client_buffer 1
+#define EGL_ANDROID_image_native_buffer 1
+#define EGL_ANDROID_native_fence_sync 1
+#define EGL_ANDROID_presentation_time 1
+#define EGL_ANDROID_recordable 1
+#define EGL_ANDROID_telemetry_hint 1
+#define EGL_ANGLE_colorspace_attribute_passthrough 1
+#define EGL_ANGLE_context_virtualization 1
+#define EGL_ANGLE_create_context_backwards_compatible 1
+#define EGL_ANGLE_create_context_client_arrays 1
+#define EGL_ANGLE_create_context_extensions_enabled 1
+#define EGL_ANGLE_create_context_webgl_compatibility 1
+#define EGL_ANGLE_create_surface_swap_interval 1
+#define EGL_ANGLE_d3d_share_handle_client_buffer 1
+#define EGL_ANGLE_d3d_texture_client_buffer 1
+#define EGL_ANGLE_device_cgl 1
+#define EGL_ANGLE_device_creation 1
+#define EGL_ANGLE_device_d3d 1
+#define EGL_ANGLE_device_d3d11 1
+#define EGL_ANGLE_device_d3d9 1
+#define EGL_ANGLE_device_eagl 1
+#define EGL_ANGLE_device_metal 1
+#define EGL_ANGLE_device_vulkan 1
+#define EGL_ANGLE_direct_composition 1
+#define EGL_ANGLE_display_power_preference 1
+#define EGL_ANGLE_display_semaphore_share_group 1
+#define EGL_ANGLE_display_texture_share_group 1
+#define EGL_ANGLE_experimental_present_path 1
+#define EGL_ANGLE_external_context_and_surface 1
+#define EGL_ANGLE_feature_control 1
+#define EGL_ANGLE_global_fence_sync 1
+#define EGL_ANGLE_iosurface_client_buffer 1
+#define EGL_ANGLE_keyed_mutex 1
+#define EGL_ANGLE_memory_usage_report 1
+#define EGL_ANGLE_metal_commands_scheduled_sync 1
+#define EGL_ANGLE_metal_create_context_ownership_identity 1
+#define EGL_ANGLE_metal_shared_event_sync 1
+#define EGL_ANGLE_metal_texture_client_buffer 1
+#define EGL_ANGLE_no_error 1
+#define EGL_ANGLE_platform_angle 1
+#define EGL_ANGLE_platform_angle_d3d 1
+#define EGL_ANGLE_platform_angle_d3d11on12 1
+#define EGL_ANGLE_platform_angle_d3d_luid 1
+#define EGL_ANGLE_platform_angle_device_context_volatile_cgl 1
+#define EGL_ANGLE_platform_angle_device_context_volatile_eagl 1
+#define EGL_ANGLE_platform_angle_device_id 1
+#define EGL_ANGLE_platform_angle_device_type_egl 1
+#define EGL_ANGLE_platform_angle_device_type_swiftshader 1
+#define EGL_ANGLE_platform_angle_metal 1
+#define EGL_ANGLE_platform_angle_null 1
+#define EGL_ANGLE_platform_angle_opengl 1
+#define EGL_ANGLE_platform_angle_vulkan 1
+#define EGL_ANGLE_platform_angle_vulkan_device_uuid 1
+#define EGL_ANGLE_platform_angle_webgpu 1
+#define EGL_ANGLE_power_preference 1
+#define EGL_ANGLE_prepare_swap_buffers 1
+#define EGL_ANGLE_program_cache_control 1
+#define EGL_ANGLE_query_surface_pointer 1
+#define EGL_ANGLE_robust_resource_initialization 1
+#define EGL_ANGLE_stream_producer_d3d_texture 1
+#define EGL_ANGLE_surface_d3d_texture_2d_share_handle 1
+#define EGL_ANGLE_surface_orientation 1
+#define EGL_ANGLE_sync_control_rate 1
+#define EGL_ANGLE_vulkan_display 1
+#define EGL_ANGLE_vulkan_image 1
+#define EGL_ANGLE_wait_until_work_scheduled 1
+#define EGL_ANGLE_window_fixed_size 1
+#define EGL_ANGLE_x11_visual 1
+#define EGL_ARM_image_format 1
+#define EGL_ARM_implicit_external_sync 1
+#define EGL_ARM_pixmap_multisample_discard 1
+#define EGL_CHROMIUM_sync_control 1
+#define EGL_EXT_bind_to_front 1
+#define EGL_EXT_buffer_age 1
+#define EGL_EXT_client_extensions 1
+#define EGL_EXT_client_sync 1
+#define EGL_EXT_compositor 1
+#define EGL_EXT_config_select_group 1
+#define EGL_EXT_create_context_robustness 1
+#define EGL_EXT_device_base 1
+#define EGL_EXT_device_drm 1
+#define EGL_EXT_device_drm_render_node 1
+#define EGL_EXT_device_enumeration 1
+#define EGL_EXT_device_openwf 1
+#define EGL_EXT_device_persistent_id 1
+#define EGL_EXT_device_query 1
+#define EGL_EXT_device_query_name 1
+#define EGL_EXT_device_type 1
+#define EGL_EXT_display_alloc 1
+#define EGL_EXT_explicit_device 1
+#define EGL_EXT_gl_colorspace_bt2020_hlg 1
+#define EGL_EXT_gl_colorspace_bt2020_linear 1
+#define EGL_EXT_gl_colorspace_bt2020_pq 1
+#define EGL_EXT_gl_colorspace_display_p3 1
+#define EGL_EXT_gl_colorspace_display_p3_linear 1
+#define EGL_EXT_gl_colorspace_display_p3_passthrough 1
+#define EGL_EXT_gl_colorspace_scrgb 1
+#define EGL_EXT_gl_colorspace_scrgb_linear 1
+#define EGL_EXT_image_dma_buf_import 1
+#define EGL_EXT_image_dma_buf_import_modifiers 1
+#define EGL_EXT_image_gl_colorspace 1
+#define EGL_EXT_image_implicit_sync_control 1
+#define EGL_EXT_multiview_window 1
+#define EGL_EXT_output_base 1
+#define EGL_EXT_output_drm 1
+#define EGL_EXT_output_openwf 1
+#define EGL_EXT_pixel_format_float 1
+#define EGL_EXT_platform_base 1
+#define EGL_EXT_platform_device 1
+#define EGL_EXT_platform_wayland 1
+#define EGL_EXT_platform_x11 1
+#define EGL_EXT_platform_xcb 1
+#define EGL_EXT_present_opaque 1
+#define EGL_EXT_protected_content 1
+#define EGL_EXT_protected_surface 1
+#define EGL_EXT_query_reset_notification_strategy 1
+#define EGL_EXT_stream_consumer_egloutput 1
+#define EGL_EXT_surface_CTA861_3_metadata 1
+#define EGL_EXT_surface_SMPTE2086_metadata 1
+#define EGL_EXT_surface_compression 1
+#define EGL_EXT_swap_buffers_with_damage 1
+#define EGL_EXT_sync_reuse 1
+#define EGL_EXT_yuv_surface 1
+#define EGL_HI_clientpixmap 1
+#define EGL_HI_colorformats 1
+#define EGL_IMG_context_priority 1
+#define EGL_IMG_image_plane_attribs 1
+#define EGL_KHR_cl_event 1
+#define EGL_KHR_cl_event2 1
+#define EGL_KHR_client_get_all_proc_addresses 1
+#define EGL_KHR_config_attribs 1
+#define EGL_KHR_context_flush_control 1
+#define EGL_KHR_create_context 1
+#define EGL_KHR_create_context_no_error 1
+#define EGL_KHR_debug 1
+#define EGL_KHR_display_reference 1
+
+#if defined(KHRONOS_SUPPORT_INT64)
+#define EGL_KHR_fence_sync 1
 #endif
+#define EGL_KHR_get_all_proc_addresses 1
+#define EGL_KHR_gl_colorspace 1
+#define EGL_KHR_gl_renderbuffer_image 1
+#define EGL_KHR_gl_texture_2D_image 1
+#define EGL_KHR_gl_texture_3D_image 1
+#define EGL_KHR_gl_texture_cubemap_image 1
+#define EGL_KHR_image 1
+#define EGL_KHR_image_base 1
+#define EGL_KHR_image_pixmap 1
+#define EGL_KHR_lock_surface 1
+#define EGL_KHR_lock_surface2 1
+#define EGL_KHR_lock_surface3 1
+#define EGL_KHR_mutable_render_buffer 1
+#define EGL_KHR_no_config_context 1
+#define EGL_KHR_partial_update 1
+#define EGL_KHR_platform_android 1
+#define EGL_KHR_platform_gbm 1
+#define EGL_KHR_platform_wayland 1
+#define EGL_KHR_platform_x11 1
+
+#if defined(KHRONOS_SUPPORT_INT64)
+#define EGL_KHR_reusable_sync 1
+#endif
+
+#if defined(KHRONOS_SUPPORT_INT64)
+#define EGL_KHR_stream 1
+#endif
+
+#if defined(KHRONOS_SUPPORT_INT64)
+#define EGL_KHR_stream_attrib 1
+#endif
+
+#if defined(EGL_KHR_stream)
+#define EGL_KHR_stream_consumer_gltexture 1
+#endif
+
+#if defined(EGL_KHR_stream)
+#define EGL_KHR_stream_cross_process_fd 1
+#endif
+
+#if defined(EGL_KHR_stream)
+#define EGL_KHR_stream_fifo 1
+#endif
+
+#if defined(EGL_KHR_stream)
+#define EGL_KHR_stream_producer_aldatalocator 1
+#endif
+
+#if defined(EGL_KHR_stream)
+#define EGL_KHR_stream_producer_eglsurface 1
+#endif
+#define EGL_KHR_surfaceless_context 1
+#define EGL_KHR_swap_buffers_with_damage 1
+#define EGL_KHR_vg_parent_image 1
+#define EGL_KHR_wait_sync 1
+#define EGL_MESA_drm_image 1
+#define EGL_MESA_image_dma_buf_export 1
+#define EGL_MESA_platform_gbm 1
+#define EGL_MESA_platform_surfaceless 1
+#define EGL_MESA_query_driver 1
+#define EGL_NOK_swap_region 1
+#define EGL_NOK_swap_region2 1
+#define EGL_NOK_texture_from_pixmap 1
+#define EGL_NV_3dvision_surface 1
+#define EGL_NV_context_priority_realtime 1
+#define EGL_NV_coverage_sample 1
+#define EGL_NV_coverage_sample_resolve 1
+#define EGL_NV_cuda_event 1
+#define EGL_NV_depth_nonlinear 1
+#define EGL_NV_device_cuda 1
+#define EGL_NV_native_query 1
+#define EGL_NV_post_convert_rounding 1
+#define EGL_NV_post_sub_buffer 1
+#define EGL_NV_quadruple_buffer 1
+#define EGL_NV_robustness_video_memory_purge 1
+#define EGL_NV_stream_consumer_eglimage 1
+#define EGL_NV_stream_consumer_eglimage_use_scanout_attrib 1
+#define EGL_NV_stream_consumer_gltexture_yuv 1
+#define EGL_NV_stream_cross_display 1
+#define EGL_NV_stream_cross_object 1
+#define EGL_NV_stream_cross_partition 1
+#define EGL_NV_stream_cross_process 1
+#define EGL_NV_stream_cross_system 1
+#define EGL_NV_stream_dma 1
+#define EGL_NV_stream_fifo_next 1
+#define EGL_NV_stream_fifo_synchronous 1
+#define EGL_NV_stream_flush 1
+#define EGL_NV_stream_frame_limits 1
+#define EGL_NV_stream_metadata 1
+#define EGL_NV_stream_origin 1
+#define EGL_NV_stream_remote 1
+#define EGL_NV_stream_reset 1
+#define EGL_NV_stream_socket 1
+#define EGL_NV_stream_socket_inet 1
+#define EGL_NV_stream_socket_unix 1
+#define EGL_NV_stream_sync 1
+
+#if defined(KHRONOS_SUPPORT_INT64)
+#define EGL_NV_sync 1
+#endif
+
+#if defined(KHRONOS_SUPPORT_INT64)
+#define EGL_NV_system_time 1
+#endif
+#define EGL_NV_triple_buffer 1
+#define EGL_QNX_image_native_buffer 1
+#define EGL_QNX_platform_screen 1
+#define EGL_TIZEN_image_native_buffer 1
+#define EGL_TIZEN_image_native_surface 1
+#define EGL_WL_bind_wayland_display 1
+#define EGL_WL_create_wayland_buffer_from_image 1
+
 /* ---- Constants ----------------------------------------------------------- */
 #define EGL_PBUFFER_BIT 0x0001
 #define EGL_PIXMAP_BIT 0x0002
@@ -758,7 +1030,6 @@ extern "C" {
 #define EGL_HIGH_POWER_ANGLE 0x0002
 #define EGL_SURFACE_ORIENTATION_INVERT_X_ANGLE 0x0001
 #define EGL_SURFACE_ORIENTATION_INVERT_Y_ANGLE 0x0002
-
 
 /* ---- Types ----------------------------------------------------------------
    Emitted in topological dependency order. */

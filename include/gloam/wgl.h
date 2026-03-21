@@ -58,7 +58,74 @@ extern "C" {
 #endif
 #ifndef GLAPIENTRY
 #  define GLAPIENTRY GLOAM_API_PTR
-#endif
+#endif/* ---- Version feature guards ----------------------------------------------
+   These mirror the upstream vulkan_core.h / gl.h definitions so that code
+   guarded by e.g. #ifdef GL_VERSION_3_3 compiles correctly against this
+   header. */
+#define WGL_VERSION_1_0 1
+
+/* ---- Extension compile-time guards ---------------------------------------
+   These mirror the definitions in standard glext.h/gl2ext.h/eglext.h so
+   that code guarded by e.g. #ifdef GL_ARB_draw_indirect compiles correctly
+   against this header. */
+#define WGL_3DFX_multisample 1
+#define WGL_3DL_stereo_control 1
+#define WGL_AMD_gpu_association 1
+#define WGL_ARB_buffer_region 1
+#define WGL_ARB_context_flush_control 1
+#define WGL_ARB_create_context 1
+#define WGL_ARB_create_context_no_error 1
+#define WGL_ARB_create_context_profile 1
+#define WGL_ARB_create_context_robustness 1
+#define WGL_ARB_extensions_string 1
+#define WGL_ARB_framebuffer_sRGB 1
+#define WGL_ARB_make_current_read 1
+#define WGL_ARB_multisample 1
+#define WGL_ARB_pbuffer 1
+#define WGL_ARB_pixel_format 1
+#define WGL_ARB_pixel_format_float 1
+#define WGL_ARB_render_texture 1
+#define WGL_ARB_robustness_application_isolation 1
+#define WGL_ARB_robustness_share_group_isolation 1
+#define WGL_ATI_pixel_format_float 1
+#define WGL_ATI_render_texture_rectangle 1
+#define WGL_EXT_colorspace 1
+#define WGL_EXT_create_context_es2_profile 1
+#define WGL_EXT_create_context_es_profile 1
+#define WGL_EXT_depth_float 1
+#define WGL_EXT_display_color_table 1
+#define WGL_EXT_extensions_string 1
+#define WGL_EXT_framebuffer_sRGB 1
+#define WGL_EXT_make_current_read 1
+#define WGL_EXT_multisample 1
+#define WGL_EXT_pbuffer 1
+#define WGL_EXT_pixel_format 1
+#define WGL_EXT_pixel_format_packed_float 1
+#define WGL_EXT_swap_control 1
+#define WGL_EXT_swap_control_tear 1
+#define WGL_I3D_digital_video_control 1
+#define WGL_I3D_gamma 1
+#define WGL_I3D_genlock 1
+#define WGL_I3D_image_buffer 1
+#define WGL_I3D_swap_frame_lock 1
+#define WGL_I3D_swap_frame_usage 1
+#define WGL_NV_DX_interop 1
+#define WGL_NV_DX_interop2 1
+#define WGL_NV_copy_image 1
+#define WGL_NV_delay_before_swap 1
+#define WGL_NV_float_buffer 1
+#define WGL_NV_gpu_affinity 1
+#define WGL_NV_multigpu_context 1
+#define WGL_NV_multisample_coverage 1
+#define WGL_NV_present_video 1
+#define WGL_NV_render_depth_texture 1
+#define WGL_NV_render_texture_rectangle 1
+#define WGL_NV_swap_group 1
+#define WGL_NV_vertex_array_range 1
+#define WGL_NV_video_capture 1
+#define WGL_NV_video_output 1
+#define WGL_OML_sync_control 1
+
 /* ---- Constants ----------------------------------------------------------- */
 #define WGL_SWAP_MAIN_PLANE 0x00000001
 #define WGL_SWAP_OVERLAY1 0x00000002
@@ -358,7 +425,6 @@ extern "C" {
 #define WGL_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB 0x8256
 #define WGL_NO_RESET_NOTIFICATION_ARB 0x8261
 #define WGL_CONTEXT_PROFILE_MASK_ARB 0x9126
-
 
 /* ---- Types ----------------------------------------------------------------
    Emitted in topological dependency order. */

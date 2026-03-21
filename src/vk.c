@@ -962,7 +962,7 @@ static const char * const kFnNames_Vulkan[] = {
    command (compares well against the alternatives: a parallel pointer array
    or a switch inside the loop). */
 static const uint8_t kCommandScopes_Vulkan[] = {
-    /*    0 */ GloamCommandScopeGlobal, /* vkCreateInstance */
+    /*    0 */ GloamCommandScopeGlobal  , /* vkCreateInstance */
     /*    1 */ GloamCommandScopeInstance, /* vkDestroyInstance */
     /*    2 */ GloamCommandScopeInstance, /* vkEnumeratePhysicalDevices */
     /*    3 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceFeatures */
@@ -971,143 +971,143 @@ static const uint8_t kCommandScopes_Vulkan[] = {
     /*    6 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceProperties */
     /*    7 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceQueueFamilyProperties */
     /*    8 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceMemoryProperties */
-    /*    9 */ GloamCommandScopeUnknown, /* vkGetInstanceProcAddr */
-    /*   10 */ GloamCommandScopeDevice, /* vkGetDeviceProcAddr */
+    /*    9 */ GloamCommandScopeUnknown , /* vkGetInstanceProcAddr */
+    /*   10 */ GloamCommandScopeDevice  , /* vkGetDeviceProcAddr */
     /*   11 */ GloamCommandScopeInstance, /* vkCreateDevice */
-    /*   12 */ GloamCommandScopeDevice, /* vkDestroyDevice */
-    /*   13 */ GloamCommandScopeGlobal, /* vkEnumerateInstanceExtensionProperties */
+    /*   12 */ GloamCommandScopeDevice  , /* vkDestroyDevice */
+    /*   13 */ GloamCommandScopeGlobal  , /* vkEnumerateInstanceExtensionProperties */
     /*   14 */ GloamCommandScopeInstance, /* vkEnumerateDeviceExtensionProperties */
-    /*   15 */ GloamCommandScopeGlobal, /* vkEnumerateInstanceLayerProperties */
+    /*   15 */ GloamCommandScopeGlobal  , /* vkEnumerateInstanceLayerProperties */
     /*   16 */ GloamCommandScopeInstance, /* vkEnumerateDeviceLayerProperties */
-    /*   17 */ GloamCommandScopeDevice, /* vkGetDeviceQueue */
-    /*   18 */ GloamCommandScopeDevice, /* vkQueueSubmit */
-    /*   19 */ GloamCommandScopeDevice, /* vkQueueWaitIdle */
-    /*   20 */ GloamCommandScopeDevice, /* vkDeviceWaitIdle */
-    /*   21 */ GloamCommandScopeDevice, /* vkAllocateMemory */
-    /*   22 */ GloamCommandScopeDevice, /* vkFreeMemory */
-    /*   23 */ GloamCommandScopeDevice, /* vkMapMemory */
-    /*   24 */ GloamCommandScopeDevice, /* vkUnmapMemory */
-    /*   25 */ GloamCommandScopeDevice, /* vkFlushMappedMemoryRanges */
-    /*   26 */ GloamCommandScopeDevice, /* vkInvalidateMappedMemoryRanges */
-    /*   27 */ GloamCommandScopeDevice, /* vkGetDeviceMemoryCommitment */
-    /*   28 */ GloamCommandScopeDevice, /* vkBindBufferMemory */
-    /*   29 */ GloamCommandScopeDevice, /* vkBindImageMemory */
-    /*   30 */ GloamCommandScopeDevice, /* vkGetBufferMemoryRequirements */
-    /*   31 */ GloamCommandScopeDevice, /* vkGetImageMemoryRequirements */
-    /*   32 */ GloamCommandScopeDevice, /* vkGetImageSparseMemoryRequirements */
+    /*   17 */ GloamCommandScopeDevice  , /* vkGetDeviceQueue */
+    /*   18 */ GloamCommandScopeDevice  , /* vkQueueSubmit */
+    /*   19 */ GloamCommandScopeDevice  , /* vkQueueWaitIdle */
+    /*   20 */ GloamCommandScopeDevice  , /* vkDeviceWaitIdle */
+    /*   21 */ GloamCommandScopeDevice  , /* vkAllocateMemory */
+    /*   22 */ GloamCommandScopeDevice  , /* vkFreeMemory */
+    /*   23 */ GloamCommandScopeDevice  , /* vkMapMemory */
+    /*   24 */ GloamCommandScopeDevice  , /* vkUnmapMemory */
+    /*   25 */ GloamCommandScopeDevice  , /* vkFlushMappedMemoryRanges */
+    /*   26 */ GloamCommandScopeDevice  , /* vkInvalidateMappedMemoryRanges */
+    /*   27 */ GloamCommandScopeDevice  , /* vkGetDeviceMemoryCommitment */
+    /*   28 */ GloamCommandScopeDevice  , /* vkBindBufferMemory */
+    /*   29 */ GloamCommandScopeDevice  , /* vkBindImageMemory */
+    /*   30 */ GloamCommandScopeDevice  , /* vkGetBufferMemoryRequirements */
+    /*   31 */ GloamCommandScopeDevice  , /* vkGetImageMemoryRequirements */
+    /*   32 */ GloamCommandScopeDevice  , /* vkGetImageSparseMemoryRequirements */
     /*   33 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSparseImageFormatProperties */
-    /*   34 */ GloamCommandScopeDevice, /* vkQueueBindSparse */
-    /*   35 */ GloamCommandScopeDevice, /* vkCreateFence */
-    /*   36 */ GloamCommandScopeDevice, /* vkDestroyFence */
-    /*   37 */ GloamCommandScopeDevice, /* vkResetFences */
-    /*   38 */ GloamCommandScopeDevice, /* vkGetFenceStatus */
-    /*   39 */ GloamCommandScopeDevice, /* vkWaitForFences */
-    /*   40 */ GloamCommandScopeDevice, /* vkCreateSemaphore */
-    /*   41 */ GloamCommandScopeDevice, /* vkDestroySemaphore */
-    /*   42 */ GloamCommandScopeDevice, /* vkCreateQueryPool */
-    /*   43 */ GloamCommandScopeDevice, /* vkDestroyQueryPool */
-    /*   44 */ GloamCommandScopeDevice, /* vkGetQueryPoolResults */
-    /*   45 */ GloamCommandScopeDevice, /* vkCreateBuffer */
-    /*   46 */ GloamCommandScopeDevice, /* vkDestroyBuffer */
-    /*   47 */ GloamCommandScopeDevice, /* vkCreateImage */
-    /*   48 */ GloamCommandScopeDevice, /* vkDestroyImage */
-    /*   49 */ GloamCommandScopeDevice, /* vkGetImageSubresourceLayout */
-    /*   50 */ GloamCommandScopeDevice, /* vkCreateImageView */
-    /*   51 */ GloamCommandScopeDevice, /* vkDestroyImageView */
-    /*   52 */ GloamCommandScopeDevice, /* vkCreateCommandPool */
-    /*   53 */ GloamCommandScopeDevice, /* vkDestroyCommandPool */
-    /*   54 */ GloamCommandScopeDevice, /* vkResetCommandPool */
-    /*   55 */ GloamCommandScopeDevice, /* vkAllocateCommandBuffers */
-    /*   56 */ GloamCommandScopeDevice, /* vkFreeCommandBuffers */
-    /*   57 */ GloamCommandScopeDevice, /* vkBeginCommandBuffer */
-    /*   58 */ GloamCommandScopeDevice, /* vkEndCommandBuffer */
-    /*   59 */ GloamCommandScopeDevice, /* vkResetCommandBuffer */
-    /*   60 */ GloamCommandScopeDevice, /* vkCmdCopyBuffer */
-    /*   61 */ GloamCommandScopeDevice, /* vkCmdCopyImage */
-    /*   62 */ GloamCommandScopeDevice, /* vkCmdCopyBufferToImage */
-    /*   63 */ GloamCommandScopeDevice, /* vkCmdCopyImageToBuffer */
-    /*   64 */ GloamCommandScopeDevice, /* vkCmdUpdateBuffer */
-    /*   65 */ GloamCommandScopeDevice, /* vkCmdFillBuffer */
-    /*   66 */ GloamCommandScopeDevice, /* vkCmdPipelineBarrier */
-    /*   67 */ GloamCommandScopeDevice, /* vkCmdBeginQuery */
-    /*   68 */ GloamCommandScopeDevice, /* vkCmdEndQuery */
-    /*   69 */ GloamCommandScopeDevice, /* vkCmdResetQueryPool */
-    /*   70 */ GloamCommandScopeDevice, /* vkCmdWriteTimestamp */
-    /*   71 */ GloamCommandScopeDevice, /* vkCmdCopyQueryPoolResults */
-    /*   72 */ GloamCommandScopeDevice, /* vkCmdExecuteCommands */
-    /*   73 */ GloamCommandScopeDevice, /* vkCreateEvent */
-    /*   74 */ GloamCommandScopeDevice, /* vkDestroyEvent */
-    /*   75 */ GloamCommandScopeDevice, /* vkGetEventStatus */
-    /*   76 */ GloamCommandScopeDevice, /* vkSetEvent */
-    /*   77 */ GloamCommandScopeDevice, /* vkResetEvent */
-    /*   78 */ GloamCommandScopeDevice, /* vkCreateBufferView */
-    /*   79 */ GloamCommandScopeDevice, /* vkDestroyBufferView */
-    /*   80 */ GloamCommandScopeDevice, /* vkCreateShaderModule */
-    /*   81 */ GloamCommandScopeDevice, /* vkDestroyShaderModule */
-    /*   82 */ GloamCommandScopeDevice, /* vkCreatePipelineCache */
-    /*   83 */ GloamCommandScopeDevice, /* vkDestroyPipelineCache */
-    /*   84 */ GloamCommandScopeDevice, /* vkGetPipelineCacheData */
-    /*   85 */ GloamCommandScopeDevice, /* vkMergePipelineCaches */
-    /*   86 */ GloamCommandScopeDevice, /* vkCreateComputePipelines */
-    /*   87 */ GloamCommandScopeDevice, /* vkDestroyPipeline */
-    /*   88 */ GloamCommandScopeDevice, /* vkCreatePipelineLayout */
-    /*   89 */ GloamCommandScopeDevice, /* vkDestroyPipelineLayout */
-    /*   90 */ GloamCommandScopeDevice, /* vkCreateSampler */
-    /*   91 */ GloamCommandScopeDevice, /* vkDestroySampler */
-    /*   92 */ GloamCommandScopeDevice, /* vkCreateDescriptorSetLayout */
-    /*   93 */ GloamCommandScopeDevice, /* vkDestroyDescriptorSetLayout */
-    /*   94 */ GloamCommandScopeDevice, /* vkCreateDescriptorPool */
-    /*   95 */ GloamCommandScopeDevice, /* vkDestroyDescriptorPool */
-    /*   96 */ GloamCommandScopeDevice, /* vkResetDescriptorPool */
-    /*   97 */ GloamCommandScopeDevice, /* vkAllocateDescriptorSets */
-    /*   98 */ GloamCommandScopeDevice, /* vkFreeDescriptorSets */
-    /*   99 */ GloamCommandScopeDevice, /* vkUpdateDescriptorSets */
-    /*  100 */ GloamCommandScopeDevice, /* vkCmdBindPipeline */
-    /*  101 */ GloamCommandScopeDevice, /* vkCmdBindDescriptorSets */
-    /*  102 */ GloamCommandScopeDevice, /* vkCmdClearColorImage */
-    /*  103 */ GloamCommandScopeDevice, /* vkCmdDispatch */
-    /*  104 */ GloamCommandScopeDevice, /* vkCmdDispatchIndirect */
-    /*  105 */ GloamCommandScopeDevice, /* vkCmdSetEvent */
-    /*  106 */ GloamCommandScopeDevice, /* vkCmdResetEvent */
-    /*  107 */ GloamCommandScopeDevice, /* vkCmdWaitEvents */
-    /*  108 */ GloamCommandScopeDevice, /* vkCmdPushConstants */
-    /*  109 */ GloamCommandScopeDevice, /* vkCreateGraphicsPipelines */
-    /*  110 */ GloamCommandScopeDevice, /* vkCreateFramebuffer */
-    /*  111 */ GloamCommandScopeDevice, /* vkDestroyFramebuffer */
-    /*  112 */ GloamCommandScopeDevice, /* vkCreateRenderPass */
-    /*  113 */ GloamCommandScopeDevice, /* vkDestroyRenderPass */
-    /*  114 */ GloamCommandScopeDevice, /* vkGetRenderAreaGranularity */
-    /*  115 */ GloamCommandScopeDevice, /* vkCmdSetViewport */
-    /*  116 */ GloamCommandScopeDevice, /* vkCmdSetScissor */
-    /*  117 */ GloamCommandScopeDevice, /* vkCmdSetLineWidth */
-    /*  118 */ GloamCommandScopeDevice, /* vkCmdSetDepthBias */
-    /*  119 */ GloamCommandScopeDevice, /* vkCmdSetBlendConstants */
-    /*  120 */ GloamCommandScopeDevice, /* vkCmdSetDepthBounds */
-    /*  121 */ GloamCommandScopeDevice, /* vkCmdSetStencilCompareMask */
-    /*  122 */ GloamCommandScopeDevice, /* vkCmdSetStencilWriteMask */
-    /*  123 */ GloamCommandScopeDevice, /* vkCmdSetStencilReference */
-    /*  124 */ GloamCommandScopeDevice, /* vkCmdBindIndexBuffer */
-    /*  125 */ GloamCommandScopeDevice, /* vkCmdBindVertexBuffers */
-    /*  126 */ GloamCommandScopeDevice, /* vkCmdDraw */
-    /*  127 */ GloamCommandScopeDevice, /* vkCmdDrawIndexed */
-    /*  128 */ GloamCommandScopeDevice, /* vkCmdDrawIndirect */
-    /*  129 */ GloamCommandScopeDevice, /* vkCmdDrawIndexedIndirect */
-    /*  130 */ GloamCommandScopeDevice, /* vkCmdBlitImage */
-    /*  131 */ GloamCommandScopeDevice, /* vkCmdClearDepthStencilImage */
-    /*  132 */ GloamCommandScopeDevice, /* vkCmdClearAttachments */
-    /*  133 */ GloamCommandScopeDevice, /* vkCmdResolveImage */
-    /*  134 */ GloamCommandScopeDevice, /* vkCmdBeginRenderPass */
-    /*  135 */ GloamCommandScopeDevice, /* vkCmdNextSubpass */
-    /*  136 */ GloamCommandScopeDevice, /* vkCmdEndRenderPass */
-    /*  137 */ GloamCommandScopeGlobal, /* vkEnumerateInstanceVersion */
-    /*  138 */ GloamCommandScopeDevice, /* vkBindBufferMemory2 */
-    /*  139 */ GloamCommandScopeDevice, /* vkBindImageMemory2 */
-    /*  140 */ GloamCommandScopeDevice, /* vkGetDeviceGroupPeerMemoryFeatures */
-    /*  141 */ GloamCommandScopeDevice, /* vkCmdSetDeviceMask */
+    /*   34 */ GloamCommandScopeDevice  , /* vkQueueBindSparse */
+    /*   35 */ GloamCommandScopeDevice  , /* vkCreateFence */
+    /*   36 */ GloamCommandScopeDevice  , /* vkDestroyFence */
+    /*   37 */ GloamCommandScopeDevice  , /* vkResetFences */
+    /*   38 */ GloamCommandScopeDevice  , /* vkGetFenceStatus */
+    /*   39 */ GloamCommandScopeDevice  , /* vkWaitForFences */
+    /*   40 */ GloamCommandScopeDevice  , /* vkCreateSemaphore */
+    /*   41 */ GloamCommandScopeDevice  , /* vkDestroySemaphore */
+    /*   42 */ GloamCommandScopeDevice  , /* vkCreateQueryPool */
+    /*   43 */ GloamCommandScopeDevice  , /* vkDestroyQueryPool */
+    /*   44 */ GloamCommandScopeDevice  , /* vkGetQueryPoolResults */
+    /*   45 */ GloamCommandScopeDevice  , /* vkCreateBuffer */
+    /*   46 */ GloamCommandScopeDevice  , /* vkDestroyBuffer */
+    /*   47 */ GloamCommandScopeDevice  , /* vkCreateImage */
+    /*   48 */ GloamCommandScopeDevice  , /* vkDestroyImage */
+    /*   49 */ GloamCommandScopeDevice  , /* vkGetImageSubresourceLayout */
+    /*   50 */ GloamCommandScopeDevice  , /* vkCreateImageView */
+    /*   51 */ GloamCommandScopeDevice  , /* vkDestroyImageView */
+    /*   52 */ GloamCommandScopeDevice  , /* vkCreateCommandPool */
+    /*   53 */ GloamCommandScopeDevice  , /* vkDestroyCommandPool */
+    /*   54 */ GloamCommandScopeDevice  , /* vkResetCommandPool */
+    /*   55 */ GloamCommandScopeDevice  , /* vkAllocateCommandBuffers */
+    /*   56 */ GloamCommandScopeDevice  , /* vkFreeCommandBuffers */
+    /*   57 */ GloamCommandScopeDevice  , /* vkBeginCommandBuffer */
+    /*   58 */ GloamCommandScopeDevice  , /* vkEndCommandBuffer */
+    /*   59 */ GloamCommandScopeDevice  , /* vkResetCommandBuffer */
+    /*   60 */ GloamCommandScopeDevice  , /* vkCmdCopyBuffer */
+    /*   61 */ GloamCommandScopeDevice  , /* vkCmdCopyImage */
+    /*   62 */ GloamCommandScopeDevice  , /* vkCmdCopyBufferToImage */
+    /*   63 */ GloamCommandScopeDevice  , /* vkCmdCopyImageToBuffer */
+    /*   64 */ GloamCommandScopeDevice  , /* vkCmdUpdateBuffer */
+    /*   65 */ GloamCommandScopeDevice  , /* vkCmdFillBuffer */
+    /*   66 */ GloamCommandScopeDevice  , /* vkCmdPipelineBarrier */
+    /*   67 */ GloamCommandScopeDevice  , /* vkCmdBeginQuery */
+    /*   68 */ GloamCommandScopeDevice  , /* vkCmdEndQuery */
+    /*   69 */ GloamCommandScopeDevice  , /* vkCmdResetQueryPool */
+    /*   70 */ GloamCommandScopeDevice  , /* vkCmdWriteTimestamp */
+    /*   71 */ GloamCommandScopeDevice  , /* vkCmdCopyQueryPoolResults */
+    /*   72 */ GloamCommandScopeDevice  , /* vkCmdExecuteCommands */
+    /*   73 */ GloamCommandScopeDevice  , /* vkCreateEvent */
+    /*   74 */ GloamCommandScopeDevice  , /* vkDestroyEvent */
+    /*   75 */ GloamCommandScopeDevice  , /* vkGetEventStatus */
+    /*   76 */ GloamCommandScopeDevice  , /* vkSetEvent */
+    /*   77 */ GloamCommandScopeDevice  , /* vkResetEvent */
+    /*   78 */ GloamCommandScopeDevice  , /* vkCreateBufferView */
+    /*   79 */ GloamCommandScopeDevice  , /* vkDestroyBufferView */
+    /*   80 */ GloamCommandScopeDevice  , /* vkCreateShaderModule */
+    /*   81 */ GloamCommandScopeDevice  , /* vkDestroyShaderModule */
+    /*   82 */ GloamCommandScopeDevice  , /* vkCreatePipelineCache */
+    /*   83 */ GloamCommandScopeDevice  , /* vkDestroyPipelineCache */
+    /*   84 */ GloamCommandScopeDevice  , /* vkGetPipelineCacheData */
+    /*   85 */ GloamCommandScopeDevice  , /* vkMergePipelineCaches */
+    /*   86 */ GloamCommandScopeDevice  , /* vkCreateComputePipelines */
+    /*   87 */ GloamCommandScopeDevice  , /* vkDestroyPipeline */
+    /*   88 */ GloamCommandScopeDevice  , /* vkCreatePipelineLayout */
+    /*   89 */ GloamCommandScopeDevice  , /* vkDestroyPipelineLayout */
+    /*   90 */ GloamCommandScopeDevice  , /* vkCreateSampler */
+    /*   91 */ GloamCommandScopeDevice  , /* vkDestroySampler */
+    /*   92 */ GloamCommandScopeDevice  , /* vkCreateDescriptorSetLayout */
+    /*   93 */ GloamCommandScopeDevice  , /* vkDestroyDescriptorSetLayout */
+    /*   94 */ GloamCommandScopeDevice  , /* vkCreateDescriptorPool */
+    /*   95 */ GloamCommandScopeDevice  , /* vkDestroyDescriptorPool */
+    /*   96 */ GloamCommandScopeDevice  , /* vkResetDescriptorPool */
+    /*   97 */ GloamCommandScopeDevice  , /* vkAllocateDescriptorSets */
+    /*   98 */ GloamCommandScopeDevice  , /* vkFreeDescriptorSets */
+    /*   99 */ GloamCommandScopeDevice  , /* vkUpdateDescriptorSets */
+    /*  100 */ GloamCommandScopeDevice  , /* vkCmdBindPipeline */
+    /*  101 */ GloamCommandScopeDevice  , /* vkCmdBindDescriptorSets */
+    /*  102 */ GloamCommandScopeDevice  , /* vkCmdClearColorImage */
+    /*  103 */ GloamCommandScopeDevice  , /* vkCmdDispatch */
+    /*  104 */ GloamCommandScopeDevice  , /* vkCmdDispatchIndirect */
+    /*  105 */ GloamCommandScopeDevice  , /* vkCmdSetEvent */
+    /*  106 */ GloamCommandScopeDevice  , /* vkCmdResetEvent */
+    /*  107 */ GloamCommandScopeDevice  , /* vkCmdWaitEvents */
+    /*  108 */ GloamCommandScopeDevice  , /* vkCmdPushConstants */
+    /*  109 */ GloamCommandScopeDevice  , /* vkCreateGraphicsPipelines */
+    /*  110 */ GloamCommandScopeDevice  , /* vkCreateFramebuffer */
+    /*  111 */ GloamCommandScopeDevice  , /* vkDestroyFramebuffer */
+    /*  112 */ GloamCommandScopeDevice  , /* vkCreateRenderPass */
+    /*  113 */ GloamCommandScopeDevice  , /* vkDestroyRenderPass */
+    /*  114 */ GloamCommandScopeDevice  , /* vkGetRenderAreaGranularity */
+    /*  115 */ GloamCommandScopeDevice  , /* vkCmdSetViewport */
+    /*  116 */ GloamCommandScopeDevice  , /* vkCmdSetScissor */
+    /*  117 */ GloamCommandScopeDevice  , /* vkCmdSetLineWidth */
+    /*  118 */ GloamCommandScopeDevice  , /* vkCmdSetDepthBias */
+    /*  119 */ GloamCommandScopeDevice  , /* vkCmdSetBlendConstants */
+    /*  120 */ GloamCommandScopeDevice  , /* vkCmdSetDepthBounds */
+    /*  121 */ GloamCommandScopeDevice  , /* vkCmdSetStencilCompareMask */
+    /*  122 */ GloamCommandScopeDevice  , /* vkCmdSetStencilWriteMask */
+    /*  123 */ GloamCommandScopeDevice  , /* vkCmdSetStencilReference */
+    /*  124 */ GloamCommandScopeDevice  , /* vkCmdBindIndexBuffer */
+    /*  125 */ GloamCommandScopeDevice  , /* vkCmdBindVertexBuffers */
+    /*  126 */ GloamCommandScopeDevice  , /* vkCmdDraw */
+    /*  127 */ GloamCommandScopeDevice  , /* vkCmdDrawIndexed */
+    /*  128 */ GloamCommandScopeDevice  , /* vkCmdDrawIndirect */
+    /*  129 */ GloamCommandScopeDevice  , /* vkCmdDrawIndexedIndirect */
+    /*  130 */ GloamCommandScopeDevice  , /* vkCmdBlitImage */
+    /*  131 */ GloamCommandScopeDevice  , /* vkCmdClearDepthStencilImage */
+    /*  132 */ GloamCommandScopeDevice  , /* vkCmdClearAttachments */
+    /*  133 */ GloamCommandScopeDevice  , /* vkCmdResolveImage */
+    /*  134 */ GloamCommandScopeDevice  , /* vkCmdBeginRenderPass */
+    /*  135 */ GloamCommandScopeDevice  , /* vkCmdNextSubpass */
+    /*  136 */ GloamCommandScopeDevice  , /* vkCmdEndRenderPass */
+    /*  137 */ GloamCommandScopeGlobal  , /* vkEnumerateInstanceVersion */
+    /*  138 */ GloamCommandScopeDevice  , /* vkBindBufferMemory2 */
+    /*  139 */ GloamCommandScopeDevice  , /* vkBindImageMemory2 */
+    /*  140 */ GloamCommandScopeDevice  , /* vkGetDeviceGroupPeerMemoryFeatures */
+    /*  141 */ GloamCommandScopeDevice  , /* vkCmdSetDeviceMask */
     /*  142 */ GloamCommandScopeInstance, /* vkEnumeratePhysicalDeviceGroups */
-    /*  143 */ GloamCommandScopeDevice, /* vkGetImageMemoryRequirements2 */
-    /*  144 */ GloamCommandScopeDevice, /* vkGetBufferMemoryRequirements2 */
-    /*  145 */ GloamCommandScopeDevice, /* vkGetImageSparseMemoryRequirements2 */
+    /*  143 */ GloamCommandScopeDevice  , /* vkGetImageMemoryRequirements2 */
+    /*  144 */ GloamCommandScopeDevice  , /* vkGetBufferMemoryRequirements2 */
+    /*  145 */ GloamCommandScopeDevice  , /* vkGetImageSparseMemoryRequirements2 */
     /*  146 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceFeatures2 */
     /*  147 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceProperties2 */
     /*  148 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceFormatProperties2 */
@@ -1115,101 +1115,101 @@ static const uint8_t kCommandScopes_Vulkan[] = {
     /*  150 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceQueueFamilyProperties2 */
     /*  151 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceMemoryProperties2 */
     /*  152 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSparseImageFormatProperties2 */
-    /*  153 */ GloamCommandScopeDevice, /* vkTrimCommandPool */
-    /*  154 */ GloamCommandScopeDevice, /* vkGetDeviceQueue2 */
+    /*  153 */ GloamCommandScopeDevice  , /* vkTrimCommandPool */
+    /*  154 */ GloamCommandScopeDevice  , /* vkGetDeviceQueue2 */
     /*  155 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceExternalBufferProperties */
     /*  156 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceExternalFenceProperties */
     /*  157 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceExternalSemaphoreProperties */
-    /*  158 */ GloamCommandScopeDevice, /* vkCmdDispatchBase */
-    /*  159 */ GloamCommandScopeDevice, /* vkCreateDescriptorUpdateTemplate */
-    /*  160 */ GloamCommandScopeDevice, /* vkDestroyDescriptorUpdateTemplate */
-    /*  161 */ GloamCommandScopeDevice, /* vkUpdateDescriptorSetWithTemplate */
-    /*  162 */ GloamCommandScopeDevice, /* vkGetDescriptorSetLayoutSupport */
-    /*  163 */ GloamCommandScopeDevice, /* vkCreateSamplerYcbcrConversion */
-    /*  164 */ GloamCommandScopeDevice, /* vkDestroySamplerYcbcrConversion */
-    /*  165 */ GloamCommandScopeDevice, /* vkResetQueryPool */
-    /*  166 */ GloamCommandScopeDevice, /* vkGetSemaphoreCounterValue */
-    /*  167 */ GloamCommandScopeDevice, /* vkWaitSemaphores */
-    /*  168 */ GloamCommandScopeDevice, /* vkSignalSemaphore */
-    /*  169 */ GloamCommandScopeDevice, /* vkGetBufferDeviceAddress */
-    /*  170 */ GloamCommandScopeDevice, /* vkGetBufferOpaqueCaptureAddress */
-    /*  171 */ GloamCommandScopeDevice, /* vkGetDeviceMemoryOpaqueCaptureAddress */
-    /*  172 */ GloamCommandScopeDevice, /* vkCmdDrawIndirectCount */
-    /*  173 */ GloamCommandScopeDevice, /* vkCmdDrawIndexedIndirectCount */
-    /*  174 */ GloamCommandScopeDevice, /* vkCreateRenderPass2 */
-    /*  175 */ GloamCommandScopeDevice, /* vkCmdBeginRenderPass2 */
-    /*  176 */ GloamCommandScopeDevice, /* vkCmdNextSubpass2 */
-    /*  177 */ GloamCommandScopeDevice, /* vkCmdEndRenderPass2 */
+    /*  158 */ GloamCommandScopeDevice  , /* vkCmdDispatchBase */
+    /*  159 */ GloamCommandScopeDevice  , /* vkCreateDescriptorUpdateTemplate */
+    /*  160 */ GloamCommandScopeDevice  , /* vkDestroyDescriptorUpdateTemplate */
+    /*  161 */ GloamCommandScopeDevice  , /* vkUpdateDescriptorSetWithTemplate */
+    /*  162 */ GloamCommandScopeDevice  , /* vkGetDescriptorSetLayoutSupport */
+    /*  163 */ GloamCommandScopeDevice  , /* vkCreateSamplerYcbcrConversion */
+    /*  164 */ GloamCommandScopeDevice  , /* vkDestroySamplerYcbcrConversion */
+    /*  165 */ GloamCommandScopeDevice  , /* vkResetQueryPool */
+    /*  166 */ GloamCommandScopeDevice  , /* vkGetSemaphoreCounterValue */
+    /*  167 */ GloamCommandScopeDevice  , /* vkWaitSemaphores */
+    /*  168 */ GloamCommandScopeDevice  , /* vkSignalSemaphore */
+    /*  169 */ GloamCommandScopeDevice  , /* vkGetBufferDeviceAddress */
+    /*  170 */ GloamCommandScopeDevice  , /* vkGetBufferOpaqueCaptureAddress */
+    /*  171 */ GloamCommandScopeDevice  , /* vkGetDeviceMemoryOpaqueCaptureAddress */
+    /*  172 */ GloamCommandScopeDevice  , /* vkCmdDrawIndirectCount */
+    /*  173 */ GloamCommandScopeDevice  , /* vkCmdDrawIndexedIndirectCount */
+    /*  174 */ GloamCommandScopeDevice  , /* vkCreateRenderPass2 */
+    /*  175 */ GloamCommandScopeDevice  , /* vkCmdBeginRenderPass2 */
+    /*  176 */ GloamCommandScopeDevice  , /* vkCmdNextSubpass2 */
+    /*  177 */ GloamCommandScopeDevice  , /* vkCmdEndRenderPass2 */
     /*  178 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceToolProperties */
-    /*  179 */ GloamCommandScopeDevice, /* vkCreatePrivateDataSlot */
-    /*  180 */ GloamCommandScopeDevice, /* vkDestroyPrivateDataSlot */
-    /*  181 */ GloamCommandScopeDevice, /* vkSetPrivateData */
-    /*  182 */ GloamCommandScopeDevice, /* vkGetPrivateData */
-    /*  183 */ GloamCommandScopeDevice, /* vkCmdPipelineBarrier2 */
-    /*  184 */ GloamCommandScopeDevice, /* vkCmdWriteTimestamp2 */
-    /*  185 */ GloamCommandScopeDevice, /* vkQueueSubmit2 */
-    /*  186 */ GloamCommandScopeDevice, /* vkCmdCopyBuffer2 */
-    /*  187 */ GloamCommandScopeDevice, /* vkCmdCopyImage2 */
-    /*  188 */ GloamCommandScopeDevice, /* vkCmdCopyBufferToImage2 */
-    /*  189 */ GloamCommandScopeDevice, /* vkCmdCopyImageToBuffer2 */
-    /*  190 */ GloamCommandScopeDevice, /* vkGetDeviceBufferMemoryRequirements */
-    /*  191 */ GloamCommandScopeDevice, /* vkGetDeviceImageMemoryRequirements */
-    /*  192 */ GloamCommandScopeDevice, /* vkGetDeviceImageSparseMemoryRequirements */
-    /*  193 */ GloamCommandScopeDevice, /* vkCmdSetEvent2 */
-    /*  194 */ GloamCommandScopeDevice, /* vkCmdResetEvent2 */
-    /*  195 */ GloamCommandScopeDevice, /* vkCmdWaitEvents2 */
-    /*  196 */ GloamCommandScopeDevice, /* vkCmdBlitImage2 */
-    /*  197 */ GloamCommandScopeDevice, /* vkCmdResolveImage2 */
-    /*  198 */ GloamCommandScopeDevice, /* vkCmdBeginRendering */
-    /*  199 */ GloamCommandScopeDevice, /* vkCmdEndRendering */
-    /*  200 */ GloamCommandScopeDevice, /* vkCmdSetCullMode */
-    /*  201 */ GloamCommandScopeDevice, /* vkCmdSetFrontFace */
-    /*  202 */ GloamCommandScopeDevice, /* vkCmdSetPrimitiveTopology */
-    /*  203 */ GloamCommandScopeDevice, /* vkCmdSetViewportWithCount */
-    /*  204 */ GloamCommandScopeDevice, /* vkCmdSetScissorWithCount */
-    /*  205 */ GloamCommandScopeDevice, /* vkCmdBindVertexBuffers2 */
-    /*  206 */ GloamCommandScopeDevice, /* vkCmdSetDepthTestEnable */
-    /*  207 */ GloamCommandScopeDevice, /* vkCmdSetDepthWriteEnable */
-    /*  208 */ GloamCommandScopeDevice, /* vkCmdSetDepthCompareOp */
-    /*  209 */ GloamCommandScopeDevice, /* vkCmdSetDepthBoundsTestEnable */
-    /*  210 */ GloamCommandScopeDevice, /* vkCmdSetStencilTestEnable */
-    /*  211 */ GloamCommandScopeDevice, /* vkCmdSetStencilOp */
-    /*  212 */ GloamCommandScopeDevice, /* vkCmdSetRasterizerDiscardEnable */
-    /*  213 */ GloamCommandScopeDevice, /* vkCmdSetDepthBiasEnable */
-    /*  214 */ GloamCommandScopeDevice, /* vkCmdSetPrimitiveRestartEnable */
-    /*  215 */ GloamCommandScopeDevice, /* vkMapMemory2 */
-    /*  216 */ GloamCommandScopeDevice, /* vkUnmapMemory2 */
-    /*  217 */ GloamCommandScopeDevice, /* vkGetDeviceImageSubresourceLayout */
-    /*  218 */ GloamCommandScopeDevice, /* vkGetImageSubresourceLayout2 */
-    /*  219 */ GloamCommandScopeDevice, /* vkCopyMemoryToImage */
-    /*  220 */ GloamCommandScopeDevice, /* vkCopyImageToMemory */
-    /*  221 */ GloamCommandScopeDevice, /* vkCopyImageToImage */
-    /*  222 */ GloamCommandScopeDevice, /* vkTransitionImageLayout */
-    /*  223 */ GloamCommandScopeDevice, /* vkCmdPushDescriptorSet */
-    /*  224 */ GloamCommandScopeDevice, /* vkCmdPushDescriptorSetWithTemplate */
-    /*  225 */ GloamCommandScopeDevice, /* vkCmdBindDescriptorSets2 */
-    /*  226 */ GloamCommandScopeDevice, /* vkCmdPushConstants2 */
-    /*  227 */ GloamCommandScopeDevice, /* vkCmdPushDescriptorSet2 */
-    /*  228 */ GloamCommandScopeDevice, /* vkCmdPushDescriptorSetWithTemplate2 */
-    /*  229 */ GloamCommandScopeDevice, /* vkCmdSetLineStipple */
-    /*  230 */ GloamCommandScopeDevice, /* vkCmdBindIndexBuffer2 */
-    /*  231 */ GloamCommandScopeDevice, /* vkGetRenderingAreaGranularity */
-    /*  232 */ GloamCommandScopeDevice, /* vkCmdSetRenderingAttachmentLocations */
-    /*  233 */ GloamCommandScopeDevice, /* vkCmdSetRenderingInputAttachmentIndices */
+    /*  179 */ GloamCommandScopeDevice  , /* vkCreatePrivateDataSlot */
+    /*  180 */ GloamCommandScopeDevice  , /* vkDestroyPrivateDataSlot */
+    /*  181 */ GloamCommandScopeDevice  , /* vkSetPrivateData */
+    /*  182 */ GloamCommandScopeDevice  , /* vkGetPrivateData */
+    /*  183 */ GloamCommandScopeDevice  , /* vkCmdPipelineBarrier2 */
+    /*  184 */ GloamCommandScopeDevice  , /* vkCmdWriteTimestamp2 */
+    /*  185 */ GloamCommandScopeDevice  , /* vkQueueSubmit2 */
+    /*  186 */ GloamCommandScopeDevice  , /* vkCmdCopyBuffer2 */
+    /*  187 */ GloamCommandScopeDevice  , /* vkCmdCopyImage2 */
+    /*  188 */ GloamCommandScopeDevice  , /* vkCmdCopyBufferToImage2 */
+    /*  189 */ GloamCommandScopeDevice  , /* vkCmdCopyImageToBuffer2 */
+    /*  190 */ GloamCommandScopeDevice  , /* vkGetDeviceBufferMemoryRequirements */
+    /*  191 */ GloamCommandScopeDevice  , /* vkGetDeviceImageMemoryRequirements */
+    /*  192 */ GloamCommandScopeDevice  , /* vkGetDeviceImageSparseMemoryRequirements */
+    /*  193 */ GloamCommandScopeDevice  , /* vkCmdSetEvent2 */
+    /*  194 */ GloamCommandScopeDevice  , /* vkCmdResetEvent2 */
+    /*  195 */ GloamCommandScopeDevice  , /* vkCmdWaitEvents2 */
+    /*  196 */ GloamCommandScopeDevice  , /* vkCmdBlitImage2 */
+    /*  197 */ GloamCommandScopeDevice  , /* vkCmdResolveImage2 */
+    /*  198 */ GloamCommandScopeDevice  , /* vkCmdBeginRendering */
+    /*  199 */ GloamCommandScopeDevice  , /* vkCmdEndRendering */
+    /*  200 */ GloamCommandScopeDevice  , /* vkCmdSetCullMode */
+    /*  201 */ GloamCommandScopeDevice  , /* vkCmdSetFrontFace */
+    /*  202 */ GloamCommandScopeDevice  , /* vkCmdSetPrimitiveTopology */
+    /*  203 */ GloamCommandScopeDevice  , /* vkCmdSetViewportWithCount */
+    /*  204 */ GloamCommandScopeDevice  , /* vkCmdSetScissorWithCount */
+    /*  205 */ GloamCommandScopeDevice  , /* vkCmdBindVertexBuffers2 */
+    /*  206 */ GloamCommandScopeDevice  , /* vkCmdSetDepthTestEnable */
+    /*  207 */ GloamCommandScopeDevice  , /* vkCmdSetDepthWriteEnable */
+    /*  208 */ GloamCommandScopeDevice  , /* vkCmdSetDepthCompareOp */
+    /*  209 */ GloamCommandScopeDevice  , /* vkCmdSetDepthBoundsTestEnable */
+    /*  210 */ GloamCommandScopeDevice  , /* vkCmdSetStencilTestEnable */
+    /*  211 */ GloamCommandScopeDevice  , /* vkCmdSetStencilOp */
+    /*  212 */ GloamCommandScopeDevice  , /* vkCmdSetRasterizerDiscardEnable */
+    /*  213 */ GloamCommandScopeDevice  , /* vkCmdSetDepthBiasEnable */
+    /*  214 */ GloamCommandScopeDevice  , /* vkCmdSetPrimitiveRestartEnable */
+    /*  215 */ GloamCommandScopeDevice  , /* vkMapMemory2 */
+    /*  216 */ GloamCommandScopeDevice  , /* vkUnmapMemory2 */
+    /*  217 */ GloamCommandScopeDevice  , /* vkGetDeviceImageSubresourceLayout */
+    /*  218 */ GloamCommandScopeDevice  , /* vkGetImageSubresourceLayout2 */
+    /*  219 */ GloamCommandScopeDevice  , /* vkCopyMemoryToImage */
+    /*  220 */ GloamCommandScopeDevice  , /* vkCopyImageToMemory */
+    /*  221 */ GloamCommandScopeDevice  , /* vkCopyImageToImage */
+    /*  222 */ GloamCommandScopeDevice  , /* vkTransitionImageLayout */
+    /*  223 */ GloamCommandScopeDevice  , /* vkCmdPushDescriptorSet */
+    /*  224 */ GloamCommandScopeDevice  , /* vkCmdPushDescriptorSetWithTemplate */
+    /*  225 */ GloamCommandScopeDevice  , /* vkCmdBindDescriptorSets2 */
+    /*  226 */ GloamCommandScopeDevice  , /* vkCmdPushConstants2 */
+    /*  227 */ GloamCommandScopeDevice  , /* vkCmdPushDescriptorSet2 */
+    /*  228 */ GloamCommandScopeDevice  , /* vkCmdPushDescriptorSetWithTemplate2 */
+    /*  229 */ GloamCommandScopeDevice  , /* vkCmdSetLineStipple */
+    /*  230 */ GloamCommandScopeDevice  , /* vkCmdBindIndexBuffer2 */
+    /*  231 */ GloamCommandScopeDevice  , /* vkGetRenderingAreaGranularity */
+    /*  232 */ GloamCommandScopeDevice  , /* vkCmdSetRenderingAttachmentLocations */
+    /*  233 */ GloamCommandScopeDevice  , /* vkCmdSetRenderingInputAttachmentIndices */
     /*  234 */ GloamCommandScopeInstance, /* vkDestroySurfaceKHR */
     /*  235 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSurfaceSupportKHR */
     /*  236 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSurfaceCapabilitiesKHR */
     /*  237 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSurfaceFormatsKHR */
     /*  238 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSurfacePresentModesKHR */
-    /*  239 */ GloamCommandScopeDevice, /* vkCreateSwapchainKHR */
-    /*  240 */ GloamCommandScopeDevice, /* vkDestroySwapchainKHR */
-    /*  241 */ GloamCommandScopeDevice, /* vkGetSwapchainImagesKHR */
-    /*  242 */ GloamCommandScopeDevice, /* vkAcquireNextImageKHR */
-    /*  243 */ GloamCommandScopeDevice, /* vkQueuePresentKHR */
-    /*  244 */ GloamCommandScopeDevice, /* vkGetDeviceGroupPresentCapabilitiesKHR */
-    /*  245 */ GloamCommandScopeDevice, /* vkGetDeviceGroupSurfacePresentModesKHR */
+    /*  239 */ GloamCommandScopeDevice  , /* vkCreateSwapchainKHR */
+    /*  240 */ GloamCommandScopeDevice  , /* vkDestroySwapchainKHR */
+    /*  241 */ GloamCommandScopeDevice  , /* vkGetSwapchainImagesKHR */
+    /*  242 */ GloamCommandScopeDevice  , /* vkAcquireNextImageKHR */
+    /*  243 */ GloamCommandScopeDevice  , /* vkQueuePresentKHR */
+    /*  244 */ GloamCommandScopeDevice  , /* vkGetDeviceGroupPresentCapabilitiesKHR */
+    /*  245 */ GloamCommandScopeDevice  , /* vkGetDeviceGroupSurfacePresentModesKHR */
     /*  246 */ GloamCommandScopeInstance, /* vkGetPhysicalDevicePresentRectanglesKHR */
-    /*  247 */ GloamCommandScopeDevice, /* vkAcquireNextImage2KHR */
+    /*  247 */ GloamCommandScopeDevice  , /* vkAcquireNextImage2KHR */
     /*  248 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceDisplayPropertiesKHR */
     /*  249 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceDisplayPlanePropertiesKHR */
     /*  250 */ GloamCommandScopeInstance, /* vkGetDisplayPlaneSupportedDisplaysKHR */
@@ -1217,7 +1217,7 @@ static const uint8_t kCommandScopes_Vulkan[] = {
     /*  252 */ GloamCommandScopeInstance, /* vkCreateDisplayModeKHR */
     /*  253 */ GloamCommandScopeInstance, /* vkGetDisplayPlaneCapabilitiesKHR */
     /*  254 */ GloamCommandScopeInstance, /* vkCreateDisplayPlaneSurfaceKHR */
-    /*  255 */ GloamCommandScopeDevice, /* vkCreateSharedSwapchainsKHR */
+    /*  255 */ GloamCommandScopeDevice  , /* vkCreateSharedSwapchainsKHR */
     /*  256 */ GloamCommandScopeInstance, /* vkCreateXlibSurfaceKHR */
     /*  257 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceXlibPresentationSupportKHR */
     /*  258 */ GloamCommandScopeInstance, /* vkCreateXcbSurfaceKHR */
@@ -1230,47 +1230,47 @@ static const uint8_t kCommandScopes_Vulkan[] = {
     /*  265 */ GloamCommandScopeInstance, /* vkCreateDebugReportCallbackEXT */
     /*  266 */ GloamCommandScopeInstance, /* vkDestroyDebugReportCallbackEXT */
     /*  267 */ GloamCommandScopeInstance, /* vkDebugReportMessageEXT */
-    /*  268 */ GloamCommandScopeDevice, /* vkDebugMarkerSetObjectTagEXT */
-    /*  269 */ GloamCommandScopeDevice, /* vkDebugMarkerSetObjectNameEXT */
-    /*  270 */ GloamCommandScopeDevice, /* vkCmdDebugMarkerBeginEXT */
-    /*  271 */ GloamCommandScopeDevice, /* vkCmdDebugMarkerEndEXT */
-    /*  272 */ GloamCommandScopeDevice, /* vkCmdDebugMarkerInsertEXT */
+    /*  268 */ GloamCommandScopeDevice  , /* vkDebugMarkerSetObjectTagEXT */
+    /*  269 */ GloamCommandScopeDevice  , /* vkDebugMarkerSetObjectNameEXT */
+    /*  270 */ GloamCommandScopeDevice  , /* vkCmdDebugMarkerBeginEXT */
+    /*  271 */ GloamCommandScopeDevice  , /* vkCmdDebugMarkerEndEXT */
+    /*  272 */ GloamCommandScopeDevice  , /* vkCmdDebugMarkerInsertEXT */
     /*  273 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceVideoCapabilitiesKHR */
     /*  274 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceVideoFormatPropertiesKHR */
-    /*  275 */ GloamCommandScopeDevice, /* vkCreateVideoSessionKHR */
-    /*  276 */ GloamCommandScopeDevice, /* vkDestroyVideoSessionKHR */
-    /*  277 */ GloamCommandScopeDevice, /* vkGetVideoSessionMemoryRequirementsKHR */
-    /*  278 */ GloamCommandScopeDevice, /* vkBindVideoSessionMemoryKHR */
-    /*  279 */ GloamCommandScopeDevice, /* vkCreateVideoSessionParametersKHR */
-    /*  280 */ GloamCommandScopeDevice, /* vkUpdateVideoSessionParametersKHR */
-    /*  281 */ GloamCommandScopeDevice, /* vkDestroyVideoSessionParametersKHR */
-    /*  282 */ GloamCommandScopeDevice, /* vkCmdBeginVideoCodingKHR */
-    /*  283 */ GloamCommandScopeDevice, /* vkCmdEndVideoCodingKHR */
-    /*  284 */ GloamCommandScopeDevice, /* vkCmdControlVideoCodingKHR */
-    /*  285 */ GloamCommandScopeDevice, /* vkCmdDecodeVideoKHR */
-    /*  286 */ GloamCommandScopeDevice, /* vkCmdBindTransformFeedbackBuffersEXT */
-    /*  287 */ GloamCommandScopeDevice, /* vkCmdBeginTransformFeedbackEXT */
-    /*  288 */ GloamCommandScopeDevice, /* vkCmdEndTransformFeedbackEXT */
-    /*  289 */ GloamCommandScopeDevice, /* vkCmdBeginQueryIndexedEXT */
-    /*  290 */ GloamCommandScopeDevice, /* vkCmdEndQueryIndexedEXT */
-    /*  291 */ GloamCommandScopeDevice, /* vkCmdDrawIndirectByteCountEXT */
-    /*  292 */ GloamCommandScopeDevice, /* vkCreateCuModuleNVX */
-    /*  293 */ GloamCommandScopeDevice, /* vkCreateCuFunctionNVX */
-    /*  294 */ GloamCommandScopeDevice, /* vkDestroyCuModuleNVX */
-    /*  295 */ GloamCommandScopeDevice, /* vkDestroyCuFunctionNVX */
-    /*  296 */ GloamCommandScopeDevice, /* vkCmdCuLaunchKernelNVX */
-    /*  297 */ GloamCommandScopeDevice, /* vkGetImageViewHandleNVX */
-    /*  298 */ GloamCommandScopeDevice, /* vkGetImageViewHandle64NVX */
-    /*  299 */ GloamCommandScopeDevice, /* vkGetImageViewAddressNVX */
-    /*  300 */ GloamCommandScopeDevice, /* vkGetDeviceCombinedImageSamplerIndexNVX */
-    /*  301 */ GloamCommandScopeDevice, /* vkCmdDrawIndirectCountAMD */
-    /*  302 */ GloamCommandScopeDevice, /* vkCmdDrawIndexedIndirectCountAMD */
-    /*  303 */ GloamCommandScopeDevice, /* vkGetShaderInfoAMD */
-    /*  304 */ GloamCommandScopeDevice, /* vkCmdBeginRenderingKHR */
-    /*  305 */ GloamCommandScopeDevice, /* vkCmdEndRenderingKHR */
+    /*  275 */ GloamCommandScopeDevice  , /* vkCreateVideoSessionKHR */
+    /*  276 */ GloamCommandScopeDevice  , /* vkDestroyVideoSessionKHR */
+    /*  277 */ GloamCommandScopeDevice  , /* vkGetVideoSessionMemoryRequirementsKHR */
+    /*  278 */ GloamCommandScopeDevice  , /* vkBindVideoSessionMemoryKHR */
+    /*  279 */ GloamCommandScopeDevice  , /* vkCreateVideoSessionParametersKHR */
+    /*  280 */ GloamCommandScopeDevice  , /* vkUpdateVideoSessionParametersKHR */
+    /*  281 */ GloamCommandScopeDevice  , /* vkDestroyVideoSessionParametersKHR */
+    /*  282 */ GloamCommandScopeDevice  , /* vkCmdBeginVideoCodingKHR */
+    /*  283 */ GloamCommandScopeDevice  , /* vkCmdEndVideoCodingKHR */
+    /*  284 */ GloamCommandScopeDevice  , /* vkCmdControlVideoCodingKHR */
+    /*  285 */ GloamCommandScopeDevice  , /* vkCmdDecodeVideoKHR */
+    /*  286 */ GloamCommandScopeDevice  , /* vkCmdBindTransformFeedbackBuffersEXT */
+    /*  287 */ GloamCommandScopeDevice  , /* vkCmdBeginTransformFeedbackEXT */
+    /*  288 */ GloamCommandScopeDevice  , /* vkCmdEndTransformFeedbackEXT */
+    /*  289 */ GloamCommandScopeDevice  , /* vkCmdBeginQueryIndexedEXT */
+    /*  290 */ GloamCommandScopeDevice  , /* vkCmdEndQueryIndexedEXT */
+    /*  291 */ GloamCommandScopeDevice  , /* vkCmdDrawIndirectByteCountEXT */
+    /*  292 */ GloamCommandScopeDevice  , /* vkCreateCuModuleNVX */
+    /*  293 */ GloamCommandScopeDevice  , /* vkCreateCuFunctionNVX */
+    /*  294 */ GloamCommandScopeDevice  , /* vkDestroyCuModuleNVX */
+    /*  295 */ GloamCommandScopeDevice  , /* vkDestroyCuFunctionNVX */
+    /*  296 */ GloamCommandScopeDevice  , /* vkCmdCuLaunchKernelNVX */
+    /*  297 */ GloamCommandScopeDevice  , /* vkGetImageViewHandleNVX */
+    /*  298 */ GloamCommandScopeDevice  , /* vkGetImageViewHandle64NVX */
+    /*  299 */ GloamCommandScopeDevice  , /* vkGetImageViewAddressNVX */
+    /*  300 */ GloamCommandScopeDevice  , /* vkGetDeviceCombinedImageSamplerIndexNVX */
+    /*  301 */ GloamCommandScopeDevice  , /* vkCmdDrawIndirectCountAMD */
+    /*  302 */ GloamCommandScopeDevice  , /* vkCmdDrawIndexedIndirectCountAMD */
+    /*  303 */ GloamCommandScopeDevice  , /* vkGetShaderInfoAMD */
+    /*  304 */ GloamCommandScopeDevice  , /* vkCmdBeginRenderingKHR */
+    /*  305 */ GloamCommandScopeDevice  , /* vkCmdEndRenderingKHR */
     /*  306 */ GloamCommandScopeInstance, /* vkCreateStreamDescriptorSurfaceGGP */
     /*  307 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceExternalImageFormatPropertiesNV */
-    /*  308 */ GloamCommandScopeDevice, /* vkGetMemoryWin32HandleNV */
+    /*  308 */ GloamCommandScopeDevice  , /* vkGetMemoryWin32HandleNV */
     /*  309 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceFeatures2KHR */
     /*  310 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceProperties2KHR */
     /*  311 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceFormatProperties2KHR */
@@ -1278,58 +1278,58 @@ static const uint8_t kCommandScopes_Vulkan[] = {
     /*  313 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceQueueFamilyProperties2KHR */
     /*  314 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceMemoryProperties2KHR */
     /*  315 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSparseImageFormatProperties2KHR */
-    /*  316 */ GloamCommandScopeDevice, /* vkGetDeviceGroupPeerMemoryFeaturesKHR */
-    /*  317 */ GloamCommandScopeDevice, /* vkCmdSetDeviceMaskKHR */
-    /*  318 */ GloamCommandScopeDevice, /* vkCmdDispatchBaseKHR */
+    /*  316 */ GloamCommandScopeDevice  , /* vkGetDeviceGroupPeerMemoryFeaturesKHR */
+    /*  317 */ GloamCommandScopeDevice  , /* vkCmdSetDeviceMaskKHR */
+    /*  318 */ GloamCommandScopeDevice  , /* vkCmdDispatchBaseKHR */
     /*  319 */ GloamCommandScopeInstance, /* vkCreateViSurfaceNN */
-    /*  320 */ GloamCommandScopeDevice, /* vkTrimCommandPoolKHR */
+    /*  320 */ GloamCommandScopeDevice  , /* vkTrimCommandPoolKHR */
     /*  321 */ GloamCommandScopeInstance, /* vkEnumeratePhysicalDeviceGroupsKHR */
     /*  322 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceExternalBufferPropertiesKHR */
-    /*  323 */ GloamCommandScopeDevice, /* vkGetMemoryWin32HandleKHR */
-    /*  324 */ GloamCommandScopeDevice, /* vkGetMemoryWin32HandlePropertiesKHR */
-    /*  325 */ GloamCommandScopeDevice, /* vkGetMemoryFdKHR */
-    /*  326 */ GloamCommandScopeDevice, /* vkGetMemoryFdPropertiesKHR */
+    /*  323 */ GloamCommandScopeDevice  , /* vkGetMemoryWin32HandleKHR */
+    /*  324 */ GloamCommandScopeDevice  , /* vkGetMemoryWin32HandlePropertiesKHR */
+    /*  325 */ GloamCommandScopeDevice  , /* vkGetMemoryFdKHR */
+    /*  326 */ GloamCommandScopeDevice  , /* vkGetMemoryFdPropertiesKHR */
     /*  327 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceExternalSemaphorePropertiesKHR */
-    /*  328 */ GloamCommandScopeDevice, /* vkImportSemaphoreWin32HandleKHR */
-    /*  329 */ GloamCommandScopeDevice, /* vkGetSemaphoreWin32HandleKHR */
-    /*  330 */ GloamCommandScopeDevice, /* vkImportSemaphoreFdKHR */
-    /*  331 */ GloamCommandScopeDevice, /* vkGetSemaphoreFdKHR */
-    /*  332 */ GloamCommandScopeDevice, /* vkCmdPushDescriptorSetKHR */
-    /*  333 */ GloamCommandScopeDevice, /* vkCmdPushDescriptorSetWithTemplateKHR */
-    /*  334 */ GloamCommandScopeDevice, /* vkCmdBeginConditionalRenderingEXT */
-    /*  335 */ GloamCommandScopeDevice, /* vkCmdEndConditionalRenderingEXT */
-    /*  336 */ GloamCommandScopeDevice, /* vkCreateDescriptorUpdateTemplateKHR */
-    /*  337 */ GloamCommandScopeDevice, /* vkDestroyDescriptorUpdateTemplateKHR */
-    /*  338 */ GloamCommandScopeDevice, /* vkUpdateDescriptorSetWithTemplateKHR */
-    /*  339 */ GloamCommandScopeDevice, /* vkCmdSetViewportWScalingNV */
+    /*  328 */ GloamCommandScopeDevice  , /* vkImportSemaphoreWin32HandleKHR */
+    /*  329 */ GloamCommandScopeDevice  , /* vkGetSemaphoreWin32HandleKHR */
+    /*  330 */ GloamCommandScopeDevice  , /* vkImportSemaphoreFdKHR */
+    /*  331 */ GloamCommandScopeDevice  , /* vkGetSemaphoreFdKHR */
+    /*  332 */ GloamCommandScopeDevice  , /* vkCmdPushDescriptorSetKHR */
+    /*  333 */ GloamCommandScopeDevice  , /* vkCmdPushDescriptorSetWithTemplateKHR */
+    /*  334 */ GloamCommandScopeDevice  , /* vkCmdBeginConditionalRenderingEXT */
+    /*  335 */ GloamCommandScopeDevice  , /* vkCmdEndConditionalRenderingEXT */
+    /*  336 */ GloamCommandScopeDevice  , /* vkCreateDescriptorUpdateTemplateKHR */
+    /*  337 */ GloamCommandScopeDevice  , /* vkDestroyDescriptorUpdateTemplateKHR */
+    /*  338 */ GloamCommandScopeDevice  , /* vkUpdateDescriptorSetWithTemplateKHR */
+    /*  339 */ GloamCommandScopeDevice  , /* vkCmdSetViewportWScalingNV */
     /*  340 */ GloamCommandScopeInstance, /* vkReleaseDisplayEXT */
     /*  341 */ GloamCommandScopeInstance, /* vkAcquireXlibDisplayEXT */
     /*  342 */ GloamCommandScopeInstance, /* vkGetRandROutputDisplayEXT */
     /*  343 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSurfaceCapabilities2EXT */
-    /*  344 */ GloamCommandScopeDevice, /* vkDisplayPowerControlEXT */
-    /*  345 */ GloamCommandScopeDevice, /* vkRegisterDeviceEventEXT */
-    /*  346 */ GloamCommandScopeDevice, /* vkRegisterDisplayEventEXT */
-    /*  347 */ GloamCommandScopeDevice, /* vkGetSwapchainCounterEXT */
-    /*  348 */ GloamCommandScopeDevice, /* vkGetRefreshCycleDurationGOOGLE */
-    /*  349 */ GloamCommandScopeDevice, /* vkGetPastPresentationTimingGOOGLE */
-    /*  350 */ GloamCommandScopeDevice, /* vkCmdSetDiscardRectangleEXT */
-    /*  351 */ GloamCommandScopeDevice, /* vkCmdSetDiscardRectangleEnableEXT */
-    /*  352 */ GloamCommandScopeDevice, /* vkCmdSetDiscardRectangleModeEXT */
-    /*  353 */ GloamCommandScopeDevice, /* vkSetHdrMetadataEXT */
-    /*  354 */ GloamCommandScopeDevice, /* vkCreateRenderPass2KHR */
-    /*  355 */ GloamCommandScopeDevice, /* vkCmdBeginRenderPass2KHR */
-    /*  356 */ GloamCommandScopeDevice, /* vkCmdNextSubpass2KHR */
-    /*  357 */ GloamCommandScopeDevice, /* vkCmdEndRenderPass2KHR */
-    /*  358 */ GloamCommandScopeDevice, /* vkGetSwapchainStatusKHR */
+    /*  344 */ GloamCommandScopeDevice  , /* vkDisplayPowerControlEXT */
+    /*  345 */ GloamCommandScopeDevice  , /* vkRegisterDeviceEventEXT */
+    /*  346 */ GloamCommandScopeDevice  , /* vkRegisterDisplayEventEXT */
+    /*  347 */ GloamCommandScopeDevice  , /* vkGetSwapchainCounterEXT */
+    /*  348 */ GloamCommandScopeDevice  , /* vkGetRefreshCycleDurationGOOGLE */
+    /*  349 */ GloamCommandScopeDevice  , /* vkGetPastPresentationTimingGOOGLE */
+    /*  350 */ GloamCommandScopeDevice  , /* vkCmdSetDiscardRectangleEXT */
+    /*  351 */ GloamCommandScopeDevice  , /* vkCmdSetDiscardRectangleEnableEXT */
+    /*  352 */ GloamCommandScopeDevice  , /* vkCmdSetDiscardRectangleModeEXT */
+    /*  353 */ GloamCommandScopeDevice  , /* vkSetHdrMetadataEXT */
+    /*  354 */ GloamCommandScopeDevice  , /* vkCreateRenderPass2KHR */
+    /*  355 */ GloamCommandScopeDevice  , /* vkCmdBeginRenderPass2KHR */
+    /*  356 */ GloamCommandScopeDevice  , /* vkCmdNextSubpass2KHR */
+    /*  357 */ GloamCommandScopeDevice  , /* vkCmdEndRenderPass2KHR */
+    /*  358 */ GloamCommandScopeDevice  , /* vkGetSwapchainStatusKHR */
     /*  359 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceExternalFencePropertiesKHR */
-    /*  360 */ GloamCommandScopeDevice, /* vkImportFenceWin32HandleKHR */
-    /*  361 */ GloamCommandScopeDevice, /* vkGetFenceWin32HandleKHR */
-    /*  362 */ GloamCommandScopeDevice, /* vkImportFenceFdKHR */
-    /*  363 */ GloamCommandScopeDevice, /* vkGetFenceFdKHR */
+    /*  360 */ GloamCommandScopeDevice  , /* vkImportFenceWin32HandleKHR */
+    /*  361 */ GloamCommandScopeDevice  , /* vkGetFenceWin32HandleKHR */
+    /*  362 */ GloamCommandScopeDevice  , /* vkImportFenceFdKHR */
+    /*  363 */ GloamCommandScopeDevice  , /* vkGetFenceFdKHR */
     /*  364 */ GloamCommandScopeInstance, /* vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR */
     /*  365 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR */
-    /*  366 */ GloamCommandScopeDevice, /* vkAcquireProfilingLockKHR */
-    /*  367 */ GloamCommandScopeDevice, /* vkReleaseProfilingLockKHR */
+    /*  366 */ GloamCommandScopeDevice  , /* vkAcquireProfilingLockKHR */
+    /*  367 */ GloamCommandScopeDevice  , /* vkReleaseProfilingLockKHR */
     /*  368 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSurfaceCapabilities2KHR */
     /*  369 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSurfaceFormats2KHR */
     /*  370 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceDisplayProperties2KHR */
@@ -1338,445 +1338,445 @@ static const uint8_t kCommandScopes_Vulkan[] = {
     /*  373 */ GloamCommandScopeInstance, /* vkGetDisplayPlaneCapabilities2KHR */
     /*  374 */ GloamCommandScopeInstance, /* vkCreateIOSSurfaceMVK */
     /*  375 */ GloamCommandScopeInstance, /* vkCreateMacOSSurfaceMVK */
-    /*  376 */ GloamCommandScopeDevice, /* vkSetDebugUtilsObjectNameEXT */
-    /*  377 */ GloamCommandScopeDevice, /* vkSetDebugUtilsObjectTagEXT */
-    /*  378 */ GloamCommandScopeDevice, /* vkQueueBeginDebugUtilsLabelEXT */
-    /*  379 */ GloamCommandScopeDevice, /* vkQueueEndDebugUtilsLabelEXT */
-    /*  380 */ GloamCommandScopeDevice, /* vkQueueInsertDebugUtilsLabelEXT */
-    /*  381 */ GloamCommandScopeDevice, /* vkCmdBeginDebugUtilsLabelEXT */
-    /*  382 */ GloamCommandScopeDevice, /* vkCmdEndDebugUtilsLabelEXT */
-    /*  383 */ GloamCommandScopeDevice, /* vkCmdInsertDebugUtilsLabelEXT */
+    /*  376 */ GloamCommandScopeDevice  , /* vkSetDebugUtilsObjectNameEXT */
+    /*  377 */ GloamCommandScopeDevice  , /* vkSetDebugUtilsObjectTagEXT */
+    /*  378 */ GloamCommandScopeDevice  , /* vkQueueBeginDebugUtilsLabelEXT */
+    /*  379 */ GloamCommandScopeDevice  , /* vkQueueEndDebugUtilsLabelEXT */
+    /*  380 */ GloamCommandScopeDevice  , /* vkQueueInsertDebugUtilsLabelEXT */
+    /*  381 */ GloamCommandScopeDevice  , /* vkCmdBeginDebugUtilsLabelEXT */
+    /*  382 */ GloamCommandScopeDevice  , /* vkCmdEndDebugUtilsLabelEXT */
+    /*  383 */ GloamCommandScopeDevice  , /* vkCmdInsertDebugUtilsLabelEXT */
     /*  384 */ GloamCommandScopeInstance, /* vkCreateDebugUtilsMessengerEXT */
     /*  385 */ GloamCommandScopeInstance, /* vkDestroyDebugUtilsMessengerEXT */
     /*  386 */ GloamCommandScopeInstance, /* vkSubmitDebugUtilsMessageEXT */
-    /*  387 */ GloamCommandScopeDevice, /* vkGetAndroidHardwareBufferPropertiesANDROID */
-    /*  388 */ GloamCommandScopeDevice, /* vkGetMemoryAndroidHardwareBufferANDROID */
-    /*  389 */ GloamCommandScopeDevice, /* vkCreateExecutionGraphPipelinesAMDX */
-    /*  390 */ GloamCommandScopeDevice, /* vkGetExecutionGraphPipelineScratchSizeAMDX */
-    /*  391 */ GloamCommandScopeDevice, /* vkGetExecutionGraphPipelineNodeIndexAMDX */
-    /*  392 */ GloamCommandScopeDevice, /* vkCmdInitializeGraphScratchMemoryAMDX */
-    /*  393 */ GloamCommandScopeDevice, /* vkCmdDispatchGraphAMDX */
-    /*  394 */ GloamCommandScopeDevice, /* vkCmdDispatchGraphIndirectAMDX */
-    /*  395 */ GloamCommandScopeDevice, /* vkCmdDispatchGraphIndirectCountAMDX */
-    /*  396 */ GloamCommandScopeDevice, /* vkWriteSamplerDescriptorsEXT */
-    /*  397 */ GloamCommandScopeDevice, /* vkWriteResourceDescriptorsEXT */
-    /*  398 */ GloamCommandScopeDevice, /* vkCmdBindSamplerHeapEXT */
-    /*  399 */ GloamCommandScopeDevice, /* vkCmdBindResourceHeapEXT */
-    /*  400 */ GloamCommandScopeDevice, /* vkCmdPushDataEXT */
-    /*  401 */ GloamCommandScopeDevice, /* vkGetImageOpaqueCaptureDataEXT */
+    /*  387 */ GloamCommandScopeDevice  , /* vkGetAndroidHardwareBufferPropertiesANDROID */
+    /*  388 */ GloamCommandScopeDevice  , /* vkGetMemoryAndroidHardwareBufferANDROID */
+    /*  389 */ GloamCommandScopeDevice  , /* vkCreateExecutionGraphPipelinesAMDX */
+    /*  390 */ GloamCommandScopeDevice  , /* vkGetExecutionGraphPipelineScratchSizeAMDX */
+    /*  391 */ GloamCommandScopeDevice  , /* vkGetExecutionGraphPipelineNodeIndexAMDX */
+    /*  392 */ GloamCommandScopeDevice  , /* vkCmdInitializeGraphScratchMemoryAMDX */
+    /*  393 */ GloamCommandScopeDevice  , /* vkCmdDispatchGraphAMDX */
+    /*  394 */ GloamCommandScopeDevice  , /* vkCmdDispatchGraphIndirectAMDX */
+    /*  395 */ GloamCommandScopeDevice  , /* vkCmdDispatchGraphIndirectCountAMDX */
+    /*  396 */ GloamCommandScopeDevice  , /* vkWriteSamplerDescriptorsEXT */
+    /*  397 */ GloamCommandScopeDevice  , /* vkWriteResourceDescriptorsEXT */
+    /*  398 */ GloamCommandScopeDevice  , /* vkCmdBindSamplerHeapEXT */
+    /*  399 */ GloamCommandScopeDevice  , /* vkCmdBindResourceHeapEXT */
+    /*  400 */ GloamCommandScopeDevice  , /* vkCmdPushDataEXT */
+    /*  401 */ GloamCommandScopeDevice  , /* vkGetImageOpaqueCaptureDataEXT */
     /*  402 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceDescriptorSizeEXT */
-    /*  403 */ GloamCommandScopeDevice, /* vkRegisterCustomBorderColorEXT */
-    /*  404 */ GloamCommandScopeDevice, /* vkUnregisterCustomBorderColorEXT */
-    /*  405 */ GloamCommandScopeDevice, /* vkGetTensorOpaqueCaptureDataARM */
-    /*  406 */ GloamCommandScopeDevice, /* vkCmdSetSampleLocationsEXT */
+    /*  403 */ GloamCommandScopeDevice  , /* vkRegisterCustomBorderColorEXT */
+    /*  404 */ GloamCommandScopeDevice  , /* vkUnregisterCustomBorderColorEXT */
+    /*  405 */ GloamCommandScopeDevice  , /* vkGetTensorOpaqueCaptureDataARM */
+    /*  406 */ GloamCommandScopeDevice  , /* vkCmdSetSampleLocationsEXT */
     /*  407 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceMultisamplePropertiesEXT */
-    /*  408 */ GloamCommandScopeDevice, /* vkGetImageMemoryRequirements2KHR */
-    /*  409 */ GloamCommandScopeDevice, /* vkGetBufferMemoryRequirements2KHR */
-    /*  410 */ GloamCommandScopeDevice, /* vkGetImageSparseMemoryRequirements2KHR */
-    /*  411 */ GloamCommandScopeDevice, /* vkCreateAccelerationStructureKHR */
-    /*  412 */ GloamCommandScopeDevice, /* vkDestroyAccelerationStructureKHR */
-    /*  413 */ GloamCommandScopeDevice, /* vkCmdBuildAccelerationStructuresKHR */
-    /*  414 */ GloamCommandScopeDevice, /* vkCmdBuildAccelerationStructuresIndirectKHR */
-    /*  415 */ GloamCommandScopeDevice, /* vkBuildAccelerationStructuresKHR */
-    /*  416 */ GloamCommandScopeDevice, /* vkCopyAccelerationStructureKHR */
-    /*  417 */ GloamCommandScopeDevice, /* vkCopyAccelerationStructureToMemoryKHR */
-    /*  418 */ GloamCommandScopeDevice, /* vkCopyMemoryToAccelerationStructureKHR */
-    /*  419 */ GloamCommandScopeDevice, /* vkWriteAccelerationStructuresPropertiesKHR */
-    /*  420 */ GloamCommandScopeDevice, /* vkCmdCopyAccelerationStructureKHR */
-    /*  421 */ GloamCommandScopeDevice, /* vkCmdCopyAccelerationStructureToMemoryKHR */
-    /*  422 */ GloamCommandScopeDevice, /* vkCmdCopyMemoryToAccelerationStructureKHR */
-    /*  423 */ GloamCommandScopeDevice, /* vkGetAccelerationStructureDeviceAddressKHR */
-    /*  424 */ GloamCommandScopeDevice, /* vkCmdWriteAccelerationStructuresPropertiesKHR */
-    /*  425 */ GloamCommandScopeDevice, /* vkGetDeviceAccelerationStructureCompatibilityKHR */
-    /*  426 */ GloamCommandScopeDevice, /* vkGetAccelerationStructureBuildSizesKHR */
-    /*  427 */ GloamCommandScopeDevice, /* vkCmdTraceRaysKHR */
-    /*  428 */ GloamCommandScopeDevice, /* vkCreateRayTracingPipelinesKHR */
-    /*  429 */ GloamCommandScopeDevice, /* vkGetRayTracingShaderGroupHandlesKHR */
-    /*  430 */ GloamCommandScopeDevice, /* vkGetRayTracingCaptureReplayShaderGroupHandlesKHR */
-    /*  431 */ GloamCommandScopeDevice, /* vkCmdTraceRaysIndirectKHR */
-    /*  432 */ GloamCommandScopeDevice, /* vkGetRayTracingShaderGroupStackSizeKHR */
-    /*  433 */ GloamCommandScopeDevice, /* vkCmdSetRayTracingPipelineStackSizeKHR */
-    /*  434 */ GloamCommandScopeDevice, /* vkCreateSamplerYcbcrConversionKHR */
-    /*  435 */ GloamCommandScopeDevice, /* vkDestroySamplerYcbcrConversionKHR */
-    /*  436 */ GloamCommandScopeDevice, /* vkBindBufferMemory2KHR */
-    /*  437 */ GloamCommandScopeDevice, /* vkBindImageMemory2KHR */
-    /*  438 */ GloamCommandScopeDevice, /* vkGetImageDrmFormatModifierPropertiesEXT */
-    /*  439 */ GloamCommandScopeDevice, /* vkCreateValidationCacheEXT */
-    /*  440 */ GloamCommandScopeDevice, /* vkDestroyValidationCacheEXT */
-    /*  441 */ GloamCommandScopeDevice, /* vkMergeValidationCachesEXT */
-    /*  442 */ GloamCommandScopeDevice, /* vkGetValidationCacheDataEXT */
-    /*  443 */ GloamCommandScopeDevice, /* vkCmdBindShadingRateImageNV */
-    /*  444 */ GloamCommandScopeDevice, /* vkCmdSetViewportShadingRatePaletteNV */
-    /*  445 */ GloamCommandScopeDevice, /* vkCmdSetCoarseSampleOrderNV */
-    /*  446 */ GloamCommandScopeDevice, /* vkCreateAccelerationStructureNV */
-    /*  447 */ GloamCommandScopeDevice, /* vkDestroyAccelerationStructureNV */
-    /*  448 */ GloamCommandScopeDevice, /* vkGetAccelerationStructureMemoryRequirementsNV */
-    /*  449 */ GloamCommandScopeDevice, /* vkBindAccelerationStructureMemoryNV */
-    /*  450 */ GloamCommandScopeDevice, /* vkCmdBuildAccelerationStructureNV */
-    /*  451 */ GloamCommandScopeDevice, /* vkCmdCopyAccelerationStructureNV */
-    /*  452 */ GloamCommandScopeDevice, /* vkCmdTraceRaysNV */
-    /*  453 */ GloamCommandScopeDevice, /* vkCreateRayTracingPipelinesNV */
-    /*  454 */ GloamCommandScopeDevice, /* vkGetRayTracingShaderGroupHandlesNV */
-    /*  455 */ GloamCommandScopeDevice, /* vkGetAccelerationStructureHandleNV */
-    /*  456 */ GloamCommandScopeDevice, /* vkCmdWriteAccelerationStructuresPropertiesNV */
-    /*  457 */ GloamCommandScopeDevice, /* vkCompileDeferredNV */
-    /*  458 */ GloamCommandScopeDevice, /* vkGetDescriptorSetLayoutSupportKHR */
-    /*  459 */ GloamCommandScopeDevice, /* vkCmdDrawIndirectCountKHR */
-    /*  460 */ GloamCommandScopeDevice, /* vkCmdDrawIndexedIndirectCountKHR */
-    /*  461 */ GloamCommandScopeDevice, /* vkGetMemoryHostPointerPropertiesEXT */
-    /*  462 */ GloamCommandScopeDevice, /* vkCmdWriteBufferMarkerAMD */
-    /*  463 */ GloamCommandScopeDevice, /* vkCmdWriteBufferMarker2AMD */
+    /*  408 */ GloamCommandScopeDevice  , /* vkGetImageMemoryRequirements2KHR */
+    /*  409 */ GloamCommandScopeDevice  , /* vkGetBufferMemoryRequirements2KHR */
+    /*  410 */ GloamCommandScopeDevice  , /* vkGetImageSparseMemoryRequirements2KHR */
+    /*  411 */ GloamCommandScopeDevice  , /* vkCreateAccelerationStructureKHR */
+    /*  412 */ GloamCommandScopeDevice  , /* vkDestroyAccelerationStructureKHR */
+    /*  413 */ GloamCommandScopeDevice  , /* vkCmdBuildAccelerationStructuresKHR */
+    /*  414 */ GloamCommandScopeDevice  , /* vkCmdBuildAccelerationStructuresIndirectKHR */
+    /*  415 */ GloamCommandScopeDevice  , /* vkBuildAccelerationStructuresKHR */
+    /*  416 */ GloamCommandScopeDevice  , /* vkCopyAccelerationStructureKHR */
+    /*  417 */ GloamCommandScopeDevice  , /* vkCopyAccelerationStructureToMemoryKHR */
+    /*  418 */ GloamCommandScopeDevice  , /* vkCopyMemoryToAccelerationStructureKHR */
+    /*  419 */ GloamCommandScopeDevice  , /* vkWriteAccelerationStructuresPropertiesKHR */
+    /*  420 */ GloamCommandScopeDevice  , /* vkCmdCopyAccelerationStructureKHR */
+    /*  421 */ GloamCommandScopeDevice  , /* vkCmdCopyAccelerationStructureToMemoryKHR */
+    /*  422 */ GloamCommandScopeDevice  , /* vkCmdCopyMemoryToAccelerationStructureKHR */
+    /*  423 */ GloamCommandScopeDevice  , /* vkGetAccelerationStructureDeviceAddressKHR */
+    /*  424 */ GloamCommandScopeDevice  , /* vkCmdWriteAccelerationStructuresPropertiesKHR */
+    /*  425 */ GloamCommandScopeDevice  , /* vkGetDeviceAccelerationStructureCompatibilityKHR */
+    /*  426 */ GloamCommandScopeDevice  , /* vkGetAccelerationStructureBuildSizesKHR */
+    /*  427 */ GloamCommandScopeDevice  , /* vkCmdTraceRaysKHR */
+    /*  428 */ GloamCommandScopeDevice  , /* vkCreateRayTracingPipelinesKHR */
+    /*  429 */ GloamCommandScopeDevice  , /* vkGetRayTracingShaderGroupHandlesKHR */
+    /*  430 */ GloamCommandScopeDevice  , /* vkGetRayTracingCaptureReplayShaderGroupHandlesKHR */
+    /*  431 */ GloamCommandScopeDevice  , /* vkCmdTraceRaysIndirectKHR */
+    /*  432 */ GloamCommandScopeDevice  , /* vkGetRayTracingShaderGroupStackSizeKHR */
+    /*  433 */ GloamCommandScopeDevice  , /* vkCmdSetRayTracingPipelineStackSizeKHR */
+    /*  434 */ GloamCommandScopeDevice  , /* vkCreateSamplerYcbcrConversionKHR */
+    /*  435 */ GloamCommandScopeDevice  , /* vkDestroySamplerYcbcrConversionKHR */
+    /*  436 */ GloamCommandScopeDevice  , /* vkBindBufferMemory2KHR */
+    /*  437 */ GloamCommandScopeDevice  , /* vkBindImageMemory2KHR */
+    /*  438 */ GloamCommandScopeDevice  , /* vkGetImageDrmFormatModifierPropertiesEXT */
+    /*  439 */ GloamCommandScopeDevice  , /* vkCreateValidationCacheEXT */
+    /*  440 */ GloamCommandScopeDevice  , /* vkDestroyValidationCacheEXT */
+    /*  441 */ GloamCommandScopeDevice  , /* vkMergeValidationCachesEXT */
+    /*  442 */ GloamCommandScopeDevice  , /* vkGetValidationCacheDataEXT */
+    /*  443 */ GloamCommandScopeDevice  , /* vkCmdBindShadingRateImageNV */
+    /*  444 */ GloamCommandScopeDevice  , /* vkCmdSetViewportShadingRatePaletteNV */
+    /*  445 */ GloamCommandScopeDevice  , /* vkCmdSetCoarseSampleOrderNV */
+    /*  446 */ GloamCommandScopeDevice  , /* vkCreateAccelerationStructureNV */
+    /*  447 */ GloamCommandScopeDevice  , /* vkDestroyAccelerationStructureNV */
+    /*  448 */ GloamCommandScopeDevice  , /* vkGetAccelerationStructureMemoryRequirementsNV */
+    /*  449 */ GloamCommandScopeDevice  , /* vkBindAccelerationStructureMemoryNV */
+    /*  450 */ GloamCommandScopeDevice  , /* vkCmdBuildAccelerationStructureNV */
+    /*  451 */ GloamCommandScopeDevice  , /* vkCmdCopyAccelerationStructureNV */
+    /*  452 */ GloamCommandScopeDevice  , /* vkCmdTraceRaysNV */
+    /*  453 */ GloamCommandScopeDevice  , /* vkCreateRayTracingPipelinesNV */
+    /*  454 */ GloamCommandScopeDevice  , /* vkGetRayTracingShaderGroupHandlesNV */
+    /*  455 */ GloamCommandScopeDevice  , /* vkGetAccelerationStructureHandleNV */
+    /*  456 */ GloamCommandScopeDevice  , /* vkCmdWriteAccelerationStructuresPropertiesNV */
+    /*  457 */ GloamCommandScopeDevice  , /* vkCompileDeferredNV */
+    /*  458 */ GloamCommandScopeDevice  , /* vkGetDescriptorSetLayoutSupportKHR */
+    /*  459 */ GloamCommandScopeDevice  , /* vkCmdDrawIndirectCountKHR */
+    /*  460 */ GloamCommandScopeDevice  , /* vkCmdDrawIndexedIndirectCountKHR */
+    /*  461 */ GloamCommandScopeDevice  , /* vkGetMemoryHostPointerPropertiesEXT */
+    /*  462 */ GloamCommandScopeDevice  , /* vkCmdWriteBufferMarkerAMD */
+    /*  463 */ GloamCommandScopeDevice  , /* vkCmdWriteBufferMarker2AMD */
     /*  464 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceCalibrateableTimeDomainsEXT */
-    /*  465 */ GloamCommandScopeDevice, /* vkGetCalibratedTimestampsEXT */
-    /*  466 */ GloamCommandScopeDevice, /* vkCmdDrawMeshTasksNV */
-    /*  467 */ GloamCommandScopeDevice, /* vkCmdDrawMeshTasksIndirectNV */
-    /*  468 */ GloamCommandScopeDevice, /* vkCmdDrawMeshTasksIndirectCountNV */
-    /*  469 */ GloamCommandScopeDevice, /* vkCmdSetExclusiveScissorEnableNV */
-    /*  470 */ GloamCommandScopeDevice, /* vkCmdSetExclusiveScissorNV */
-    /*  471 */ GloamCommandScopeDevice, /* vkCmdSetCheckpointNV */
-    /*  472 */ GloamCommandScopeDevice, /* vkGetQueueCheckpointDataNV */
-    /*  473 */ GloamCommandScopeDevice, /* vkGetQueueCheckpointData2NV */
-    /*  474 */ GloamCommandScopeDevice, /* vkGetSemaphoreCounterValueKHR */
-    /*  475 */ GloamCommandScopeDevice, /* vkWaitSemaphoresKHR */
-    /*  476 */ GloamCommandScopeDevice, /* vkSignalSemaphoreKHR */
-    /*  477 */ GloamCommandScopeDevice, /* vkSetSwapchainPresentTimingQueueSizeEXT */
-    /*  478 */ GloamCommandScopeDevice, /* vkGetSwapchainTimingPropertiesEXT */
-    /*  479 */ GloamCommandScopeDevice, /* vkGetSwapchainTimeDomainPropertiesEXT */
-    /*  480 */ GloamCommandScopeDevice, /* vkGetPastPresentationTimingEXT */
-    /*  481 */ GloamCommandScopeDevice, /* vkInitializePerformanceApiINTEL */
-    /*  482 */ GloamCommandScopeDevice, /* vkUninitializePerformanceApiINTEL */
-    /*  483 */ GloamCommandScopeDevice, /* vkCmdSetPerformanceMarkerINTEL */
-    /*  484 */ GloamCommandScopeDevice, /* vkCmdSetPerformanceStreamMarkerINTEL */
-    /*  485 */ GloamCommandScopeDevice, /* vkCmdSetPerformanceOverrideINTEL */
-    /*  486 */ GloamCommandScopeDevice, /* vkAcquirePerformanceConfigurationINTEL */
-    /*  487 */ GloamCommandScopeDevice, /* vkReleasePerformanceConfigurationINTEL */
-    /*  488 */ GloamCommandScopeDevice, /* vkQueueSetPerformanceConfigurationINTEL */
-    /*  489 */ GloamCommandScopeDevice, /* vkGetPerformanceParameterINTEL */
-    /*  490 */ GloamCommandScopeDevice, /* vkSetLocalDimmingAMD */
+    /*  465 */ GloamCommandScopeDevice  , /* vkGetCalibratedTimestampsEXT */
+    /*  466 */ GloamCommandScopeDevice  , /* vkCmdDrawMeshTasksNV */
+    /*  467 */ GloamCommandScopeDevice  , /* vkCmdDrawMeshTasksIndirectNV */
+    /*  468 */ GloamCommandScopeDevice  , /* vkCmdDrawMeshTasksIndirectCountNV */
+    /*  469 */ GloamCommandScopeDevice  , /* vkCmdSetExclusiveScissorEnableNV */
+    /*  470 */ GloamCommandScopeDevice  , /* vkCmdSetExclusiveScissorNV */
+    /*  471 */ GloamCommandScopeDevice  , /* vkCmdSetCheckpointNV */
+    /*  472 */ GloamCommandScopeDevice  , /* vkGetQueueCheckpointDataNV */
+    /*  473 */ GloamCommandScopeDevice  , /* vkGetQueueCheckpointData2NV */
+    /*  474 */ GloamCommandScopeDevice  , /* vkGetSemaphoreCounterValueKHR */
+    /*  475 */ GloamCommandScopeDevice  , /* vkWaitSemaphoresKHR */
+    /*  476 */ GloamCommandScopeDevice  , /* vkSignalSemaphoreKHR */
+    /*  477 */ GloamCommandScopeDevice  , /* vkSetSwapchainPresentTimingQueueSizeEXT */
+    /*  478 */ GloamCommandScopeDevice  , /* vkGetSwapchainTimingPropertiesEXT */
+    /*  479 */ GloamCommandScopeDevice  , /* vkGetSwapchainTimeDomainPropertiesEXT */
+    /*  480 */ GloamCommandScopeDevice  , /* vkGetPastPresentationTimingEXT */
+    /*  481 */ GloamCommandScopeDevice  , /* vkInitializePerformanceApiINTEL */
+    /*  482 */ GloamCommandScopeDevice  , /* vkUninitializePerformanceApiINTEL */
+    /*  483 */ GloamCommandScopeDevice  , /* vkCmdSetPerformanceMarkerINTEL */
+    /*  484 */ GloamCommandScopeDevice  , /* vkCmdSetPerformanceStreamMarkerINTEL */
+    /*  485 */ GloamCommandScopeDevice  , /* vkCmdSetPerformanceOverrideINTEL */
+    /*  486 */ GloamCommandScopeDevice  , /* vkAcquirePerformanceConfigurationINTEL */
+    /*  487 */ GloamCommandScopeDevice  , /* vkReleasePerformanceConfigurationINTEL */
+    /*  488 */ GloamCommandScopeDevice  , /* vkQueueSetPerformanceConfigurationINTEL */
+    /*  489 */ GloamCommandScopeDevice  , /* vkGetPerformanceParameterINTEL */
+    /*  490 */ GloamCommandScopeDevice  , /* vkSetLocalDimmingAMD */
     /*  491 */ GloamCommandScopeInstance, /* vkCreateImagePipeSurfaceFUCHSIA */
     /*  492 */ GloamCommandScopeInstance, /* vkCreateMetalSurfaceEXT */
     /*  493 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceFragmentShadingRatesKHR */
-    /*  494 */ GloamCommandScopeDevice, /* vkCmdSetFragmentShadingRateKHR */
-    /*  495 */ GloamCommandScopeDevice, /* vkCmdSetRenderingAttachmentLocationsKHR */
-    /*  496 */ GloamCommandScopeDevice, /* vkCmdSetRenderingInputAttachmentIndicesKHR */
-    /*  497 */ GloamCommandScopeDevice, /* vkGetBufferDeviceAddressEXT */
+    /*  494 */ GloamCommandScopeDevice  , /* vkCmdSetFragmentShadingRateKHR */
+    /*  495 */ GloamCommandScopeDevice  , /* vkCmdSetRenderingAttachmentLocationsKHR */
+    /*  496 */ GloamCommandScopeDevice  , /* vkCmdSetRenderingInputAttachmentIndicesKHR */
+    /*  497 */ GloamCommandScopeDevice  , /* vkGetBufferDeviceAddressEXT */
     /*  498 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceToolPropertiesEXT */
-    /*  499 */ GloamCommandScopeDevice, /* vkWaitForPresentKHR */
+    /*  499 */ GloamCommandScopeDevice  , /* vkWaitForPresentKHR */
     /*  500 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceCooperativeMatrixPropertiesNV */
     /*  501 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV */
     /*  502 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceSurfacePresentModes2EXT */
-    /*  503 */ GloamCommandScopeDevice, /* vkAcquireFullScreenExclusiveModeEXT */
-    /*  504 */ GloamCommandScopeDevice, /* vkReleaseFullScreenExclusiveModeEXT */
-    /*  505 */ GloamCommandScopeDevice, /* vkGetDeviceGroupSurfacePresentModes2EXT */
+    /*  503 */ GloamCommandScopeDevice  , /* vkAcquireFullScreenExclusiveModeEXT */
+    /*  504 */ GloamCommandScopeDevice  , /* vkReleaseFullScreenExclusiveModeEXT */
+    /*  505 */ GloamCommandScopeDevice  , /* vkGetDeviceGroupSurfacePresentModes2EXT */
     /*  506 */ GloamCommandScopeInstance, /* vkCreateHeadlessSurfaceEXT */
-    /*  507 */ GloamCommandScopeDevice, /* vkGetBufferDeviceAddressKHR */
-    /*  508 */ GloamCommandScopeDevice, /* vkGetBufferOpaqueCaptureAddressKHR */
-    /*  509 */ GloamCommandScopeDevice, /* vkGetDeviceMemoryOpaqueCaptureAddressKHR */
-    /*  510 */ GloamCommandScopeDevice, /* vkCmdSetLineStippleEXT */
-    /*  511 */ GloamCommandScopeDevice, /* vkResetQueryPoolEXT */
-    /*  512 */ GloamCommandScopeDevice, /* vkCmdSetCullModeEXT */
-    /*  513 */ GloamCommandScopeDevice, /* vkCmdSetFrontFaceEXT */
-    /*  514 */ GloamCommandScopeDevice, /* vkCmdSetPrimitiveTopologyEXT */
-    /*  515 */ GloamCommandScopeDevice, /* vkCmdSetViewportWithCountEXT */
-    /*  516 */ GloamCommandScopeDevice, /* vkCmdSetScissorWithCountEXT */
-    /*  517 */ GloamCommandScopeDevice, /* vkCmdBindVertexBuffers2EXT */
-    /*  518 */ GloamCommandScopeDevice, /* vkCmdSetDepthTestEnableEXT */
-    /*  519 */ GloamCommandScopeDevice, /* vkCmdSetDepthWriteEnableEXT */
-    /*  520 */ GloamCommandScopeDevice, /* vkCmdSetDepthCompareOpEXT */
-    /*  521 */ GloamCommandScopeDevice, /* vkCmdSetDepthBoundsTestEnableEXT */
-    /*  522 */ GloamCommandScopeDevice, /* vkCmdSetStencilTestEnableEXT */
-    /*  523 */ GloamCommandScopeDevice, /* vkCmdSetStencilOpEXT */
-    /*  524 */ GloamCommandScopeDevice, /* vkCreateDeferredOperationKHR */
-    /*  525 */ GloamCommandScopeDevice, /* vkDestroyDeferredOperationKHR */
-    /*  526 */ GloamCommandScopeDevice, /* vkGetDeferredOperationMaxConcurrencyKHR */
-    /*  527 */ GloamCommandScopeDevice, /* vkGetDeferredOperationResultKHR */
-    /*  528 */ GloamCommandScopeDevice, /* vkDeferredOperationJoinKHR */
-    /*  529 */ GloamCommandScopeDevice, /* vkGetPipelineExecutablePropertiesKHR */
-    /*  530 */ GloamCommandScopeDevice, /* vkGetPipelineExecutableStatisticsKHR */
-    /*  531 */ GloamCommandScopeDevice, /* vkGetPipelineExecutableInternalRepresentationsKHR */
-    /*  532 */ GloamCommandScopeDevice, /* vkCopyMemoryToImageEXT */
-    /*  533 */ GloamCommandScopeDevice, /* vkCopyImageToMemoryEXT */
-    /*  534 */ GloamCommandScopeDevice, /* vkCopyImageToImageEXT */
-    /*  535 */ GloamCommandScopeDevice, /* vkTransitionImageLayoutEXT */
-    /*  536 */ GloamCommandScopeDevice, /* vkGetImageSubresourceLayout2EXT */
-    /*  537 */ GloamCommandScopeDevice, /* vkMapMemory2KHR */
-    /*  538 */ GloamCommandScopeDevice, /* vkUnmapMemory2KHR */
-    /*  539 */ GloamCommandScopeDevice, /* vkReleaseSwapchainImagesEXT */
-    /*  540 */ GloamCommandScopeDevice, /* vkGetGeneratedCommandsMemoryRequirementsNV */
-    /*  541 */ GloamCommandScopeDevice, /* vkCmdPreprocessGeneratedCommandsNV */
-    /*  542 */ GloamCommandScopeDevice, /* vkCmdExecuteGeneratedCommandsNV */
-    /*  543 */ GloamCommandScopeDevice, /* vkCmdBindPipelineShaderGroupNV */
-    /*  544 */ GloamCommandScopeDevice, /* vkCreateIndirectCommandsLayoutNV */
-    /*  545 */ GloamCommandScopeDevice, /* vkDestroyIndirectCommandsLayoutNV */
-    /*  546 */ GloamCommandScopeDevice, /* vkCmdSetDepthBias2EXT */
+    /*  507 */ GloamCommandScopeDevice  , /* vkGetBufferDeviceAddressKHR */
+    /*  508 */ GloamCommandScopeDevice  , /* vkGetBufferOpaqueCaptureAddressKHR */
+    /*  509 */ GloamCommandScopeDevice  , /* vkGetDeviceMemoryOpaqueCaptureAddressKHR */
+    /*  510 */ GloamCommandScopeDevice  , /* vkCmdSetLineStippleEXT */
+    /*  511 */ GloamCommandScopeDevice  , /* vkResetQueryPoolEXT */
+    /*  512 */ GloamCommandScopeDevice  , /* vkCmdSetCullModeEXT */
+    /*  513 */ GloamCommandScopeDevice  , /* vkCmdSetFrontFaceEXT */
+    /*  514 */ GloamCommandScopeDevice  , /* vkCmdSetPrimitiveTopologyEXT */
+    /*  515 */ GloamCommandScopeDevice  , /* vkCmdSetViewportWithCountEXT */
+    /*  516 */ GloamCommandScopeDevice  , /* vkCmdSetScissorWithCountEXT */
+    /*  517 */ GloamCommandScopeDevice  , /* vkCmdBindVertexBuffers2EXT */
+    /*  518 */ GloamCommandScopeDevice  , /* vkCmdSetDepthTestEnableEXT */
+    /*  519 */ GloamCommandScopeDevice  , /* vkCmdSetDepthWriteEnableEXT */
+    /*  520 */ GloamCommandScopeDevice  , /* vkCmdSetDepthCompareOpEXT */
+    /*  521 */ GloamCommandScopeDevice  , /* vkCmdSetDepthBoundsTestEnableEXT */
+    /*  522 */ GloamCommandScopeDevice  , /* vkCmdSetStencilTestEnableEXT */
+    /*  523 */ GloamCommandScopeDevice  , /* vkCmdSetStencilOpEXT */
+    /*  524 */ GloamCommandScopeDevice  , /* vkCreateDeferredOperationKHR */
+    /*  525 */ GloamCommandScopeDevice  , /* vkDestroyDeferredOperationKHR */
+    /*  526 */ GloamCommandScopeDevice  , /* vkGetDeferredOperationMaxConcurrencyKHR */
+    /*  527 */ GloamCommandScopeDevice  , /* vkGetDeferredOperationResultKHR */
+    /*  528 */ GloamCommandScopeDevice  , /* vkDeferredOperationJoinKHR */
+    /*  529 */ GloamCommandScopeDevice  , /* vkGetPipelineExecutablePropertiesKHR */
+    /*  530 */ GloamCommandScopeDevice  , /* vkGetPipelineExecutableStatisticsKHR */
+    /*  531 */ GloamCommandScopeDevice  , /* vkGetPipelineExecutableInternalRepresentationsKHR */
+    /*  532 */ GloamCommandScopeDevice  , /* vkCopyMemoryToImageEXT */
+    /*  533 */ GloamCommandScopeDevice  , /* vkCopyImageToMemoryEXT */
+    /*  534 */ GloamCommandScopeDevice  , /* vkCopyImageToImageEXT */
+    /*  535 */ GloamCommandScopeDevice  , /* vkTransitionImageLayoutEXT */
+    /*  536 */ GloamCommandScopeDevice  , /* vkGetImageSubresourceLayout2EXT */
+    /*  537 */ GloamCommandScopeDevice  , /* vkMapMemory2KHR */
+    /*  538 */ GloamCommandScopeDevice  , /* vkUnmapMemory2KHR */
+    /*  539 */ GloamCommandScopeDevice  , /* vkReleaseSwapchainImagesEXT */
+    /*  540 */ GloamCommandScopeDevice  , /* vkGetGeneratedCommandsMemoryRequirementsNV */
+    /*  541 */ GloamCommandScopeDevice  , /* vkCmdPreprocessGeneratedCommandsNV */
+    /*  542 */ GloamCommandScopeDevice  , /* vkCmdExecuteGeneratedCommandsNV */
+    /*  543 */ GloamCommandScopeDevice  , /* vkCmdBindPipelineShaderGroupNV */
+    /*  544 */ GloamCommandScopeDevice  , /* vkCreateIndirectCommandsLayoutNV */
+    /*  545 */ GloamCommandScopeDevice  , /* vkDestroyIndirectCommandsLayoutNV */
+    /*  546 */ GloamCommandScopeDevice  , /* vkCmdSetDepthBias2EXT */
     /*  547 */ GloamCommandScopeInstance, /* vkAcquireDrmDisplayEXT */
     /*  548 */ GloamCommandScopeInstance, /* vkGetDrmDisplayEXT */
-    /*  549 */ GloamCommandScopeDevice, /* vkCreatePrivateDataSlotEXT */
-    /*  550 */ GloamCommandScopeDevice, /* vkDestroyPrivateDataSlotEXT */
-    /*  551 */ GloamCommandScopeDevice, /* vkSetPrivateDataEXT */
-    /*  552 */ GloamCommandScopeDevice, /* vkGetPrivateDataEXT */
+    /*  549 */ GloamCommandScopeDevice  , /* vkCreatePrivateDataSlotEXT */
+    /*  550 */ GloamCommandScopeDevice  , /* vkDestroyPrivateDataSlotEXT */
+    /*  551 */ GloamCommandScopeDevice  , /* vkSetPrivateDataEXT */
+    /*  552 */ GloamCommandScopeDevice  , /* vkGetPrivateDataEXT */
     /*  553 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceVideoEncodeQualityLevelPropertiesKHR */
-    /*  554 */ GloamCommandScopeDevice, /* vkGetEncodedVideoSessionParametersKHR */
-    /*  555 */ GloamCommandScopeDevice, /* vkCmdEncodeVideoKHR */
-    /*  556 */ GloamCommandScopeDevice, /* vkCreateCudaModuleNV */
-    /*  557 */ GloamCommandScopeDevice, /* vkGetCudaModuleCacheNV */
-    /*  558 */ GloamCommandScopeDevice, /* vkCreateCudaFunctionNV */
-    /*  559 */ GloamCommandScopeDevice, /* vkDestroyCudaModuleNV */
-    /*  560 */ GloamCommandScopeDevice, /* vkDestroyCudaFunctionNV */
-    /*  561 */ GloamCommandScopeDevice, /* vkCmdCudaLaunchKernelNV */
-    /*  562 */ GloamCommandScopeDevice, /* vkCmdDispatchTileQCOM */
-    /*  563 */ GloamCommandScopeDevice, /* vkCmdBeginPerTileExecutionQCOM */
-    /*  564 */ GloamCommandScopeDevice, /* vkCmdEndPerTileExecutionQCOM */
-    /*  565 */ GloamCommandScopeDevice, /* vkExportMetalObjectsEXT */
-    /*  566 */ GloamCommandScopeDevice, /* vkCmdSetEvent2KHR */
-    /*  567 */ GloamCommandScopeDevice, /* vkCmdResetEvent2KHR */
-    /*  568 */ GloamCommandScopeDevice, /* vkCmdWaitEvents2KHR */
-    /*  569 */ GloamCommandScopeDevice, /* vkCmdPipelineBarrier2KHR */
-    /*  570 */ GloamCommandScopeDevice, /* vkCmdWriteTimestamp2KHR */
-    /*  571 */ GloamCommandScopeDevice, /* vkQueueSubmit2KHR */
-    /*  572 */ GloamCommandScopeDevice, /* vkGetDescriptorSetLayoutSizeEXT */
-    /*  573 */ GloamCommandScopeDevice, /* vkGetDescriptorSetLayoutBindingOffsetEXT */
-    /*  574 */ GloamCommandScopeDevice, /* vkGetDescriptorEXT */
-    /*  575 */ GloamCommandScopeDevice, /* vkCmdBindDescriptorBuffersEXT */
-    /*  576 */ GloamCommandScopeDevice, /* vkCmdSetDescriptorBufferOffsetsEXT */
-    /*  577 */ GloamCommandScopeDevice, /* vkCmdBindDescriptorBufferEmbeddedSamplersEXT */
-    /*  578 */ GloamCommandScopeDevice, /* vkGetBufferOpaqueCaptureDescriptorDataEXT */
-    /*  579 */ GloamCommandScopeDevice, /* vkGetImageOpaqueCaptureDescriptorDataEXT */
-    /*  580 */ GloamCommandScopeDevice, /* vkGetImageViewOpaqueCaptureDescriptorDataEXT */
-    /*  581 */ GloamCommandScopeDevice, /* vkGetSamplerOpaqueCaptureDescriptorDataEXT */
-    /*  582 */ GloamCommandScopeDevice, /* vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT */
-    /*  583 */ GloamCommandScopeDevice, /* vkCmdBindIndexBuffer3KHR */
-    /*  584 */ GloamCommandScopeDevice, /* vkCmdBindVertexBuffers3KHR */
-    /*  585 */ GloamCommandScopeDevice, /* vkCmdDrawIndirect2KHR */
-    /*  586 */ GloamCommandScopeDevice, /* vkCmdDrawIndexedIndirect2KHR */
-    /*  587 */ GloamCommandScopeDevice, /* vkCmdDispatchIndirect2KHR */
-    /*  588 */ GloamCommandScopeDevice, /* vkCmdCopyMemoryKHR */
-    /*  589 */ GloamCommandScopeDevice, /* vkCmdCopyMemoryToImageKHR */
-    /*  590 */ GloamCommandScopeDevice, /* vkCmdCopyImageToMemoryKHR */
-    /*  591 */ GloamCommandScopeDevice, /* vkCmdUpdateMemoryKHR */
-    /*  592 */ GloamCommandScopeDevice, /* vkCmdFillMemoryKHR */
-    /*  593 */ GloamCommandScopeDevice, /* vkCmdCopyQueryPoolResultsToMemoryKHR */
-    /*  594 */ GloamCommandScopeDevice, /* vkCmdDrawIndirectCount2KHR */
-    /*  595 */ GloamCommandScopeDevice, /* vkCmdDrawIndexedIndirectCount2KHR */
-    /*  596 */ GloamCommandScopeDevice, /* vkCmdBeginConditionalRendering2EXT */
-    /*  597 */ GloamCommandScopeDevice, /* vkCmdBindTransformFeedbackBuffers2EXT */
-    /*  598 */ GloamCommandScopeDevice, /* vkCmdBeginTransformFeedback2EXT */
-    /*  599 */ GloamCommandScopeDevice, /* vkCmdEndTransformFeedback2EXT */
-    /*  600 */ GloamCommandScopeDevice, /* vkCmdDrawIndirectByteCount2EXT */
-    /*  601 */ GloamCommandScopeDevice, /* vkCmdDrawMeshTasksIndirect2EXT */
-    /*  602 */ GloamCommandScopeDevice, /* vkCmdDrawMeshTasksIndirectCount2EXT */
-    /*  603 */ GloamCommandScopeDevice, /* vkCmdWriteMarkerToMemoryAMD */
-    /*  604 */ GloamCommandScopeDevice, /* vkCreateAccelerationStructure2KHR */
-    /*  605 */ GloamCommandScopeDevice, /* vkCmdSetFragmentShadingRateEnumNV */
-    /*  606 */ GloamCommandScopeDevice, /* vkCmdDrawMeshTasksEXT */
-    /*  607 */ GloamCommandScopeDevice, /* vkCmdDrawMeshTasksIndirectEXT */
-    /*  608 */ GloamCommandScopeDevice, /* vkCmdDrawMeshTasksIndirectCountEXT */
-    /*  609 */ GloamCommandScopeDevice, /* vkCmdCopyBuffer2KHR */
-    /*  610 */ GloamCommandScopeDevice, /* vkCmdCopyImage2KHR */
-    /*  611 */ GloamCommandScopeDevice, /* vkCmdCopyBufferToImage2KHR */
-    /*  612 */ GloamCommandScopeDevice, /* vkCmdCopyImageToBuffer2KHR */
-    /*  613 */ GloamCommandScopeDevice, /* vkCmdBlitImage2KHR */
-    /*  614 */ GloamCommandScopeDevice, /* vkCmdResolveImage2KHR */
-    /*  615 */ GloamCommandScopeDevice, /* vkGetDeviceFaultInfoEXT */
+    /*  554 */ GloamCommandScopeDevice  , /* vkGetEncodedVideoSessionParametersKHR */
+    /*  555 */ GloamCommandScopeDevice  , /* vkCmdEncodeVideoKHR */
+    /*  556 */ GloamCommandScopeDevice  , /* vkCreateCudaModuleNV */
+    /*  557 */ GloamCommandScopeDevice  , /* vkGetCudaModuleCacheNV */
+    /*  558 */ GloamCommandScopeDevice  , /* vkCreateCudaFunctionNV */
+    /*  559 */ GloamCommandScopeDevice  , /* vkDestroyCudaModuleNV */
+    /*  560 */ GloamCommandScopeDevice  , /* vkDestroyCudaFunctionNV */
+    /*  561 */ GloamCommandScopeDevice  , /* vkCmdCudaLaunchKernelNV */
+    /*  562 */ GloamCommandScopeDevice  , /* vkCmdDispatchTileQCOM */
+    /*  563 */ GloamCommandScopeDevice  , /* vkCmdBeginPerTileExecutionQCOM */
+    /*  564 */ GloamCommandScopeDevice  , /* vkCmdEndPerTileExecutionQCOM */
+    /*  565 */ GloamCommandScopeDevice  , /* vkExportMetalObjectsEXT */
+    /*  566 */ GloamCommandScopeDevice  , /* vkCmdSetEvent2KHR */
+    /*  567 */ GloamCommandScopeDevice  , /* vkCmdResetEvent2KHR */
+    /*  568 */ GloamCommandScopeDevice  , /* vkCmdWaitEvents2KHR */
+    /*  569 */ GloamCommandScopeDevice  , /* vkCmdPipelineBarrier2KHR */
+    /*  570 */ GloamCommandScopeDevice  , /* vkCmdWriteTimestamp2KHR */
+    /*  571 */ GloamCommandScopeDevice  , /* vkQueueSubmit2KHR */
+    /*  572 */ GloamCommandScopeDevice  , /* vkGetDescriptorSetLayoutSizeEXT */
+    /*  573 */ GloamCommandScopeDevice  , /* vkGetDescriptorSetLayoutBindingOffsetEXT */
+    /*  574 */ GloamCommandScopeDevice  , /* vkGetDescriptorEXT */
+    /*  575 */ GloamCommandScopeDevice  , /* vkCmdBindDescriptorBuffersEXT */
+    /*  576 */ GloamCommandScopeDevice  , /* vkCmdSetDescriptorBufferOffsetsEXT */
+    /*  577 */ GloamCommandScopeDevice  , /* vkCmdBindDescriptorBufferEmbeddedSamplersEXT */
+    /*  578 */ GloamCommandScopeDevice  , /* vkGetBufferOpaqueCaptureDescriptorDataEXT */
+    /*  579 */ GloamCommandScopeDevice  , /* vkGetImageOpaqueCaptureDescriptorDataEXT */
+    /*  580 */ GloamCommandScopeDevice  , /* vkGetImageViewOpaqueCaptureDescriptorDataEXT */
+    /*  581 */ GloamCommandScopeDevice  , /* vkGetSamplerOpaqueCaptureDescriptorDataEXT */
+    /*  582 */ GloamCommandScopeDevice  , /* vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT */
+    /*  583 */ GloamCommandScopeDevice  , /* vkCmdBindIndexBuffer3KHR */
+    /*  584 */ GloamCommandScopeDevice  , /* vkCmdBindVertexBuffers3KHR */
+    /*  585 */ GloamCommandScopeDevice  , /* vkCmdDrawIndirect2KHR */
+    /*  586 */ GloamCommandScopeDevice  , /* vkCmdDrawIndexedIndirect2KHR */
+    /*  587 */ GloamCommandScopeDevice  , /* vkCmdDispatchIndirect2KHR */
+    /*  588 */ GloamCommandScopeDevice  , /* vkCmdCopyMemoryKHR */
+    /*  589 */ GloamCommandScopeDevice  , /* vkCmdCopyMemoryToImageKHR */
+    /*  590 */ GloamCommandScopeDevice  , /* vkCmdCopyImageToMemoryKHR */
+    /*  591 */ GloamCommandScopeDevice  , /* vkCmdUpdateMemoryKHR */
+    /*  592 */ GloamCommandScopeDevice  , /* vkCmdFillMemoryKHR */
+    /*  593 */ GloamCommandScopeDevice  , /* vkCmdCopyQueryPoolResultsToMemoryKHR */
+    /*  594 */ GloamCommandScopeDevice  , /* vkCmdDrawIndirectCount2KHR */
+    /*  595 */ GloamCommandScopeDevice  , /* vkCmdDrawIndexedIndirectCount2KHR */
+    /*  596 */ GloamCommandScopeDevice  , /* vkCmdBeginConditionalRendering2EXT */
+    /*  597 */ GloamCommandScopeDevice  , /* vkCmdBindTransformFeedbackBuffers2EXT */
+    /*  598 */ GloamCommandScopeDevice  , /* vkCmdBeginTransformFeedback2EXT */
+    /*  599 */ GloamCommandScopeDevice  , /* vkCmdEndTransformFeedback2EXT */
+    /*  600 */ GloamCommandScopeDevice  , /* vkCmdDrawIndirectByteCount2EXT */
+    /*  601 */ GloamCommandScopeDevice  , /* vkCmdDrawMeshTasksIndirect2EXT */
+    /*  602 */ GloamCommandScopeDevice  , /* vkCmdDrawMeshTasksIndirectCount2EXT */
+    /*  603 */ GloamCommandScopeDevice  , /* vkCmdWriteMarkerToMemoryAMD */
+    /*  604 */ GloamCommandScopeDevice  , /* vkCreateAccelerationStructure2KHR */
+    /*  605 */ GloamCommandScopeDevice  , /* vkCmdSetFragmentShadingRateEnumNV */
+    /*  606 */ GloamCommandScopeDevice  , /* vkCmdDrawMeshTasksEXT */
+    /*  607 */ GloamCommandScopeDevice  , /* vkCmdDrawMeshTasksIndirectEXT */
+    /*  608 */ GloamCommandScopeDevice  , /* vkCmdDrawMeshTasksIndirectCountEXT */
+    /*  609 */ GloamCommandScopeDevice  , /* vkCmdCopyBuffer2KHR */
+    /*  610 */ GloamCommandScopeDevice  , /* vkCmdCopyImage2KHR */
+    /*  611 */ GloamCommandScopeDevice  , /* vkCmdCopyBufferToImage2KHR */
+    /*  612 */ GloamCommandScopeDevice  , /* vkCmdCopyImageToBuffer2KHR */
+    /*  613 */ GloamCommandScopeDevice  , /* vkCmdBlitImage2KHR */
+    /*  614 */ GloamCommandScopeDevice  , /* vkCmdResolveImage2KHR */
+    /*  615 */ GloamCommandScopeDevice  , /* vkGetDeviceFaultInfoEXT */
     /*  616 */ GloamCommandScopeInstance, /* vkAcquireWinrtDisplayNV */
     /*  617 */ GloamCommandScopeInstance, /* vkGetWinrtDisplayNV */
     /*  618 */ GloamCommandScopeInstance, /* vkCreateDirectFBSurfaceEXT */
     /*  619 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceDirectFBPresentationSupportEXT */
-    /*  620 */ GloamCommandScopeDevice, /* vkCmdSetVertexInputEXT */
-    /*  621 */ GloamCommandScopeDevice, /* vkGetMemoryZirconHandleFUCHSIA */
-    /*  622 */ GloamCommandScopeDevice, /* vkGetMemoryZirconHandlePropertiesFUCHSIA */
-    /*  623 */ GloamCommandScopeDevice, /* vkImportSemaphoreZirconHandleFUCHSIA */
-    /*  624 */ GloamCommandScopeDevice, /* vkGetSemaphoreZirconHandleFUCHSIA */
-    /*  625 */ GloamCommandScopeDevice, /* vkCreateBufferCollectionFUCHSIA */
-    /*  626 */ GloamCommandScopeDevice, /* vkSetBufferCollectionImageConstraintsFUCHSIA */
-    /*  627 */ GloamCommandScopeDevice, /* vkSetBufferCollectionBufferConstraintsFUCHSIA */
-    /*  628 */ GloamCommandScopeDevice, /* vkDestroyBufferCollectionFUCHSIA */
-    /*  629 */ GloamCommandScopeDevice, /* vkGetBufferCollectionPropertiesFUCHSIA */
-    /*  630 */ GloamCommandScopeDevice, /* vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI */
-    /*  631 */ GloamCommandScopeDevice, /* vkCmdSubpassShadingHUAWEI */
-    /*  632 */ GloamCommandScopeDevice, /* vkCmdBindInvocationMaskHUAWEI */
-    /*  633 */ GloamCommandScopeDevice, /* vkGetMemoryRemoteAddressNV */
-    /*  634 */ GloamCommandScopeDevice, /* vkGetPipelinePropertiesEXT */
-    /*  635 */ GloamCommandScopeDevice, /* vkCmdSetPatchControlPointsEXT */
-    /*  636 */ GloamCommandScopeDevice, /* vkCmdSetRasterizerDiscardEnableEXT */
-    /*  637 */ GloamCommandScopeDevice, /* vkCmdSetDepthBiasEnableEXT */
-    /*  638 */ GloamCommandScopeDevice, /* vkCmdSetLogicOpEXT */
-    /*  639 */ GloamCommandScopeDevice, /* vkCmdSetPrimitiveRestartEnableEXT */
+    /*  620 */ GloamCommandScopeDevice  , /* vkCmdSetVertexInputEXT */
+    /*  621 */ GloamCommandScopeDevice  , /* vkGetMemoryZirconHandleFUCHSIA */
+    /*  622 */ GloamCommandScopeDevice  , /* vkGetMemoryZirconHandlePropertiesFUCHSIA */
+    /*  623 */ GloamCommandScopeDevice  , /* vkImportSemaphoreZirconHandleFUCHSIA */
+    /*  624 */ GloamCommandScopeDevice  , /* vkGetSemaphoreZirconHandleFUCHSIA */
+    /*  625 */ GloamCommandScopeDevice  , /* vkCreateBufferCollectionFUCHSIA */
+    /*  626 */ GloamCommandScopeDevice  , /* vkSetBufferCollectionImageConstraintsFUCHSIA */
+    /*  627 */ GloamCommandScopeDevice  , /* vkSetBufferCollectionBufferConstraintsFUCHSIA */
+    /*  628 */ GloamCommandScopeDevice  , /* vkDestroyBufferCollectionFUCHSIA */
+    /*  629 */ GloamCommandScopeDevice  , /* vkGetBufferCollectionPropertiesFUCHSIA */
+    /*  630 */ GloamCommandScopeDevice  , /* vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI */
+    /*  631 */ GloamCommandScopeDevice  , /* vkCmdSubpassShadingHUAWEI */
+    /*  632 */ GloamCommandScopeDevice  , /* vkCmdBindInvocationMaskHUAWEI */
+    /*  633 */ GloamCommandScopeDevice  , /* vkGetMemoryRemoteAddressNV */
+    /*  634 */ GloamCommandScopeDevice  , /* vkGetPipelinePropertiesEXT */
+    /*  635 */ GloamCommandScopeDevice  , /* vkCmdSetPatchControlPointsEXT */
+    /*  636 */ GloamCommandScopeDevice  , /* vkCmdSetRasterizerDiscardEnableEXT */
+    /*  637 */ GloamCommandScopeDevice  , /* vkCmdSetDepthBiasEnableEXT */
+    /*  638 */ GloamCommandScopeDevice  , /* vkCmdSetLogicOpEXT */
+    /*  639 */ GloamCommandScopeDevice  , /* vkCmdSetPrimitiveRestartEnableEXT */
     /*  640 */ GloamCommandScopeInstance, /* vkCreateScreenSurfaceQNX */
     /*  641 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceScreenPresentationSupportQNX */
-    /*  642 */ GloamCommandScopeDevice, /* vkCmdSetColorWriteEnableEXT */
-    /*  643 */ GloamCommandScopeDevice, /* vkCmdTraceRaysIndirect2KHR */
-    /*  644 */ GloamCommandScopeDevice, /* vkCmdDrawMultiEXT */
-    /*  645 */ GloamCommandScopeDevice, /* vkCmdDrawMultiIndexedEXT */
-    /*  646 */ GloamCommandScopeDevice, /* vkCreateMicromapEXT */
-    /*  647 */ GloamCommandScopeDevice, /* vkDestroyMicromapEXT */
-    /*  648 */ GloamCommandScopeDevice, /* vkCmdBuildMicromapsEXT */
-    /*  649 */ GloamCommandScopeDevice, /* vkBuildMicromapsEXT */
-    /*  650 */ GloamCommandScopeDevice, /* vkCopyMicromapEXT */
-    /*  651 */ GloamCommandScopeDevice, /* vkCopyMicromapToMemoryEXT */
-    /*  652 */ GloamCommandScopeDevice, /* vkCopyMemoryToMicromapEXT */
-    /*  653 */ GloamCommandScopeDevice, /* vkWriteMicromapsPropertiesEXT */
-    /*  654 */ GloamCommandScopeDevice, /* vkCmdCopyMicromapEXT */
-    /*  655 */ GloamCommandScopeDevice, /* vkCmdCopyMicromapToMemoryEXT */
-    /*  656 */ GloamCommandScopeDevice, /* vkCmdCopyMemoryToMicromapEXT */
-    /*  657 */ GloamCommandScopeDevice, /* vkCmdWriteMicromapsPropertiesEXT */
-    /*  658 */ GloamCommandScopeDevice, /* vkGetDeviceMicromapCompatibilityEXT */
-    /*  659 */ GloamCommandScopeDevice, /* vkGetMicromapBuildSizesEXT */
-    /*  660 */ GloamCommandScopeDevice, /* vkCmdDrawClusterHUAWEI */
-    /*  661 */ GloamCommandScopeDevice, /* vkCmdDrawClusterIndirectHUAWEI */
-    /*  662 */ GloamCommandScopeDevice, /* vkSetDeviceMemoryPriorityEXT */
-    /*  663 */ GloamCommandScopeDevice, /* vkGetDeviceBufferMemoryRequirementsKHR */
-    /*  664 */ GloamCommandScopeDevice, /* vkGetDeviceImageMemoryRequirementsKHR */
-    /*  665 */ GloamCommandScopeDevice, /* vkGetDeviceImageSparseMemoryRequirementsKHR */
-    /*  666 */ GloamCommandScopeDevice, /* vkGetDescriptorSetLayoutHostMappingInfoVALVE */
-    /*  667 */ GloamCommandScopeDevice, /* vkGetDescriptorSetHostMappingVALVE */
-    /*  668 */ GloamCommandScopeDevice, /* vkCmdCopyMemoryIndirectNV */
-    /*  669 */ GloamCommandScopeDevice, /* vkCmdCopyMemoryToImageIndirectNV */
-    /*  670 */ GloamCommandScopeDevice, /* vkCmdDecompressMemoryNV */
-    /*  671 */ GloamCommandScopeDevice, /* vkCmdDecompressMemoryIndirectCountNV */
-    /*  672 */ GloamCommandScopeDevice, /* vkGetPipelineIndirectMemoryRequirementsNV */
-    /*  673 */ GloamCommandScopeDevice, /* vkCmdUpdatePipelineIndirectBufferNV */
-    /*  674 */ GloamCommandScopeDevice, /* vkGetPipelineIndirectDeviceAddressNV */
-    /*  675 */ GloamCommandScopeDevice, /* vkGetNativeBufferPropertiesOHOS */
-    /*  676 */ GloamCommandScopeDevice, /* vkGetMemoryNativeBufferOHOS */
-    /*  677 */ GloamCommandScopeDevice, /* vkCmdSetDepthClampEnableEXT */
-    /*  678 */ GloamCommandScopeDevice, /* vkCmdSetPolygonModeEXT */
-    /*  679 */ GloamCommandScopeDevice, /* vkCmdSetRasterizationSamplesEXT */
-    /*  680 */ GloamCommandScopeDevice, /* vkCmdSetSampleMaskEXT */
-    /*  681 */ GloamCommandScopeDevice, /* vkCmdSetAlphaToCoverageEnableEXT */
-    /*  682 */ GloamCommandScopeDevice, /* vkCmdSetAlphaToOneEnableEXT */
-    /*  683 */ GloamCommandScopeDevice, /* vkCmdSetLogicOpEnableEXT */
-    /*  684 */ GloamCommandScopeDevice, /* vkCmdSetColorBlendEnableEXT */
-    /*  685 */ GloamCommandScopeDevice, /* vkCmdSetColorBlendEquationEXT */
-    /*  686 */ GloamCommandScopeDevice, /* vkCmdSetColorWriteMaskEXT */
-    /*  687 */ GloamCommandScopeDevice, /* vkCmdSetTessellationDomainOriginEXT */
-    /*  688 */ GloamCommandScopeDevice, /* vkCmdSetRasterizationStreamEXT */
-    /*  689 */ GloamCommandScopeDevice, /* vkCmdSetConservativeRasterizationModeEXT */
-    /*  690 */ GloamCommandScopeDevice, /* vkCmdSetExtraPrimitiveOverestimationSizeEXT */
-    /*  691 */ GloamCommandScopeDevice, /* vkCmdSetDepthClipEnableEXT */
-    /*  692 */ GloamCommandScopeDevice, /* vkCmdSetSampleLocationsEnableEXT */
-    /*  693 */ GloamCommandScopeDevice, /* vkCmdSetColorBlendAdvancedEXT */
-    /*  694 */ GloamCommandScopeDevice, /* vkCmdSetProvokingVertexModeEXT */
-    /*  695 */ GloamCommandScopeDevice, /* vkCmdSetLineRasterizationModeEXT */
-    /*  696 */ GloamCommandScopeDevice, /* vkCmdSetLineStippleEnableEXT */
-    /*  697 */ GloamCommandScopeDevice, /* vkCmdSetDepthClipNegativeOneToOneEXT */
-    /*  698 */ GloamCommandScopeDevice, /* vkCmdSetViewportWScalingEnableNV */
-    /*  699 */ GloamCommandScopeDevice, /* vkCmdSetViewportSwizzleNV */
-    /*  700 */ GloamCommandScopeDevice, /* vkCmdSetCoverageToColorEnableNV */
-    /*  701 */ GloamCommandScopeDevice, /* vkCmdSetCoverageToColorLocationNV */
-    /*  702 */ GloamCommandScopeDevice, /* vkCmdSetCoverageModulationModeNV */
-    /*  703 */ GloamCommandScopeDevice, /* vkCmdSetCoverageModulationTableEnableNV */
-    /*  704 */ GloamCommandScopeDevice, /* vkCmdSetCoverageModulationTableNV */
-    /*  705 */ GloamCommandScopeDevice, /* vkCmdSetShadingRateImageEnableNV */
-    /*  706 */ GloamCommandScopeDevice, /* vkCmdSetRepresentativeFragmentTestEnableNV */
-    /*  707 */ GloamCommandScopeDevice, /* vkCmdSetCoverageReductionModeNV */
-    /*  708 */ GloamCommandScopeDevice, /* vkCreateTensorARM */
-    /*  709 */ GloamCommandScopeDevice, /* vkDestroyTensorARM */
-    /*  710 */ GloamCommandScopeDevice, /* vkCreateTensorViewARM */
-    /*  711 */ GloamCommandScopeDevice, /* vkDestroyTensorViewARM */
-    /*  712 */ GloamCommandScopeDevice, /* vkGetTensorMemoryRequirementsARM */
-    /*  713 */ GloamCommandScopeDevice, /* vkBindTensorMemoryARM */
-    /*  714 */ GloamCommandScopeDevice, /* vkGetDeviceTensorMemoryRequirementsARM */
-    /*  715 */ GloamCommandScopeDevice, /* vkCmdCopyTensorARM */
+    /*  642 */ GloamCommandScopeDevice  , /* vkCmdSetColorWriteEnableEXT */
+    /*  643 */ GloamCommandScopeDevice  , /* vkCmdTraceRaysIndirect2KHR */
+    /*  644 */ GloamCommandScopeDevice  , /* vkCmdDrawMultiEXT */
+    /*  645 */ GloamCommandScopeDevice  , /* vkCmdDrawMultiIndexedEXT */
+    /*  646 */ GloamCommandScopeDevice  , /* vkCreateMicromapEXT */
+    /*  647 */ GloamCommandScopeDevice  , /* vkDestroyMicromapEXT */
+    /*  648 */ GloamCommandScopeDevice  , /* vkCmdBuildMicromapsEXT */
+    /*  649 */ GloamCommandScopeDevice  , /* vkBuildMicromapsEXT */
+    /*  650 */ GloamCommandScopeDevice  , /* vkCopyMicromapEXT */
+    /*  651 */ GloamCommandScopeDevice  , /* vkCopyMicromapToMemoryEXT */
+    /*  652 */ GloamCommandScopeDevice  , /* vkCopyMemoryToMicromapEXT */
+    /*  653 */ GloamCommandScopeDevice  , /* vkWriteMicromapsPropertiesEXT */
+    /*  654 */ GloamCommandScopeDevice  , /* vkCmdCopyMicromapEXT */
+    /*  655 */ GloamCommandScopeDevice  , /* vkCmdCopyMicromapToMemoryEXT */
+    /*  656 */ GloamCommandScopeDevice  , /* vkCmdCopyMemoryToMicromapEXT */
+    /*  657 */ GloamCommandScopeDevice  , /* vkCmdWriteMicromapsPropertiesEXT */
+    /*  658 */ GloamCommandScopeDevice  , /* vkGetDeviceMicromapCompatibilityEXT */
+    /*  659 */ GloamCommandScopeDevice  , /* vkGetMicromapBuildSizesEXT */
+    /*  660 */ GloamCommandScopeDevice  , /* vkCmdDrawClusterHUAWEI */
+    /*  661 */ GloamCommandScopeDevice  , /* vkCmdDrawClusterIndirectHUAWEI */
+    /*  662 */ GloamCommandScopeDevice  , /* vkSetDeviceMemoryPriorityEXT */
+    /*  663 */ GloamCommandScopeDevice  , /* vkGetDeviceBufferMemoryRequirementsKHR */
+    /*  664 */ GloamCommandScopeDevice  , /* vkGetDeviceImageMemoryRequirementsKHR */
+    /*  665 */ GloamCommandScopeDevice  , /* vkGetDeviceImageSparseMemoryRequirementsKHR */
+    /*  666 */ GloamCommandScopeDevice  , /* vkGetDescriptorSetLayoutHostMappingInfoVALVE */
+    /*  667 */ GloamCommandScopeDevice  , /* vkGetDescriptorSetHostMappingVALVE */
+    /*  668 */ GloamCommandScopeDevice  , /* vkCmdCopyMemoryIndirectNV */
+    /*  669 */ GloamCommandScopeDevice  , /* vkCmdCopyMemoryToImageIndirectNV */
+    /*  670 */ GloamCommandScopeDevice  , /* vkCmdDecompressMemoryNV */
+    /*  671 */ GloamCommandScopeDevice  , /* vkCmdDecompressMemoryIndirectCountNV */
+    /*  672 */ GloamCommandScopeDevice  , /* vkGetPipelineIndirectMemoryRequirementsNV */
+    /*  673 */ GloamCommandScopeDevice  , /* vkCmdUpdatePipelineIndirectBufferNV */
+    /*  674 */ GloamCommandScopeDevice  , /* vkGetPipelineIndirectDeviceAddressNV */
+    /*  675 */ GloamCommandScopeDevice  , /* vkGetNativeBufferPropertiesOHOS */
+    /*  676 */ GloamCommandScopeDevice  , /* vkGetMemoryNativeBufferOHOS */
+    /*  677 */ GloamCommandScopeDevice  , /* vkCmdSetDepthClampEnableEXT */
+    /*  678 */ GloamCommandScopeDevice  , /* vkCmdSetPolygonModeEXT */
+    /*  679 */ GloamCommandScopeDevice  , /* vkCmdSetRasterizationSamplesEXT */
+    /*  680 */ GloamCommandScopeDevice  , /* vkCmdSetSampleMaskEXT */
+    /*  681 */ GloamCommandScopeDevice  , /* vkCmdSetAlphaToCoverageEnableEXT */
+    /*  682 */ GloamCommandScopeDevice  , /* vkCmdSetAlphaToOneEnableEXT */
+    /*  683 */ GloamCommandScopeDevice  , /* vkCmdSetLogicOpEnableEXT */
+    /*  684 */ GloamCommandScopeDevice  , /* vkCmdSetColorBlendEnableEXT */
+    /*  685 */ GloamCommandScopeDevice  , /* vkCmdSetColorBlendEquationEXT */
+    /*  686 */ GloamCommandScopeDevice  , /* vkCmdSetColorWriteMaskEXT */
+    /*  687 */ GloamCommandScopeDevice  , /* vkCmdSetTessellationDomainOriginEXT */
+    /*  688 */ GloamCommandScopeDevice  , /* vkCmdSetRasterizationStreamEXT */
+    /*  689 */ GloamCommandScopeDevice  , /* vkCmdSetConservativeRasterizationModeEXT */
+    /*  690 */ GloamCommandScopeDevice  , /* vkCmdSetExtraPrimitiveOverestimationSizeEXT */
+    /*  691 */ GloamCommandScopeDevice  , /* vkCmdSetDepthClipEnableEXT */
+    /*  692 */ GloamCommandScopeDevice  , /* vkCmdSetSampleLocationsEnableEXT */
+    /*  693 */ GloamCommandScopeDevice  , /* vkCmdSetColorBlendAdvancedEXT */
+    /*  694 */ GloamCommandScopeDevice  , /* vkCmdSetProvokingVertexModeEXT */
+    /*  695 */ GloamCommandScopeDevice  , /* vkCmdSetLineRasterizationModeEXT */
+    /*  696 */ GloamCommandScopeDevice  , /* vkCmdSetLineStippleEnableEXT */
+    /*  697 */ GloamCommandScopeDevice  , /* vkCmdSetDepthClipNegativeOneToOneEXT */
+    /*  698 */ GloamCommandScopeDevice  , /* vkCmdSetViewportWScalingEnableNV */
+    /*  699 */ GloamCommandScopeDevice  , /* vkCmdSetViewportSwizzleNV */
+    /*  700 */ GloamCommandScopeDevice  , /* vkCmdSetCoverageToColorEnableNV */
+    /*  701 */ GloamCommandScopeDevice  , /* vkCmdSetCoverageToColorLocationNV */
+    /*  702 */ GloamCommandScopeDevice  , /* vkCmdSetCoverageModulationModeNV */
+    /*  703 */ GloamCommandScopeDevice  , /* vkCmdSetCoverageModulationTableEnableNV */
+    /*  704 */ GloamCommandScopeDevice  , /* vkCmdSetCoverageModulationTableNV */
+    /*  705 */ GloamCommandScopeDevice  , /* vkCmdSetShadingRateImageEnableNV */
+    /*  706 */ GloamCommandScopeDevice  , /* vkCmdSetRepresentativeFragmentTestEnableNV */
+    /*  707 */ GloamCommandScopeDevice  , /* vkCmdSetCoverageReductionModeNV */
+    /*  708 */ GloamCommandScopeDevice  , /* vkCreateTensorARM */
+    /*  709 */ GloamCommandScopeDevice  , /* vkDestroyTensorARM */
+    /*  710 */ GloamCommandScopeDevice  , /* vkCreateTensorViewARM */
+    /*  711 */ GloamCommandScopeDevice  , /* vkDestroyTensorViewARM */
+    /*  712 */ GloamCommandScopeDevice  , /* vkGetTensorMemoryRequirementsARM */
+    /*  713 */ GloamCommandScopeDevice  , /* vkBindTensorMemoryARM */
+    /*  714 */ GloamCommandScopeDevice  , /* vkGetDeviceTensorMemoryRequirementsARM */
+    /*  715 */ GloamCommandScopeDevice  , /* vkCmdCopyTensorARM */
     /*  716 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceExternalTensorPropertiesARM */
-    /*  717 */ GloamCommandScopeDevice, /* vkGetTensorOpaqueCaptureDescriptorDataARM */
-    /*  718 */ GloamCommandScopeDevice, /* vkGetTensorViewOpaqueCaptureDescriptorDataARM */
-    /*  719 */ GloamCommandScopeDevice, /* vkGetShaderModuleIdentifierEXT */
-    /*  720 */ GloamCommandScopeDevice, /* vkGetShaderModuleCreateInfoIdentifierEXT */
+    /*  717 */ GloamCommandScopeDevice  , /* vkGetTensorOpaqueCaptureDescriptorDataARM */
+    /*  718 */ GloamCommandScopeDevice  , /* vkGetTensorViewOpaqueCaptureDescriptorDataARM */
+    /*  719 */ GloamCommandScopeDevice  , /* vkGetShaderModuleIdentifierEXT */
+    /*  720 */ GloamCommandScopeDevice  , /* vkGetShaderModuleCreateInfoIdentifierEXT */
     /*  721 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceOpticalFlowImageFormatsNV */
-    /*  722 */ GloamCommandScopeDevice, /* vkCreateOpticalFlowSessionNV */
-    /*  723 */ GloamCommandScopeDevice, /* vkDestroyOpticalFlowSessionNV */
-    /*  724 */ GloamCommandScopeDevice, /* vkBindOpticalFlowSessionImageNV */
-    /*  725 */ GloamCommandScopeDevice, /* vkCmdOpticalFlowExecuteNV */
-    /*  726 */ GloamCommandScopeDevice, /* vkCmdBindIndexBuffer2KHR */
-    /*  727 */ GloamCommandScopeDevice, /* vkGetRenderingAreaGranularityKHR */
-    /*  728 */ GloamCommandScopeDevice, /* vkGetDeviceImageSubresourceLayoutKHR */
-    /*  729 */ GloamCommandScopeDevice, /* vkGetImageSubresourceLayout2KHR */
-    /*  730 */ GloamCommandScopeDevice, /* vkAntiLagUpdateAMD */
-    /*  731 */ GloamCommandScopeDevice, /* vkWaitForPresent2KHR */
-    /*  732 */ GloamCommandScopeDevice, /* vkCreateShadersEXT */
-    /*  733 */ GloamCommandScopeDevice, /* vkDestroyShaderEXT */
-    /*  734 */ GloamCommandScopeDevice, /* vkGetShaderBinaryDataEXT */
-    /*  735 */ GloamCommandScopeDevice, /* vkCmdBindShadersEXT */
-    /*  736 */ GloamCommandScopeDevice, /* vkCmdSetDepthClampRangeEXT */
-    /*  737 */ GloamCommandScopeDevice, /* vkCreatePipelineBinariesKHR */
-    /*  738 */ GloamCommandScopeDevice, /* vkDestroyPipelineBinaryKHR */
-    /*  739 */ GloamCommandScopeDevice, /* vkGetPipelineKeyKHR */
-    /*  740 */ GloamCommandScopeDevice, /* vkGetPipelineBinaryDataKHR */
-    /*  741 */ GloamCommandScopeDevice, /* vkReleaseCapturedPipelineDataKHR */
-    /*  742 */ GloamCommandScopeDevice, /* vkGetFramebufferTilePropertiesQCOM */
-    /*  743 */ GloamCommandScopeDevice, /* vkGetDynamicRenderingTilePropertiesQCOM */
-    /*  744 */ GloamCommandScopeDevice, /* vkReleaseSwapchainImagesKHR */
+    /*  722 */ GloamCommandScopeDevice  , /* vkCreateOpticalFlowSessionNV */
+    /*  723 */ GloamCommandScopeDevice  , /* vkDestroyOpticalFlowSessionNV */
+    /*  724 */ GloamCommandScopeDevice  , /* vkBindOpticalFlowSessionImageNV */
+    /*  725 */ GloamCommandScopeDevice  , /* vkCmdOpticalFlowExecuteNV */
+    /*  726 */ GloamCommandScopeDevice  , /* vkCmdBindIndexBuffer2KHR */
+    /*  727 */ GloamCommandScopeDevice  , /* vkGetRenderingAreaGranularityKHR */
+    /*  728 */ GloamCommandScopeDevice  , /* vkGetDeviceImageSubresourceLayoutKHR */
+    /*  729 */ GloamCommandScopeDevice  , /* vkGetImageSubresourceLayout2KHR */
+    /*  730 */ GloamCommandScopeDevice  , /* vkAntiLagUpdateAMD */
+    /*  731 */ GloamCommandScopeDevice  , /* vkWaitForPresent2KHR */
+    /*  732 */ GloamCommandScopeDevice  , /* vkCreateShadersEXT */
+    /*  733 */ GloamCommandScopeDevice  , /* vkDestroyShaderEXT */
+    /*  734 */ GloamCommandScopeDevice  , /* vkGetShaderBinaryDataEXT */
+    /*  735 */ GloamCommandScopeDevice  , /* vkCmdBindShadersEXT */
+    /*  736 */ GloamCommandScopeDevice  , /* vkCmdSetDepthClampRangeEXT */
+    /*  737 */ GloamCommandScopeDevice  , /* vkCreatePipelineBinariesKHR */
+    /*  738 */ GloamCommandScopeDevice  , /* vkDestroyPipelineBinaryKHR */
+    /*  739 */ GloamCommandScopeDevice  , /* vkGetPipelineKeyKHR */
+    /*  740 */ GloamCommandScopeDevice  , /* vkGetPipelineBinaryDataKHR */
+    /*  741 */ GloamCommandScopeDevice  , /* vkReleaseCapturedPipelineDataKHR */
+    /*  742 */ GloamCommandScopeDevice  , /* vkGetFramebufferTilePropertiesQCOM */
+    /*  743 */ GloamCommandScopeDevice  , /* vkGetDynamicRenderingTilePropertiesQCOM */
+    /*  744 */ GloamCommandScopeDevice  , /* vkReleaseSwapchainImagesKHR */
     /*  745 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceCooperativeVectorPropertiesNV */
-    /*  746 */ GloamCommandScopeDevice, /* vkConvertCooperativeVectorMatrixNV */
-    /*  747 */ GloamCommandScopeDevice, /* vkCmdConvertCooperativeVectorMatrixNV */
-    /*  748 */ GloamCommandScopeDevice, /* vkSetLatencySleepModeNV */
-    /*  749 */ GloamCommandScopeDevice, /* vkLatencySleepNV */
-    /*  750 */ GloamCommandScopeDevice, /* vkSetLatencyMarkerNV */
-    /*  751 */ GloamCommandScopeDevice, /* vkGetLatencyTimingsNV */
-    /*  752 */ GloamCommandScopeDevice, /* vkQueueNotifyOutOfBandNV */
+    /*  746 */ GloamCommandScopeDevice  , /* vkConvertCooperativeVectorMatrixNV */
+    /*  747 */ GloamCommandScopeDevice  , /* vkCmdConvertCooperativeVectorMatrixNV */
+    /*  748 */ GloamCommandScopeDevice  , /* vkSetLatencySleepModeNV */
+    /*  749 */ GloamCommandScopeDevice  , /* vkLatencySleepNV */
+    /*  750 */ GloamCommandScopeDevice  , /* vkSetLatencyMarkerNV */
+    /*  751 */ GloamCommandScopeDevice  , /* vkGetLatencyTimingsNV */
+    /*  752 */ GloamCommandScopeDevice  , /* vkQueueNotifyOutOfBandNV */
     /*  753 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR */
-    /*  754 */ GloamCommandScopeDevice, /* vkCreateDataGraphPipelinesARM */
-    /*  755 */ GloamCommandScopeDevice, /* vkCreateDataGraphPipelineSessionARM */
-    /*  756 */ GloamCommandScopeDevice, /* vkGetDataGraphPipelineSessionBindPointRequirementsARM */
-    /*  757 */ GloamCommandScopeDevice, /* vkGetDataGraphPipelineSessionMemoryRequirementsARM */
-    /*  758 */ GloamCommandScopeDevice, /* vkBindDataGraphPipelineSessionMemoryARM */
-    /*  759 */ GloamCommandScopeDevice, /* vkDestroyDataGraphPipelineSessionARM */
-    /*  760 */ GloamCommandScopeDevice, /* vkCmdDispatchDataGraphARM */
-    /*  761 */ GloamCommandScopeDevice, /* vkGetDataGraphPipelineAvailablePropertiesARM */
-    /*  762 */ GloamCommandScopeDevice, /* vkGetDataGraphPipelinePropertiesARM */
+    /*  754 */ GloamCommandScopeDevice  , /* vkCreateDataGraphPipelinesARM */
+    /*  755 */ GloamCommandScopeDevice  , /* vkCreateDataGraphPipelineSessionARM */
+    /*  756 */ GloamCommandScopeDevice  , /* vkGetDataGraphPipelineSessionBindPointRequirementsARM */
+    /*  757 */ GloamCommandScopeDevice  , /* vkGetDataGraphPipelineSessionMemoryRequirementsARM */
+    /*  758 */ GloamCommandScopeDevice  , /* vkBindDataGraphPipelineSessionMemoryARM */
+    /*  759 */ GloamCommandScopeDevice  , /* vkDestroyDataGraphPipelineSessionARM */
+    /*  760 */ GloamCommandScopeDevice  , /* vkCmdDispatchDataGraphARM */
+    /*  761 */ GloamCommandScopeDevice  , /* vkGetDataGraphPipelineAvailablePropertiesARM */
+    /*  762 */ GloamCommandScopeDevice  , /* vkGetDataGraphPipelinePropertiesARM */
     /*  763 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM */
     /*  764 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM */
-    /*  765 */ GloamCommandScopeDevice, /* vkCmdSetAttachmentFeedbackLoopEnableEXT */
-    /*  766 */ GloamCommandScopeDevice, /* vkGetScreenBufferPropertiesQNX */
-    /*  767 */ GloamCommandScopeDevice, /* vkCmdSetLineStippleKHR */
+    /*  765 */ GloamCommandScopeDevice  , /* vkCmdSetAttachmentFeedbackLoopEnableEXT */
+    /*  766 */ GloamCommandScopeDevice  , /* vkGetScreenBufferPropertiesQNX */
+    /*  767 */ GloamCommandScopeDevice  , /* vkCmdSetLineStippleKHR */
     /*  768 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceCalibrateableTimeDomainsKHR */
-    /*  769 */ GloamCommandScopeDevice, /* vkGetCalibratedTimestampsKHR */
-    /*  770 */ GloamCommandScopeDevice, /* vkCmdBindDescriptorSets2KHR */
-    /*  771 */ GloamCommandScopeDevice, /* vkCmdPushConstants2KHR */
-    /*  772 */ GloamCommandScopeDevice, /* vkCmdPushDescriptorSet2KHR */
-    /*  773 */ GloamCommandScopeDevice, /* vkCmdPushDescriptorSetWithTemplate2KHR */
-    /*  774 */ GloamCommandScopeDevice, /* vkCmdSetDescriptorBufferOffsets2EXT */
-    /*  775 */ GloamCommandScopeDevice, /* vkCmdBindDescriptorBufferEmbeddedSamplers2EXT */
-    /*  776 */ GloamCommandScopeDevice, /* vkCmdBindTileMemoryQCOM */
-    /*  777 */ GloamCommandScopeDevice, /* vkCmdCopyMemoryIndirectKHR */
-    /*  778 */ GloamCommandScopeDevice, /* vkCmdCopyMemoryToImageIndirectKHR */
-    /*  779 */ GloamCommandScopeDevice, /* vkCmdDecompressMemoryEXT */
-    /*  780 */ GloamCommandScopeDevice, /* vkCmdDecompressMemoryIndirectCountEXT */
-    /*  781 */ GloamCommandScopeDevice, /* vkCreateExternalComputeQueueNV */
-    /*  782 */ GloamCommandScopeDevice, /* vkDestroyExternalComputeQueueNV */
-    /*  783 */ GloamCommandScopeGlobal, /* vkGetExternalComputeQueueDataNV */
-    /*  784 */ GloamCommandScopeDevice, /* vkGetClusterAccelerationStructureBuildSizesNV */
-    /*  785 */ GloamCommandScopeDevice, /* vkCmdBuildClusterAccelerationStructureIndirectNV */
-    /*  786 */ GloamCommandScopeDevice, /* vkGetPartitionedAccelerationStructuresBuildSizesNV */
-    /*  787 */ GloamCommandScopeDevice, /* vkCmdBuildPartitionedAccelerationStructuresNV */
-    /*  788 */ GloamCommandScopeDevice, /* vkGetGeneratedCommandsMemoryRequirementsEXT */
-    /*  789 */ GloamCommandScopeDevice, /* vkCmdPreprocessGeneratedCommandsEXT */
-    /*  790 */ GloamCommandScopeDevice, /* vkCmdExecuteGeneratedCommandsEXT */
-    /*  791 */ GloamCommandScopeDevice, /* vkCreateIndirectCommandsLayoutEXT */
-    /*  792 */ GloamCommandScopeDevice, /* vkDestroyIndirectCommandsLayoutEXT */
-    /*  793 */ GloamCommandScopeDevice, /* vkCreateIndirectExecutionSetEXT */
-    /*  794 */ GloamCommandScopeDevice, /* vkDestroyIndirectExecutionSetEXT */
-    /*  795 */ GloamCommandScopeDevice, /* vkUpdateIndirectExecutionSetPipelineEXT */
-    /*  796 */ GloamCommandScopeDevice, /* vkUpdateIndirectExecutionSetShaderEXT */
-    /*  797 */ GloamCommandScopeDevice, /* vkGetDeviceFaultReportsKHR */
-    /*  798 */ GloamCommandScopeDevice, /* vkGetDeviceFaultDebugInfoKHR */
+    /*  769 */ GloamCommandScopeDevice  , /* vkGetCalibratedTimestampsKHR */
+    /*  770 */ GloamCommandScopeDevice  , /* vkCmdBindDescriptorSets2KHR */
+    /*  771 */ GloamCommandScopeDevice  , /* vkCmdPushConstants2KHR */
+    /*  772 */ GloamCommandScopeDevice  , /* vkCmdPushDescriptorSet2KHR */
+    /*  773 */ GloamCommandScopeDevice  , /* vkCmdPushDescriptorSetWithTemplate2KHR */
+    /*  774 */ GloamCommandScopeDevice  , /* vkCmdSetDescriptorBufferOffsets2EXT */
+    /*  775 */ GloamCommandScopeDevice  , /* vkCmdBindDescriptorBufferEmbeddedSamplers2EXT */
+    /*  776 */ GloamCommandScopeDevice  , /* vkCmdBindTileMemoryQCOM */
+    /*  777 */ GloamCommandScopeDevice  , /* vkCmdCopyMemoryIndirectKHR */
+    /*  778 */ GloamCommandScopeDevice  , /* vkCmdCopyMemoryToImageIndirectKHR */
+    /*  779 */ GloamCommandScopeDevice  , /* vkCmdDecompressMemoryEXT */
+    /*  780 */ GloamCommandScopeDevice  , /* vkCmdDecompressMemoryIndirectCountEXT */
+    /*  781 */ GloamCommandScopeDevice  , /* vkCreateExternalComputeQueueNV */
+    /*  782 */ GloamCommandScopeDevice  , /* vkDestroyExternalComputeQueueNV */
+    /*  783 */ GloamCommandScopeGlobal  , /* vkGetExternalComputeQueueDataNV */
+    /*  784 */ GloamCommandScopeDevice  , /* vkGetClusterAccelerationStructureBuildSizesNV */
+    /*  785 */ GloamCommandScopeDevice  , /* vkCmdBuildClusterAccelerationStructureIndirectNV */
+    /*  786 */ GloamCommandScopeDevice  , /* vkGetPartitionedAccelerationStructuresBuildSizesNV */
+    /*  787 */ GloamCommandScopeDevice  , /* vkCmdBuildPartitionedAccelerationStructuresNV */
+    /*  788 */ GloamCommandScopeDevice  , /* vkGetGeneratedCommandsMemoryRequirementsEXT */
+    /*  789 */ GloamCommandScopeDevice  , /* vkCmdPreprocessGeneratedCommandsEXT */
+    /*  790 */ GloamCommandScopeDevice  , /* vkCmdExecuteGeneratedCommandsEXT */
+    /*  791 */ GloamCommandScopeDevice  , /* vkCreateIndirectCommandsLayoutEXT */
+    /*  792 */ GloamCommandScopeDevice  , /* vkDestroyIndirectCommandsLayoutEXT */
+    /*  793 */ GloamCommandScopeDevice  , /* vkCreateIndirectExecutionSetEXT */
+    /*  794 */ GloamCommandScopeDevice  , /* vkDestroyIndirectExecutionSetEXT */
+    /*  795 */ GloamCommandScopeDevice  , /* vkUpdateIndirectExecutionSetPipelineEXT */
+    /*  796 */ GloamCommandScopeDevice  , /* vkUpdateIndirectExecutionSetShaderEXT */
+    /*  797 */ GloamCommandScopeDevice  , /* vkGetDeviceFaultReportsKHR */
+    /*  798 */ GloamCommandScopeDevice  , /* vkGetDeviceFaultDebugInfoKHR */
     /*  799 */ GloamCommandScopeInstance, /* vkCreateSurfaceOHOS */
     /*  800 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV */
-    /*  801 */ GloamCommandScopeDevice, /* vkGetMemoryMetalHandleEXT */
-    /*  802 */ GloamCommandScopeDevice, /* vkGetMemoryMetalHandlePropertiesEXT */
+    /*  801 */ GloamCommandScopeDevice  , /* vkGetMemoryMetalHandleEXT */
+    /*  802 */ GloamCommandScopeDevice  , /* vkGetMemoryMetalHandlePropertiesEXT */
     /*  803 */ GloamCommandScopeInstance, /* vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM */
     /*  804 */ GloamCommandScopeInstance, /* vkEnumeratePhysicalDeviceShaderInstrumentationMetricsARM */
-    /*  805 */ GloamCommandScopeDevice, /* vkCreateShaderInstrumentationARM */
-    /*  806 */ GloamCommandScopeDevice, /* vkDestroyShaderInstrumentationARM */
-    /*  807 */ GloamCommandScopeDevice, /* vkCmdBeginShaderInstrumentationARM */
-    /*  808 */ GloamCommandScopeDevice, /* vkCmdEndShaderInstrumentationARM */
-    /*  809 */ GloamCommandScopeDevice, /* vkGetShaderInstrumentationValuesARM */
-    /*  810 */ GloamCommandScopeDevice, /* vkClearShaderInstrumentationMetricsARM */
-    /*  811 */ GloamCommandScopeDevice, /* vkCmdEndRendering2EXT */
-    /*  812 */ GloamCommandScopeDevice, /* vkCmdBeginCustomResolveEXT */
-    /*  813 */ GloamCommandScopeDevice, /* vkCmdEndRendering2KHR */
-    /*  814 */ GloamCommandScopeDevice, /* vkCmdSetComputeOccupancyPriorityNV */
+    /*  805 */ GloamCommandScopeDevice  , /* vkCreateShaderInstrumentationARM */
+    /*  806 */ GloamCommandScopeDevice  , /* vkDestroyShaderInstrumentationARM */
+    /*  807 */ GloamCommandScopeDevice  , /* vkCmdBeginShaderInstrumentationARM */
+    /*  808 */ GloamCommandScopeDevice  , /* vkCmdEndShaderInstrumentationARM */
+    /*  809 */ GloamCommandScopeDevice  , /* vkGetShaderInstrumentationValuesARM */
+    /*  810 */ GloamCommandScopeDevice  , /* vkClearShaderInstrumentationMetricsARM */
+    /*  811 */ GloamCommandScopeDevice  , /* vkCmdEndRendering2EXT */
+    /*  812 */ GloamCommandScopeDevice  , /* vkCmdBeginCustomResolveEXT */
+    /*  813 */ GloamCommandScopeDevice  , /* vkCmdEndRendering2KHR */
+    /*  814 */ GloamCommandScopeDevice  , /* vkCmdSetComputeOccupancyPriorityNV */
     /*  815 */ GloamCommandScopeInstance, /* vkCreateUbmSurfaceSEC */
     /*  816 */ GloamCommandScopeInstance, /* vkGetPhysicalDeviceUbmPresentationSupportSEC */
 };
