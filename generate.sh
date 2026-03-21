@@ -135,6 +135,12 @@ GLOAM_ARGS=(
 	# listed above.
 	#--extensions="${extlist}"
 
+	# e.g. ARB_parallel_shader_compile -> KHR_parallel_shader_compile
+	--predecessors
+
+	# e.g. ARB_multitexture promoted to core
+	--promoted
+
 	# Can be more restrictive, e.g. "gl:core=3.3", but you have to account for
 	# other differences such as some GLOAM_GL_VERSION_* macros not being defined
 	--api=gl:core,gles2,vulkan,egl,glx,wgl
