@@ -31,12 +31,15 @@ EXTENSIONS=(
 	EGL_EXT_platform_x11
 	EGL_KHR_debug
 	EGL_KHR_gl_colorspace
+	EGL_KHR_platform_wayland
+	EGL_KHR_platform_x11
 	GL_3DFX_texture_compression_FXT1
 	GL_AMD_gpu_shader_half_float
 	GL_AMD_gpu_shader_int16
 	GL_AMD_performance_monitor
 	GL_AMD_query_buffer_object
 	GL_ANGLE_base_vertex_base_instance
+	GL_ANGLE_blob_cache
 	GL_ANGLE_lossy_etc_decode
 	GL_ANGLE_multi_draw
 	GL_ANGLE_program_binary
@@ -51,24 +54,38 @@ EXTENSIONS=(
 	GL_ARB_base_instance
 	GL_ARB_buffer_storage
 	GL_ARB_clip_control
+	GL_ARB_compute_shader
 	GL_ARB_conservative_depth
 	GL_ARB_debug_output
 	GL_ARB_direct_state_access
 	GL_ARB_draw_indirect
+	GL_ARB_draw_instanced
+	GL_ARB_geometry_shader4
 	GL_ARB_get_program_binary
 	GL_ARB_gpu_shader5
 	GL_ARB_invalidate_subdata
 	GL_ARB_multi_bind
 	GL_ARB_multi_draw_indirect
 	GL_ARB_multisample
+	GL_ARB_parallel_shader_compile
 	GL_ARB_pixel_buffer_object
+	GL_ARB_provoking_vertex
 	GL_ARB_query_buffer_object
 	GL_ARB_sample_shading
+	GL_ARB_shader_atomic_counters
+	GL_ARB_shader_image_load_store
+	GL_ARB_shader_storage_buffer_object
 	GL_ARB_shading_language_420pack
 	GL_ARB_shading_language_packing
+	GL_ARB_texture_buffer_object
+	GL_ARB_texture_compression
 	GL_ARB_texture_filter_anisotropic
 	GL_ARB_texture_gather
+	GL_ARB_texture_multisample
 	GL_ARB_texture_storage
+	GL_ARB_texture_storage_multisample
+	GL_ARB_transform_feedback2
+	GL_ARB_uniform_buffer_object
 	GL_ARB_vertex_attrib_binding
 	GL_EXT_base_instance
 	GL_EXT_buffer_storage
@@ -77,18 +94,22 @@ EXTENSIONS=(
 	GL_EXT_clip_cull_distance
 	GL_EXT_debug_marker
 	GL_EXT_direct_state_access
+	GL_EXT_draw_elements_base_vertex
 	GL_EXT_fragment_shader_barycentric
 	GL_EXT_fragment_shading_rate
 	GL_EXT_gpu_shader5
+	GL_EXT_multi_draw_arrays
 	GL_EXT_multi_draw_indirect
 	GL_EXT_multisample
 	GL_EXT_multisampled_render_to_texture
 	GL_EXT_multisampled_render_to_texture2
+	GL_EXT_provoking_vertex
 	GL_EXT_pvrtc_sRGB
 	GL_EXT_sRGB_write_control
 	GL_EXT_shader_16bit_storage
 	GL_EXT_shader_explicit_arithmetic_types
 	GL_EXT_texture
+	GL_EXT_texture_buffer
 	GL_EXT_texture_compression_dxt1
 	GL_EXT_texture_compression_latc
 	GL_EXT_texture_compression_rgtc
@@ -112,6 +133,8 @@ EXTENSIONS=(
 	GL_NV_sRGB_formats
 	GL_OES_compressed_ETC1_RGB8_texture
 	GL_OES_compressed_paletted_texture
+	GL_OES_geometry_shader
+	GL_OES_sample_shading
 	GL_OES_shader_image_atomic
 	GL_OES_texture_compression_astc
 	GL_QCOM_shading_rate
