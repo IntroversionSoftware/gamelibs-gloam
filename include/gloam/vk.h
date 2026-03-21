@@ -27,7 +27,6 @@
 #include "vk_video/vulkan_video_codec_h264std_encode.h"
 #include "vk_video/vulkan_video_codec_h265std_encode.h"
 #include "vk_video/vulkan_video_codec_av1std_encode.h"
-#include "vk_platform.h"
 
 #if defined(VK_USE_PLATFORM_XLIB_KHR) || defined(VK_USE_PLATFORM_XLIB_XRANDR_EXT)
 #include <X11/Xlib.h>
@@ -68,25 +67,6 @@
 #if defined(VK_USE_PLATFORM_SCREEN_QNX)
 #include <screen/screen.h>
 #endif
-
-#if defined(VK_USE_PLATFORM_SCI)
-#include <nvscisync.h>
-#endif
-
-#if defined(VK_USE_PLATFORM_SCI)
-#include <nvscibuf.h>
-#endif
-#include "vk_video/vulkan_video_codec_h264std.h"
-#include "vk_video/vulkan_video_codec_h264std_decode.h"
-#include "vk_video/vulkan_video_codec_h265std.h"
-#include "vk_video/vulkan_video_codec_h265std_decode.h"
-#include "vk_video/vulkan_video_codec_vp9std.h"
-#include "vk_video/vulkan_video_codec_vp9std_decode.h"
-#include "vk_video/vulkan_video_codec_av1std.h"
-#include "vk_video/vulkan_video_codec_av1std_decode.h"
-#include "vk_video/vulkan_video_codec_h264std_encode.h"
-#include "vk_video/vulkan_video_codec_h265std_encode.h"
-#include "vk_video/vulkan_video_codec_av1std_encode.h"
 
 #ifdef __cplusplus
 extern "C" {
