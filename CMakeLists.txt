@@ -14,7 +14,7 @@ if (NOT TARGET xxhash)
         xxHash
         GIT_REPOSITORY https://git.uplinklabs.net/IntroversionSoftware/gamelibs-xxhash.git
         GIT_TAG origin/master
-        SOURCE_SUBDIR cmake_unofficial
+        SOURCE_SUBDIR build/cmake
     )
     FetchContent_MakeAvailable(xxHash)
 endif()

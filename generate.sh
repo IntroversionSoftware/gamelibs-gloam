@@ -2,6 +2,8 @@
 
 set -ex
 
+GLOAM="${GLOAM:-gloam}"
+
 EXTENSIONS=(
 	EGL_ANDROID_blob_cache
 	EGL_ANGLE_colorspace_attribute_passthrough
@@ -165,4 +167,4 @@ GLOAM_ARGS=(
 #	--header-only
 #)
 
-exec gloam "${GLOAM_ARGS[@]}"
+exec "${GLOAM}" "${GLOAM_ARGS[@]}"
