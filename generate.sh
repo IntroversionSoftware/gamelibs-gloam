@@ -4,148 +4,81 @@ set -ex
 
 GLOAM="${GLOAM:-gloam}"
 
+APIS="gl:core,gles2,vulkan,egl,glx,wgl"
+APIS_BASELINE="gl:core=3.3,gles2=3.0"
+
 EXTENSIONS=(
-	EGL_ANDROID_blob_cache
-	EGL_ANGLE_colorspace_attribute_passthrough
-	EGL_ANGLE_create_context_extensions_enabled
-	EGL_ANGLE_create_surface_swap_interval
-	EGL_ANGLE_device_d3d
-	EGL_ANGLE_device_vulkan
-	EGL_ANGLE_direct_composition
-	EGL_ANGLE_display_power_preference
-	EGL_ANGLE_feature_control
-	EGL_ANGLE_platform_angle
-	EGL_ANGLE_platform_angle_d3d
-	EGL_ANGLE_platform_angle_d3d11on12
-	EGL_ANGLE_platform_angle_d3d_luid
-	EGL_ANGLE_platform_angle_device_id
-	EGL_ANGLE_platform_angle_metal
-	EGL_ANGLE_platform_angle_opengl
-	EGL_ANGLE_platform_angle_vulkan
-	EGL_ANGLE_platform_angle_vulkan_device_uuid
-	EGL_ANGLE_program_cache_control
-	EGL_ANGLE_surface_orientation
-	EGL_EXT_device_query
-	EGL_EXT_gl_colorspace_scrgb_linear
-	EGL_EXT_platform_wayland
-	EGL_EXT_platform_x11
-	EGL_KHR_debug
-	EGL_KHR_gl_colorspace
-	EGL_KHR_platform_wayland
-	EGL_KHR_platform_x11
-	GL_3DFX_texture_compression_FXT1
-	GL_AMD_gpu_shader_half_float
-	GL_AMD_gpu_shader_int16
-	GL_AMD_performance_monitor
-	GL_AMD_query_buffer_object
-	GL_ANGLE_base_vertex_base_instance
-	GL_ANGLE_blob_cache
-	GL_ANGLE_lossy_etc_decode
-	GL_ANGLE_multi_draw
-	GL_ANGLE_program_binary
-	GL_ANGLE_provoking_vertex
-	GL_ANGLE_shader_binary
-	GL_ANGLE_texture_compression_dxt5
-	GL_ANGLE_texture_multisample
-	GL_ANGLE_texture_usage
-	GL_APPLE_clip_distance
-	GL_APPLE_texture_format_BGRA8888
-	GL_ARB_arrays_of_arrays
-	GL_ARB_base_instance
-	GL_ARB_buffer_storage
-	GL_ARB_clip_control
-	GL_ARB_compute_shader
-	GL_ARB_conservative_depth
-	GL_ARB_debug_output
-	GL_ARB_direct_state_access
-	GL_ARB_draw_indirect
-	GL_ARB_draw_instanced
-	GL_ARB_geometry_shader4
-	GL_ARB_get_program_binary
-	GL_ARB_gpu_shader5
-	GL_ARB_invalidate_subdata
-	GL_ARB_multi_bind
-	GL_ARB_multi_draw_indirect
-	GL_ARB_multisample
-	GL_ARB_parallel_shader_compile
-	GL_ARB_pixel_buffer_object
-	GL_ARB_provoking_vertex
-	GL_ARB_query_buffer_object
-	GL_ARB_sample_shading
-	GL_ARB_shader_atomic_counters
-	GL_ARB_shader_image_load_store
-	GL_ARB_shader_storage_buffer_object
-	GL_ARB_shading_language_420pack
-	GL_ARB_shading_language_packing
+	# Base, include everything
+	all
+
+	# Exclude obsolete extensions
+	-GL_EXT_direct_state_access
+	-GL_EXT_separate_shader_objects
+	-GL_EXT_vertex_shader
+	-GL_SUNX_constant_data
+	-GL_SUN_convolution_border_modes
+	-GL_SUN_global_alpha
+	-GL_SUN_mesh_array
+	-GL_SUN_slice_accum
+	-GL_SUN_triangle_list
+	-GL_SUN_vertex
+	-GL_SGIX_async
+	-GL_SGIX_async_histogram
+	-GL_SGIX_async_pixel
+	-GL_SGIX_blend_alpha_minmax
+	-GL_SGIX_calligraphic_fragment
+	-GL_SGIX_clipmap
+	-GL_SGIX_convolution_accuracy
+	-GL_SGIX_depth_pass_instrument
+	-GL_SGIX_depth_texture
+	-GL_SGIX_flush_raster
+	-GL_SGIX_fog_offset
+	-GL_SGIX_fragment_lighting
+	-GL_SGIX_framezoom
+	-GL_SGIX_igloo_interface
+	-GL_SGIX_instruments
+	-GL_SGIX_interlace
+	-GL_SGIX_ir_instrument1
+	-GL_SGIX_list_priority
+	-GL_SGIX_pixel_texture
+	-GL_SGIX_pixel_tiles
+	-GL_SGIX_polynomial_ffd
+	-GL_SGIX_reference_plane
+	-GL_SGIX_resample
+	-GL_SGIX_scalebias_hint
+	-GL_SGIX_shadow
+	-GL_SGIX_shadow_ambient
+	-GL_SGIX_sprite
+	-GL_SGIX_subsample
+	-GL_SGIX_tag_sample_buffer
+	-GL_SGIX_texture_add_env
+	-GL_SGIX_texture_coordinate_clamp
+	-GL_SGIX_texture_lod_bias
+	-GL_SGIX_texture_multi_buffer
+	-GL_SGIX_texture_scale_bias
+	-GL_SGIX_vertex_preclip
+	-GL_SGIX_ycrcb
+	-GL_SGIX_ycrcb_subsample
+	-GL_SGIX_ycrcba
+	-GL_NV_half_float
+	-GL_OES_byte_coordinates
+
+	# Exclude extensions we don't care about, with long command strings that
+	# waste space in the command name buffer
+	-GL_ANGLE_robust_client_memory
+	-GL_ANGLE_shader_pixel_local_storage
+
+	# Explicitly add some extensions
 	GL_ARB_texture_buffer_object
 	GL_ARB_texture_compression
-	GL_ARB_texture_filter_anisotropic
-	GL_ARB_texture_gather
 	GL_ARB_texture_multisample
-	GL_ARB_texture_storage
-	GL_ARB_texture_storage_multisample
-	GL_ARB_transform_feedback2
+	GL_ARB_provoking_vertex
+	GL_ARB_query_buffer_object
 	GL_ARB_uniform_buffer_object
-	GL_ARB_vertex_attrib_binding
-	GL_EXT_base_instance
-	GL_EXT_buffer_storage
-	GL_EXT_clear_texture
-	GL_EXT_clip_control
-	GL_EXT_clip_cull_distance
-	GL_EXT_debug_marker
-	GL_EXT_direct_state_access
-	GL_EXT_draw_elements_base_vertex
-	GL_EXT_fragment_shader_barycentric
-	GL_EXT_fragment_shading_rate
-	GL_EXT_gpu_shader5
 	GL_EXT_multi_draw_arrays
-	GL_EXT_multi_draw_indirect
-	GL_EXT_multisample
-	GL_EXT_multisampled_render_to_texture
-	GL_EXT_multisampled_render_to_texture2
 	GL_EXT_provoking_vertex
-	GL_EXT_pvrtc_sRGB
-	GL_EXT_sRGB_write_control
-	GL_EXT_shader_16bit_storage
-	GL_EXT_shader_explicit_arithmetic_types
-	GL_EXT_texture
-	GL_EXT_texture_buffer
-	GL_EXT_texture_compression_dxt1
-	GL_EXT_texture_compression_latc
-	GL_EXT_texture_compression_rgtc
-	GL_EXT_texture_compression_s3tc
-	GL_EXT_texture_compression_s3tc_srgb
-	GL_EXT_texture_env_combine
-	GL_EXT_texture_filter_anisotropic
-	GL_EXT_texture_format_BGRA8888
-	GL_EXT_texture_sRGB
-	GL_EXT_texture_storage
-	GL_HUAWEI_program_binary
-	GL_HUAWEI_shader_binary
-	GL_IMG_texture_compression_pvrtc
-	GL_IMG_texture_compression_pvrtc2
-	GL_KHR_debug
-	GL_KHR_parallel_shader_compile
-	GL_MESA_program_binary_formats
-	GL_NV_depth_buffer_float
-	GL_NV_fence
-	GL_NV_fragment_shader_barycentric
-	GL_NV_sRGB_formats
-	GL_OES_compressed_ETC1_RGB8_texture
-	GL_OES_compressed_paletted_texture
-	GL_OES_geometry_shader
-	GL_OES_sample_shading
-	GL_OES_shader_image_atomic
-	GL_OES_texture_compression_astc
-	GL_QCOM_shading_rate
-	GL_S3_s3tc
-	GL_VIV_shader_binary
-	VK_EXT_memory_budget
-	VK_KHR_driver_properties
-	VK_KHR_get_physical_device_properties2
-	VK_KHR_portability_enumeration
-	VK_KHR_timeline_semaphore
 )
+
 printf -v extlist '%s,' "${EXTENSIONS[@]}"
 
 THIS_DIR="$PWD"
@@ -158,7 +91,7 @@ esac
 GLOAM_ARGS=(
 	# If you enable this, it will only include the extensions we've explicitly
 	# listed above.
-	#--extensions="${extlist}"
+	--extensions="${extlist}"
 
 	# e.g. ARB_parallel_shader_compile -> KHR_parallel_shader_compile
 	--predecessors
@@ -168,7 +101,11 @@ GLOAM_ARGS=(
 
 	# Can be more restrictive, e.g. "gl:core=3.3", but you have to account for
 	# other differences such as some GLOAM_GL_VERSION_* macros not being defined
-	--api=gl:core,gles2,vulkan,egl,glx,wgl
+	--api="$APIS"
+
+	# Automatically exclude extensions we can assume are present because
+	# they're part of our baseline profiles
+	--baseline="$APIS_BASELINE"
 
 	--out-path "$THIS_DIR"
 	--merge
@@ -176,18 +113,5 @@ GLOAM_ARGS=(
 	--alias
 	--loader
 )
-
-# Faster profile for testing changes with the C generator
-#GLOAM_ARGS=(
-#	--reproducible
-#	--api=gl:core=3.3
-#	--out-path="$PWD"
-#	--merge
-#	c
-#	--alias
-#	--loader
-#	--mx --mx-global
-#	--header-only
-#)
 
 exec "${GLOAM}" "${GLOAM_ARGS[@]}"
