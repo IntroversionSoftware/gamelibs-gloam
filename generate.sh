@@ -67,16 +67,6 @@ EXTENSIONS=(
 	# waste space in the command name buffer
 	-GL_ANGLE_robust_client_memory
 	-GL_ANGLE_shader_pixel_local_storage
-
-	# Explicitly add some extensions
-	GL_ARB_texture_buffer_object
-	GL_ARB_texture_compression
-	GL_ARB_texture_multisample
-	GL_ARB_provoking_vertex
-	GL_ARB_query_buffer_object
-	GL_ARB_uniform_buffer_object
-	GL_EXT_multi_draw_arrays
-	GL_EXT_provoking_vertex
 )
 
 printf -v extlist '%s,' "${EXTENSIONS[@]}"
