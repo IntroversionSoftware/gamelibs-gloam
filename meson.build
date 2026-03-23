@@ -29,6 +29,6 @@ gloam_dep = declare_dependency(
     version: meson.project_version()
 )
 
-meson.override_dependency('gloam', glad_dep)
+meson.override_dependency('gloam', gloam_dep)
 
 # vim: set ts=4 sts=4 sw=4 et:
