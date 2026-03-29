@@ -53,7 +53,7 @@ HEADERS := \
 	include/vk_video/vulkan_video_codec_vp9std.h \
 	include/vk_video/vulkan_video_codec_vp9std_decode.h \
 	include/vk_video/vulkan_video_codecs_common.h \
-	include/vk_platform.h
+	include/vulkan/vk_platform.h
 SOURCES := \
 	src/egl.c \
 	src/gl.c \
@@ -72,6 +72,7 @@ CPPFLAGS += -Iinclude -I../xxHash
 all: $(OBJ_DIR)/$(LIB)
 
 $(includedir)/%.h: include/%.h
+	-@if [ ! -d $(includedir)/vulkan ]; then mkdir -p $(includedir)/vulkan; fi
 	-@if [ ! -d $(includedir)/vk_video ]; then mkdir -p $(includedir)/vk_video; fi
 	-@if [ ! -d $(includedir)/gloam ]; then mkdir -p $(includedir)/gloam; fi
 	-@if [ ! -d $(includedir)/KHR ]; then mkdir -p $(includedir)/KHR; fi
