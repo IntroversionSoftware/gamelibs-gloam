@@ -62,7 +62,6 @@
     <ClInclude Include="..\include\gloam\vk.h" />
     <ClInclude Include="..\include\gloam\wgl.h" />
     <ClInclude Include="..\include\KHR\khrplatform.h" />
-    <ClInclude Include="..\include\vk_platform.h" />
     <ClInclude Include="..\include\vk_video\vulkan_video_codec_av1std.h" />
     <ClInclude Include="..\include\vk_video\vulkan_video_codec_av1std_decode.h" />
     <ClInclude Include="..\include\vk_video\vulkan_video_codec_av1std_encode.h" />
@@ -75,6 +74,8 @@
     <ClInclude Include="..\include\vk_video\vulkan_video_codec_vp9std.h" />
     <ClInclude Include="..\include\vk_video\vulkan_video_codec_vp9std_decode.h" />
     <ClInclude Include="..\include\vk_video\vulkan_video_codecs_common.h" />
+    <ClInclude Include="..\include\vulkan\vk_platform.h" />
+    <ClInclude Include="..\include\xxhash.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\egl.c" />

@@ -16,6 +16,9 @@
     <Filter Include="include\vk_video">
       <UniqueIdentifier>{8bf44271-53eb-440c-a59e-5b6ee54c3dcc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\vulkan">
+      <UniqueIdentifier>{136150a4-3f54-41ce-8a8c-6bdc6ae2866f}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{ffadab43-8db5-4573-be65-4704cfd5534f}</UniqueIdentifier>
     </Filter>
@@ -41,9 +44,6 @@
     </ClInclude>
     <ClInclude Include="..\include\KHR\khrplatform.h">
       <Filter>include\KHR</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\vk_platform.h">
-      <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="..\include\vk_video\vulkan_video_codec_av1std.h">
       <Filter>include\vk_video</Filter>
@@ -80,6 +80,12 @@
     </ClInclude>
     <ClInclude Include="..\include\vk_video\vulkan_video_codecs_common.h">
       <Filter>include\vk_video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\vulkan\vk_platform.h">
+      <Filter>include\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\xxhash.h">
+      <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

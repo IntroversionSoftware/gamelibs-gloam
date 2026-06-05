@@ -79,6 +79,8 @@ case "$(uname -s)" in
 esac
 
 GLOAM_ARGS=(
+	--fetch
+
 	# If you enable this, it will only include the extensions we've explicitly
 	# listed above.
 	--extensions="${extlist}"
