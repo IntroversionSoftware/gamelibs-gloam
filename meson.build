@@ -1,4 +1,4 @@
-project('gloam', 'c', version: '0.1.1')
+project('gloam', 'c', version: '0.5.1')
 
 compiler = meson.get_compiler('c')
 link_deps = [dependency('xxhash')]
