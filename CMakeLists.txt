@@ -23,15 +23,28 @@ if (MSVC)
     add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
 endif()
 
+file(GLOB vk_video_includes CONFIGURE_DEPENDS
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/vk_video/*.h)
+
 add_library(gloam_GL STATIC
+    include/KHR/khrplatform.h
+    include/gloam/gl.h
     src/gl.c)
 add_library(gloam_EGL STATIC
+    include/EGL/eglplatform.h
+    include/KHR/khrplatform.h
+    include/gloam/egl.h
     src/egl.c)
 add_library(gloam_GLX STATIC
+    include/gloam/glx.h
     src/glx.c)
 add_library(gloam_Vulkan STATIC
+    include/vulkan/vk_platform.h
+    ${vk_video_includes}
+    include/gloam/vk.h
     src/vk.c)
 add_library(gloam_WGL STATIC
+    include/gloam/wgl.h
     src/wgl.c)
 
 target_include_directories(gloam_GL PUBLIC
