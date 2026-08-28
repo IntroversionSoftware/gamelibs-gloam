@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "gloam": {
-    "version": "0.6.0",
-    "describe": "0.6.0+8e859ba",
-    "commit": "8e859bab16c6dfd5379784a22a803d10cadaf705",
+    "version": "0.7.0",
+    "describe": "0.7.0+2892ff0",
+    "commit": "2892ff01aa7e53e7f0aeec83c955cd5f6a6daaf7",
     "command_line": "gloam --fetch --extensions=all,-GL_EXT_direct_state_access,-GL_EXT_separate_shader_objects,-GL_EXT_vertex_shader,-GL_SUNX_constant_data,-GL_SUN_convolution_border_modes,-GL_SUN_global_alpha,-GL_SUN_mesh_array,-GL_SUN_slice_accum,-GL_SUN_triangle_list,-GL_SUN_vertex,-GL_SGIX_async,-GL_SGIX_async_histogram,-GL_SGIX_async_pixel,-GL_SGIX_blend_alpha_minmax,-GL_SGIX_calligraphic_fragment,-GL_SGIX_clipmap,-GL_SGIX_convolution_accuracy,-GL_SGIX_depth_pass_instrument,-GL_SGIX_depth_texture,-GL_SGIX_flush_raster,-GL_SGIX_fog_offset,-GL_SGIX_fragment_lighting,-GL_SGIX_framezoom,-GL_SGIX_igloo_interface,-GL_SGIX_instruments,-GL_SGIX_interlace,-GL_SGIX_ir_instrument1,-GL_SGIX_list_priority,-GL_SGIX_pixel_texture,-GL_SGIX_pixel_tiles,-GL_SGIX_polynomial_ffd,-GL_SGIX_reference_plane,-GL_SGIX_resample,-GL_SGIX_scalebias_hint,-GL_SGIX_shadow,-GL_SGIX_shadow_ambient,-GL_SGIX_sprite,-GL_SGIX_subsample,-GL_SGIX_tag_sample_buffer,-GL_SGIX_texture_add_env,-GL_SGIX_texture_coordinate_clamp,-GL_SGIX_texture_lod_bias,-GL_SGIX_texture_multi_buffer,-GL_SGIX_texture_scale_bias,-GL_SGIX_vertex_preclip,-GL_SGIX_ycrcb,-GL_SGIX_ycrcb_subsample,-GL_SGIX_ycrcba,-GL_NV_half_float,-GL_OES_byte_coordinates,-GL_ANGLE_robust_client_memory,-GL_ANGLE_shader_pixel_local_storage, --predecessors --promoted --api=gl:core,gles2,vulkan,egl,glx,wgl --baseline=gl:core=3.3,gles2=3.0 --out-path C:\\cygwin64\\home\\steven\\dev\\darwinia\\contrib\\gloam --merge c --alias --loader"
   },
   "provenance": {
@@ -39,8 +39,8 @@
       "repo": "KhronosGroup/OpenGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/OpenGL-Registry",
       "path_in_repo": "xml/gl.xml",
-      "commit": "e8f7cd0e35ac8d6f5667a021ff83d04b1fec41ef",
-      "blob": "7492d15565b79cf3844e3402858582f649677fec"
+      "commit": "1cdd228e34966dd6b95bd203e9f84faba0f371a1",
+      "blob": "ff263739c9100a4636f45e3c1bbb5940444c1d70"
     },
     "gl_angle_ext.xml": {
       "repo": "angle/angle",
@@ -60,15 +60,15 @@
       "repo": "KhronosGroup/OpenGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/OpenGL-Registry",
       "path_in_repo": "xml/glx.xml",
-      "commit": "e8f7cd0e35ac8d6f5667a021ff83d04b1fec41ef",
+      "commit": "1cdd228e34966dd6b95bd203e9f84faba0f371a1",
       "blob": "80bce12bf53a81f58fd585846495cf1937b35b44"
     },
     "vk.xml": {
       "repo": "KhronosGroup/Vulkan-Docs",
       "repo_url": "https://github.com/KhronosGroup/Vulkan-Docs",
       "path_in_repo": "xml/vk.xml",
-      "commit": "090f1b190d60ced4a1d198fd3747d071cc271b1c",
-      "blob": "e046fba88de9f82a00833fd95ca6dd6de2d515fb"
+      "commit": "20a9e5892e2aab7b9776b16a238b10fc8133090a",
+      "blob": "caddc54434096430537344ce98f8595a1056198a"
     },
     "vk_video/vulkan_video_codec_av1std.h": {
       "repo": "KhronosGroup/Vulkan-Headers",
@@ -165,7 +165,7 @@
       "repo": "KhronosGroup/OpenGL-Registry",
       "repo_url": "https://github.com/KhronosGroup/OpenGL-Registry",
       "path_in_repo": "xml/wgl.xml",
-      "commit": "e8f7cd0e35ac8d6f5667a021ff83d04b1fec41ef",
+      "commit": "1cdd228e34966dd6b95bd203e9f84faba0f371a1",
       "blob": "1ef34b838104167593158efa3d631bf851a0d4bc"
     },
     "xxhash.h": {
@@ -195,7 +195,7 @@
     },
     {
       "path": "include/gloam/egl.h",
-      "blob": "7e8a007d7a1c4a644a48fab17eaafe779590e0e6",
+      "blob": "022fa5c33088a05f51fbc74114ee620a18bafe4d",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -206,7 +206,7 @@
     },
     {
       "path": "include/gloam/gl.h",
-      "blob": "e6b0796bc3ca45fcd4d47352f5af7c34e91ee454",
+      "blob": "97df43725b038aa50322e62dc9c073c82e719251",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -217,7 +217,7 @@
     },
     {
       "path": "include/gloam/glx.h",
-      "blob": "dbf27b7a41d5e003e91d1664fec5c99cd3f49d7b",
+      "blob": "44cf7e619745bd5e8c284477253f00f841efb801",
       "derived_from": [
         "glx.xml",
         "xxhash.h"
@@ -225,7 +225,7 @@
     },
     {
       "path": "include/gloam/vk.h",
-      "blob": "8e1b93c4c9167726fb8ae6dd246e53c896c87601",
+      "blob": "4c09d19890520fdc6e8df46851e228fe32484461",
       "derived_from": [
         "vk.xml",
         "vk_video/vulkan_video_codec_av1std.h",
@@ -245,7 +245,7 @@
     },
     {
       "path": "include/gloam/wgl.h",
-      "blob": "f747dd0d7804b42f40f6967b824282cdc08b2d81",
+      "blob": "dcd9d129990110f15016d804a64d96594717050d",
       "derived_from": [
         "wgl.xml",
         "xxhash.h"
@@ -365,7 +365,7 @@
     },
     {
       "path": "src/egl.c",
-      "blob": "dc49ecc344bb297bc511b047e86dd0effc76fad4",
+      "blob": "e2a3056a83ae51632fb44eef791102a88cd1cbca",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -376,7 +376,7 @@
     },
     {
       "path": "src/gl.c",
-      "blob": "d3d2e76d69348965858d383c5fc4be7df1fea871",
+      "blob": "71a0f666f01ffbe48ea0132068be27921585696c",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -387,7 +387,7 @@
     },
     {
       "path": "src/glx.c",
-      "blob": "93ec37e81748e5d09b8a75f892c9686de5310560",
+      "blob": "1a7d7d594321521e9231a47fb6258f2633342691",
       "derived_from": [
         "glx.xml",
         "xxhash.h"
@@ -395,7 +395,7 @@
     },
     {
       "path": "src/vk.c",
-      "blob": "f781ccf49396a6db15d46a485b0f7bd610d10aef",
+      "blob": "fc7e1ef66c6ec6223b1bf3a3e5ff7b36937ae413",
       "derived_from": [
         "vk.xml",
         "vk_video/vulkan_video_codec_av1std.h",
@@ -415,7 +415,7 @@
     },
     {
       "path": "src/wgl.c",
-      "blob": "05019e36b213494ff44910e88ca8ca0dad44aa5f",
+      "blob": "5cef396f3abd872fc7c70b97d43de921c38dae76",
       "derived_from": [
         "wgl.xml",
         "xxhash.h"
