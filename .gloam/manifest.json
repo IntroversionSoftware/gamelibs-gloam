@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "gloam": {
-    "version": "0.7.4",
-    "describe": "0.7.4",
+    "version": "0.7.5",
+    "describe": "0.7.5",
     "commit": "",
-    "command_line": "gloam --fetch --extensions=all,-GL_EXT_direct_state_access,-GL_EXT_separate_shader_objects,-GL_EXT_vertex_shader,-GL_SUNX_constant_data,-GL_SUN_convolution_border_modes,-GL_SUN_global_alpha,-GL_SUN_mesh_array,-GL_SUN_slice_accum,-GL_SUN_triangle_list,-GL_SUN_vertex,-GL_SGIX_async,-GL_SGIX_async_histogram,-GL_SGIX_async_pixel,-GL_SGIX_blend_alpha_minmax,-GL_SGIX_calligraphic_fragment,-GL_SGIX_clipmap,-GL_SGIX_convolution_accuracy,-GL_SGIX_depth_pass_instrument,-GL_SGIX_depth_texture,-GL_SGIX_flush_raster,-GL_SGIX_fog_offset,-GL_SGIX_fragment_lighting,-GL_SGIX_framezoom,-GL_SGIX_igloo_interface,-GL_SGIX_instruments,-GL_SGIX_interlace,-GL_SGIX_ir_instrument1,-GL_SGIX_list_priority,-GL_SGIX_pixel_texture,-GL_SGIX_pixel_tiles,-GL_SGIX_polynomial_ffd,-GL_SGIX_reference_plane,-GL_SGIX_resample,-GL_SGIX_scalebias_hint,-GL_SGIX_shadow,-GL_SGIX_shadow_ambient,-GL_SGIX_sprite,-GL_SGIX_subsample,-GL_SGIX_tag_sample_buffer,-GL_SGIX_texture_add_env,-GL_SGIX_texture_coordinate_clamp,-GL_SGIX_texture_lod_bias,-GL_SGIX_texture_multi_buffer,-GL_SGIX_texture_scale_bias,-GL_SGIX_vertex_preclip,-GL_SGIX_ycrcb,-GL_SGIX_ycrcb_subsample,-GL_SGIX_ycrcba,-GL_NV_half_float,-GL_OES_byte_coordinates,-GL_ANGLE_robust_client_memory,-GL_ANGLE_shader_pixel_local_storage, --predecessors --promoted --api=gl:core,gles2,vulkan,egl,glx,wgl --baseline=gl:core=3.3,gles2=3.0 --out-path /Users/steven/Development/darwinia/contrib/gloam --merge c --alias --loader"
+    "command_line": "gloam --fetch --extensions=all,-GL_EXT_direct_state_access,-GL_EXT_separate_shader_objects,-GL_EXT_vertex_shader,-GL_SUNX_constant_data,-GL_SUN_convolution_border_modes,-GL_SUN_global_alpha,-GL_SUN_mesh_array,-GL_SUN_slice_accum,-GL_SUN_triangle_list,-GL_SUN_vertex,-GL_SGIX_async,-GL_SGIX_async_histogram,-GL_SGIX_async_pixel,-GL_SGIX_blend_alpha_minmax,-GL_SGIX_calligraphic_fragment,-GL_SGIX_clipmap,-GL_SGIX_convolution_accuracy,-GL_SGIX_depth_pass_instrument,-GL_SGIX_depth_texture,-GL_SGIX_flush_raster,-GL_SGIX_fog_offset,-GL_SGIX_fragment_lighting,-GL_SGIX_framezoom,-GL_SGIX_igloo_interface,-GL_SGIX_instruments,-GL_SGIX_interlace,-GL_SGIX_ir_instrument1,-GL_SGIX_list_priority,-GL_SGIX_pixel_texture,-GL_SGIX_pixel_tiles,-GL_SGIX_polynomial_ffd,-GL_SGIX_reference_plane,-GL_SGIX_resample,-GL_SGIX_scalebias_hint,-GL_SGIX_shadow,-GL_SGIX_shadow_ambient,-GL_SGIX_sprite,-GL_SGIX_subsample,-GL_SGIX_tag_sample_buffer,-GL_SGIX_texture_add_env,-GL_SGIX_texture_coordinate_clamp,-GL_SGIX_texture_lod_bias,-GL_SGIX_texture_multi_buffer,-GL_SGIX_texture_scale_bias,-GL_SGIX_vertex_preclip,-GL_SGIX_ycrcb,-GL_SGIX_ycrcb_subsample,-GL_SGIX_ycrcba,-GL_NV_half_float,-GL_OES_byte_coordinates,-GL_ANGLE_robust_client_memory,-GL_ANGLE_shader_pixel_local_storage, --predecessors --promoted --api=gl:core,gles2,vulkan,egl,glx,wgl --baseline=gl:core=3.3,gles2=3.0 --out-path D:\\dev\\darwinia\\contrib\\gloam --merge c --alias --loader"
   },
   "provenance": {
     "EGL/eglplatform.h": {
@@ -172,8 +172,8 @@
       "repo": "Cyan4973/xxHash",
       "repo_url": "https://github.com/Cyan4973/xxHash",
       "path_in_repo": "xxhash.h",
-      "commit": "215108c62f84a9a94d1e821800b29963f544a602",
-      "blob": "081eca2fb63c7b719a284c3b0cc447343b4d7c51"
+      "commit": "63a758c4f26727f2ec31bb646d8d2e353a0f3a88",
+      "blob": "b077f4f54b788d5d6f35c98706f4325f24c2f42c"
     }
   },
   "output": [
@@ -195,7 +195,7 @@
     },
     {
       "path": "include/gloam/egl.h",
-      "blob": "c7812eba76f46b8d3ebfa8e6673a793b4c6e74fc",
+      "blob": "49e8d212b5f9f14f6c590269a70df681decee556",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -206,7 +206,7 @@
     },
     {
       "path": "include/gloam/gl.h",
-      "blob": "8d43d2880ec58a870cbace6dd3c87b58ce1df41a",
+      "blob": "0d790fa2ba0b69beb82349abadd5f3180bde2e1e",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -217,7 +217,7 @@
     },
     {
       "path": "include/gloam/glx.h",
-      "blob": "0b97f467f5d6b42b42bcaef0917c619ec63181ab",
+      "blob": "8ba1d70033ba634aecf1325ed3615c929c537e1d",
       "derived_from": [
         "glx.xml",
         "xxhash.h"
@@ -225,7 +225,7 @@
     },
     {
       "path": "include/gloam/vk.h",
-      "blob": "e0c863f2ab5185a4b672c5aa296c0ff883f24b85",
+      "blob": "6a98c17e515cc4df297f597d21d0cdb5cc65ef6a",
       "derived_from": [
         "vk.xml",
         "vk_video/vulkan_video_codec_av1std.h",
@@ -245,7 +245,7 @@
     },
     {
       "path": "include/gloam/wgl.h",
-      "blob": "4ab3fa467807ccdcc96dd7b1767927a452799374",
+      "blob": "e574931e938118bc434f3922c7f0f452d815d952",
       "derived_from": [
         "wgl.xml",
         "xxhash.h"
@@ -357,7 +357,7 @@
     },
     {
       "path": "include/xxhash.h",
-      "blob": "081eca2fb63c7b719a284c3b0cc447343b4d7c51",
+      "blob": "b077f4f54b788d5d6f35c98706f4325f24c2f42c",
       "verbatim": true,
       "derived_from": [
         "xxhash.h"
@@ -365,7 +365,7 @@
     },
     {
       "path": "src/egl.c",
-      "blob": "57189704d234f245e16b6a110af34e28c529c415",
+      "blob": "b8ada3a59c2323f10d4e23d83231319883f5fd68",
       "derived_from": [
         "EGL/eglplatform.h",
         "KHR/khrplatform.h",
@@ -376,7 +376,7 @@
     },
     {
       "path": "src/gl.c",
-      "blob": "1413bb154a614b9093b926846c6f1354fefd1925",
+      "blob": "73037b66d2d7ef63f3cd5415a8ed4487e7b76f5e",
       "derived_from": [
         "KHR/khrplatform.h",
         "gl.xml",
@@ -387,7 +387,7 @@
     },
     {
       "path": "src/glx.c",
-      "blob": "3e3cc144cc7234331e7e703f76e7e76096860f79",
+      "blob": "b75b69d4b4dcefd50f0f9e1ded74f1031cd15d7b",
       "derived_from": [
         "glx.xml",
         "xxhash.h"
@@ -395,7 +395,7 @@
     },
     {
       "path": "src/vk.c",
-      "blob": "2a6f47dc78eb7623275cb74f381244861578b19e",
+      "blob": "2abc902394de38112a15165cfd7a8efcc05e8ba6",
       "derived_from": [
         "vk.xml",
         "vk_video/vulkan_video_codec_av1std.h",
@@ -415,7 +415,7 @@
     },
     {
       "path": "src/wgl.c",
-      "blob": "67830ff4d8b22e934ebcfb1bbbbea60b0166fb79",
+      "blob": "11f2c3b437de3db282af8d39b32fd48fabdacce8",
       "derived_from": [
         "wgl.xml",
         "xxhash.h"
